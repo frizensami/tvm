@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :ranks
   resources :waves
   resources :participants
   # The priority is based upon order of creation: first created -> highest priority.
