@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  wave_number: 1
+  start_time: 2015-12-05 15:40:20
+
+two:
+  wave_number: 1
+  start_time: 2015-12-05 15:40:20
