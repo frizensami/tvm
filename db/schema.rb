@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151205084430) do
+ActiveRecord::Schema.define(version: 20151205084636) do
 
   create_table "participants", force: :cascade do |t|
     t.string   "name"
@@ -19,6 +19,14 @@ ActiveRecord::Schema.define(version: 20151205084430) do
     t.integer  "wave_number"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "rank_participants", force: :cascade do |t|
+    t.integer  "rank"
+    t.string   "name"
+    t.string   "bib_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "ranks", force: :cascade do |t|

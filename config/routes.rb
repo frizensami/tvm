@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :rank_participants
   resources :ranks
   resources :waves
   resources :participants
