@@ -1,4 +1,43 @@
-<p id="notice"><%= notice %></p>
+
+<script>
+$(
+  $("#new_participant").on("ajax:success", function(e, data, status, xhr) {
+    alert("hi");
+  })
+)
+
+</script>
+
+<!-- Everything below is CopyPasted from form.html -->
+<%= form_for(@participant, remote: true) do |f| %>
+  <% if @participant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@participant.errors.count, "error") %> prohibited this participant from being saved:</h2>
+
+      <ul>
+      <% @participant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :bib_number %><br>
+    <%= f.text_field :bib_number %>
+  </div>
+  <div class="field">
+    <%= f.label :wave_number %><br>
+    <%= f.number_field :wave_number %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
 
 <h1>Listing Participants</h1>
 
@@ -26,6 +65,10 @@
   </tbody>
 </table>
 
+
+
 <br>
+
+
 
 <%= link_to 'New Participant', new_participant_path %>
