@@ -24,9 +24,9 @@ $(document).ready(function(){
     Turbolinks.visit(location.toString());
 
   }).bind('ajaxError', function(event, jqxhr, settings, exception){
-
+  	alert("AJAX Error: Whatever you were saving was not saved.")
   	//ok lo you want then can
-    Turbolinks.visit(location.toString());
+    //Turbolinks.visit(location.toString());
 
   });
 
