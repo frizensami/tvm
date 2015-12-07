@@ -4,7 +4,8 @@ class ParticipantsController < ApplicationController
   # GET /participants
   # GET /participants.json
   def index
-    @participants = Participant.all
+    #@participants = Participant.all
+    @participants = Participant.all.reverse
     @participant = Participant.new
   end
 
@@ -31,11 +32,11 @@ class ParticipantsController < ApplicationController
       if @participant.save
         format.html { redirect_to @participant, notice: 'Participant was successfully created.' }
         format.json { render :show, status: :created, location: @participant }
-        format.js {}
+        format.js   { }
       else
         format.html { render :new }
         format.json { render json: @participant.errors, status: :unprocessable_entity }
-        format.js {}
+        format.js   { }
       end
     end
   end

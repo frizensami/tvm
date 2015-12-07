@@ -14,3 +14,20 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+//This code catches all ajax calls and forces a page refresh
+$(document).ready(function(){
+
+  $(document).bind('ajaxSuccess', function(event, jqxhr, settings, exception){
+
+    alert("You have encountered an interesting event, please contact Sriram or Yew Siang to report this.");
+    Turbolinks.visit(location.toString());
+
+  }).bind('ajaxError', function(event, jqxhr, settings, exception){
+
+  	//ok lo you want then can
+    Turbolinks.visit(location.toString());
+
+  });
+
+});
