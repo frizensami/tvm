@@ -20,7 +20,7 @@ $(document).ready(function(){
 
   $(document).bind('ajaxSuccess', function(event, jqxhr, settings, exception){
 
-    alert("You have encountered an interesting event, please contact Sriram or Yew Siang to report this.");
+    //alert("You have encountered an interesting event, please contact Sriram or Yew Siang to report this.");
     Turbolinks.visit(location.toString());
 
   }).bind('ajaxError', function(event, jqxhr, settings, exception){
@@ -31,3 +31,6 @@ $(document).ready(function(){
   });
 
 });
+
+
+
