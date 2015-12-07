@@ -34,6 +34,7 @@ class WavesController < ApplicationController
       else
         format.html { render :new }
         format.json { render json: @wave.errors, status: :unprocessable_entity }
+        format.js { render json: @wave.errors, status: :unprocessable_entity }
       end
     end
   end

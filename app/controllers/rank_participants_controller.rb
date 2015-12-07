@@ -34,6 +34,7 @@ class RankParticipantsController < ApplicationController
       else
         format.html { render :new }
         format.json { render json: @rank_participant.errors, status: :unprocessable_entity }
+        format.js { render json: @rank_participant.errors, status: :unprocessable_entity }
       end
     end
   end
