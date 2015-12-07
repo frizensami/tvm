@@ -1,3 +1,31 @@
+<%= form_for(@wave) do |f| %>
+  <% if @wave.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@wave.errors.count, "error") %> prohibited this wave from being saved:</h2>
+
+      <ul>
+      <% @wave.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :wave_number %><br>
+    <%= f.number_field :wave_number %>
+  </div>
+  <div class="field">
+    <%= f.label :start_time %><br>
+    <%= f.datetime_select :start_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Waves</h1>
@@ -12,13 +40,13 @@
   </thead>
 
   <tbody>
-    <% @waves.each do |wafe| %>
+    <% @waves.each do |wave| %>
       <tr>
-        <td><%= wafe.wave_number %></td>
-        <td><%= wafe.start_time %></td>
-        <td><%= link_to 'Show', wafe %></td>
-        <td><%= link_to 'Edit', edit_wafe_path(wafe) %></td>
-        <td><%= link_to 'Destroy', wafe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= wave.wave_number %></td>
+        <td><%= wave.start_time %></td>
+        <td><%= link_to 'Show', wave %></td>
+        <td><%= link_to 'Edit', edit_wafe_path(wave) %></td>
+        <td><%= link_to 'Destroy', wave, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

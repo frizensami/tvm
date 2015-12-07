@@ -1,10 +1,10 @@
-<%= form_for(@wafe) do |f| %>
-  <% if @wafe.errors.any? %>
+<%= form_for(@wave) do |f| %>
+  <% if @wave.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@wafe.errors.count, "error") %> prohibited this wafe from being saved:</h2>
+      <h2><%= pluralize(@wave.errors.count, "error") %> prohibited this wave from being saved:</h2>
 
       <ul>
-      <% @wafe.errors.full_messages.each do |message| %>
+      <% @wave.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>

@@ -1,4 +1,4 @@
-json.array!(@waves) do |wafe|
-  json.extract! wafe, :id, :wave_number, :start_time
-  json.url wafe_url(wafe, format: :json)
+json.array!(@waves) do |wave|
+  json.extract! wave, :id, :wave_number, :start_time
+  json.url wave_url(wave, format: :json)
 end
