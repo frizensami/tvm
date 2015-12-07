@@ -5,6 +5,7 @@ class RankParticipantsController < ApplicationController
   # GET /rank_participants.json
   def index
     @rank_participants = RankParticipant.all
+    @rank_participant = RankParticipant.new
   end
 
   # GET /rank_participants/1

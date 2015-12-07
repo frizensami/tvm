@@ -5,6 +5,7 @@ class RanksController < ApplicationController
   # GET /ranks.json
   def index
     @ranks = Rank.all
+    @rank = Rank.new
   end
 
   # GET /ranks/1

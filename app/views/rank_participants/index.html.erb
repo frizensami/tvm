@@ -1,3 +1,34 @@
+<%= form_for(@rank_participant, remote: true) do |f| %>
+  <% if @rank_participant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rank_participant.errors.count, "error") %> prohibited this rank_participant from being saved:</h2>
+
+      <ul>
+      <% @rank_participant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :rank %><br>
+    <%= f.number_field :rank %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :bib_number %><br>
+    <%= f.text_field :bib_number %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Rank Participants</h1>

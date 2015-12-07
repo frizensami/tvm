@@ -1,10 +1,11 @@
 class WavesController < ApplicationController
-  before_action :set_wafe, only: [:show, :edit, :update, :destroy]
+  before_action :set_wave, only: [:show, :edit, :update, :destroy]
 
   # GET /waves
   # GET /waves.json
   def index
     @waves = Wave.all
+    @wave = Wave.new
   end
 
   # GET /waves/1
@@ -14,7 +15,7 @@ class WavesController < ApplicationController
 
   # GET /waves/new
   def new
-    @wafe = Wave.new
+    @wave = Wave.new
   end
 
   # GET /waves/1/edit
@@ -24,15 +25,15 @@ class WavesController < ApplicationController
   # POST /waves
   # POST /waves.json
   def create
-    @wafe = Wave.new(wafe_params)
+    @wave = Wave.new(wave_params)
 
     respond_to do |format|
-      if @wafe.save
-        format.html { redirect_to @wafe, notice: 'Wave was successfully created.' }
-        format.json { render :show, status: :created, location: @wafe }
+      if @wave.save
+        format.html { redirect_to @wave, notice: 'Wave was successfully created.' }
+        format.json { render :show, status: :created, location: @wave }
       else
         format.html { render :new }
-        format.json { render json: @wafe.errors, status: :unprocessable_entity }
+        format.json { render json: @wave.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -41,12 +42,12 @@ class WavesController < ApplicationController
   # PATCH/PUT /waves/1.json
   def update
     respond_to do |format|
-      if @wafe.update(wafe_params)
-        format.html { redirect_to @wafe, notice: 'Wave was successfully updated.' }
-        format.json { render :show, status: :ok, location: @wafe }
+      if @wave.update(wave_params)
+        format.html { redirect_to @wave, notice: 'Wave was successfully updated.' }
+        format.json { render :show, status: :ok, location: @wave }
       else
         format.html { render :edit }
-        format.json { render json: @wafe.errors, status: :unprocessable_entity }
+        format.json { render json: @wave.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -54,7 +55,7 @@ class WavesController < ApplicationController
   # DELETE /waves/1
   # DELETE /waves/1.json
   def destroy
-    @wafe.destroy
+    @wave.destroy
     respond_to do |format|
       format.html { redirect_to waves_url, notice: 'Wave was successfully destroyed.' }
       format.json { head :no_content }
@@ -63,12 +64,12 @@ class WavesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_wafe
-      @wafe = Wave.find(params[:id])
+    def set_wave
+      @wave = Wave.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def wafe_params
-      params.require(:wafe).permit(:wave_number, :start_time)
+    def wave_params
+      params.require(:wave).permit(:wave_number, :start_time)
     end
 end
