@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  root 'static_pages#home'
+
+  get 'static_pages/home'
+  get 'overview' => 'static_pages#overview'
+  #get 'static_pages/overview'
+
+  get 'static_pages/about'
+
   resources :rank_participants
   resources :ranks
   resources :waves
