@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require_tree .
 
+
 //This code catches all ajax calls and forces a page refresh
 $(document).ready(function(){
 
@@ -28,6 +29,24 @@ $(document).ready(function(){
   	//ok lo you want then can
     //Turbolinks.visit(location.toString());
 
+  });
+
+
+  $(document).keyup(function(event) {
+
+  	var pathname = $(location).attr('pathname');
+
+  	if (event.keyCode === 32) {
+  		if (pathname === '/waves') {
+	  		$.ajax({url: "/waves/auto", success: function(result){
+		        Turbolinks.visit(location.toString());
+		    }});
+  		} else if (pathname === '/ranks') {
+  			$.ajax({url: "/ranks/auto", success: function(result){
+		        Turbolinks.visit(location.toString());
+		    }});
+  		}
+  	}
   });
 
 });

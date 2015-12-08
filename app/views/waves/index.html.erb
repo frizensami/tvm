@@ -43,6 +43,7 @@
     <% @waves.each do |wave| %>
       <tr>
         <td><%= wave.wave_number %></td>
+        <% Time.zone = "Singapore" %>
         <td><%= wave.start_time %></td>
         <td><%= link_to 'Show', wave %></td>
         <td><%= link_to 'Edit', edit_wave_path(wave) %></td>

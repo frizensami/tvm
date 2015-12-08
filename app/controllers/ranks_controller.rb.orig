@@ -64,6 +64,7 @@ class RanksController < ApplicationController
     end
   end
 
+<<<<<<< HEAD
   #lists ALL the deleted Ranks in order so that we can undo
   def undolist
     @ranks = Rank.only_deleted.reverse
@@ -89,7 +90,7 @@ class RanksController < ApplicationController
     end
   end
 
-
+=======
 
   def auto
     @ranks = Rank.all
@@ -124,7 +125,7 @@ class RanksController < ApplicationController
   end
 
 
-
+>>>>>>> feature/spacebar
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_rank
