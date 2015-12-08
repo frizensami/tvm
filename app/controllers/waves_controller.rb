@@ -1,6 +1,15 @@
+require 'digest'
 class WavesController < ApplicationController
+  require 'digest'
   before_action :set_wave, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate
 
+  def authenticate
+    authenticate_or_request_with_http_basic('Administration') do |username, password|
+      md5_of_password = Digest::MD5.hexdigest(password)
+      username == 'admin' && md5_of_password == 'c8bad41e1002c9972696a22dc4ee3681'
+    end
+  end
   # GET /waves
   # GET /waves.json
   def index
