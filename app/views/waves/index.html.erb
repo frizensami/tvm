@@ -45,7 +45,7 @@
         <td><%= wave.wave_number %></td>
         <td><%= wave.start_time %></td>
         <td><%= link_to 'Show', wave %></td>
-        <td><%= link_to 'Edit', edit_wafe_path(wave) %></td>
+        <td><%= link_to 'Edit', edit_wave_path(wave) %></td>
         <td><%= link_to 'Destroy', wave, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -54,4 +54,4 @@
 
 <br>
 
-<%= link_to 'New Wave', new_wafe_path %>
+<%= link_to 'New Wave', new_wave_path %>

@@ -2,7 +2,7 @@ require 'test_helper'
 
 class WavesControllerTest < ActionController::TestCase
   setup do
-    @wafe = waves(:one)
+    @wave = waves(:one)
   end
 
   test "should get index" do
@@ -16,32 +16,32 @@ class WavesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create wafe" do
+  test "should create wave" do
     assert_difference('Wave.count') do
-      post :create, wafe: { start_time: @wafe.start_time, wave_number: @wafe.wave_number }
+      post :create, wave: { start_time: @wave.start_time, wave_number: @wave.wave_number }
     end
 
-    assert_redirected_to wafe_path(assigns(:wafe))
+    assert_redirected_to wave_path(assigns(:wave))
   end
 
-  test "should show wafe" do
-    get :show, id: @wafe
+  test "should show wave" do
+    get :show, id: @wave
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @wafe
+    get :edit, id: @wave
     assert_response :success
   end
 
-  test "should update wafe" do
-    patch :update, id: @wafe, wafe: { start_time: @wafe.start_time, wave_number: @wafe.wave_number }
-    assert_redirected_to wafe_path(assigns(:wafe))
+  test "should update wave" do
+    patch :update, id: @wave, wave: { start_time: @wave.start_time, wave_number: @wave.wave_number }
+    assert_redirected_to wave_path(assigns(:wave))
   end
 
-  test "should destroy wafe" do
+  test "should destroy wave" do
     assert_difference('Wave.count', -1) do
-      delete :destroy, id: @wafe
+      delete :destroy, id: @wave
     end
 
     assert_redirected_to waves_path
