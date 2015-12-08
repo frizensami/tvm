@@ -15,12 +15,13 @@
 //= require turbolinks
 //= require_tree .
 
+
 //This code catches all ajax calls and forces a page refresh
 $(document).ready(function(){
 
   $(document).bind('ajaxSuccess', function(event, jqxhr, settings, exception){
 
-    alert("You have encountered an interesting event, please contact Sriram or Yew Siang to report this.");
+    //alert("You have encountered an interesting event, please contact Sriram or Yew Siang to report this.");
     Turbolinks.visit(location.toString());
 
   }).bind('ajaxError', function(event, jqxhr, settings, exception){
@@ -28,6 +29,24 @@ $(document).ready(function(){
   	//ok lo you want then can
     Turbolinks.visit(location.toString());
 
+  });
+
+
+  $(document).keyup(function(event) {
+
+  	var pathname = $(location).attr('pathname');
+
+  	if (event.keyCode === 32) {
+  		if (pathname === '/waves') {
+	  		$.ajax({url: "/waves/auto", success: function(result){
+		        Turbolinks.visit(location.toString());
+		    }});
+  		} else if (pathname === '/ranks') {
+  			$.ajax({url: "/ranks/auto", success: function(result){
+		        Turbolinks.visit(location.toString());
+		    }});
+  		}
+  	}
   });
 
 });

@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
+
+  get 'ranks/auto' => 'ranks#auto'
+  get 'waves/auto' => 'waves#auto'
+  
   resources :rank_participants
   resources :ranks
   resources :waves
   resources :participants
+
+  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

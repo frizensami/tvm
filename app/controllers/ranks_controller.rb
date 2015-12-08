@@ -4,7 +4,7 @@ class RanksController < ApplicationController
   # GET /ranks
   # GET /ranks.json
   def index
-    @ranks = Rank.all
+    @ranks = Rank.all.reverse
     @rank = Rank.new
   end
 
@@ -36,6 +36,7 @@ class RanksController < ApplicationController
         format.json { render json: @rank.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # PATCH/PUT /ranks/1
@@ -61,6 +62,40 @@ class RanksController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+  def auto
+    @ranks = Rank.all
+    @new_rank = Rank.new
+
+    # Current time
+    Time.zone = "Singapore"
+    time_now = Time.zone.now
+
+    # Edit the new_rank to be added to the database
+    if @ranks.blank?
+      @new_rank.rank = 1
+      @new_rank.id = 1  
+    else
+      @new_rank.rank = @ranks.last.rank + 1
+      @new_rank.id = @ranks.last.id + 1
+    end
+    @new_rank.end_time = time_now
+    @new_rank.created_at = time_now
+    @new_rank.updated_at = time_now
+
+    respond_to do |format|
+      if @new_rank.save
+        format.html { redirect_to @new_rank, notice: 'Rank was successfully created.' }
+        format.json { render :show, status: :created, location: @new_rank }
+      else
+        format.html { render :new }
+        format.json { render json: @new_rank.errors, status: :unprocessable_entity }
+      end
+    end
+
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

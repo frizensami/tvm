@@ -4,7 +4,7 @@ class WavesController < ApplicationController
   # GET /waves
   # GET /waves.json
   def index
-    @waves = Wave.all
+    @waves = Wave.all.reverse
     @wave = Wave.new
   end
 
@@ -61,6 +61,40 @@ class WavesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+  def auto
+    @waves = Wave.all
+    @new_wave = Wave.new
+
+    # Current time
+    Time.zone = "Singapore"
+    time_now = Time.zone.now
+
+    # Edit the new_wave to be added to the database
+    if @waves.blank?
+      @new_wave.wave_number = 1
+      @new_wave.id = 1  
+    else
+      @new_wave.wave_number = @waves.last.wave_number + 1
+      @new_wave.id = @waves.last.id + 1
+    end
+    @new_wave.start_time = time_now
+    @new_wave.created_at = time_now
+    @new_wave.updated_at = time_now
+
+    respond_to do |format|
+      if @new_wave.save
+        format.html { redirect_to @new_wave, notice: 'Wave was successfully created.' }
+        format.json { render :show, status: :created, location: @new_wave }
+      else
+        format.html { render :new }
+        format.json { render json: @new_wave.errors, status: :unprocessable_entity }
+      end
+    end
+
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
