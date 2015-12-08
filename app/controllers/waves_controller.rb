@@ -118,6 +118,19 @@ class WavesController < ApplicationController
         format.json { render json: @new_wave.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+
+  def update_nums
+    @waves = Wave.all
+    @new_waves = @waves.sort_by { |x| [x.start_time] }
+
+    counter = 1
+    @new_waves.each do |new_wave|
+      new_wave.update_attribute(:wave_number, counter)
+      counter = counter + 1
+    end
+  render plain: @new_waves.inspect
 
   end
 

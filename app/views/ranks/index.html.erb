@@ -29,7 +29,8 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Ranks</h1>
-<%= button_to 'Undo', '/ranks/undolist', :method => "get" %> <br>
+<%= button_to 'Undo', '/ranks/undolist', :method => "get" %> 
+<%= button_to 'Update Numbers', '/ranks/update_nums', :method => "get", remote: true %> <br>
 <table>
   <thead>
     <tr>
@@ -40,7 +41,7 @@
   </thead>
 
   <tbody>
-    <% @ranks.each do |rank| %>
+    <% @ranks.sort_by { |x| [x.rank] }.reverse.each do |rank| %>
       <tr>
         <td><%= rank.rank %></td>
         <% Time.zone = "Singapore" %>
