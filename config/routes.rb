@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   patch '/waves/:id/undo_deletion' => 'waves#undo_deletion'
   resources :waves
 
+  get '/participants/match_rank'
   get '/participants/undolist'
   delete '/participants/:id/really_delete' => 'participants#really_delete'
   patch '/participants/:id/undo_deletion' => 'participants#undo_deletion'

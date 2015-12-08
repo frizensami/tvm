@@ -59,7 +59,7 @@ class ParticipantsController < ApplicationController
   # DELETE /participants/1.json
   def destroy
       @participant.destroy
-    
+
 
     respond_to do |format|
       format.html { redirect_to participants_url, notice: 'Participant was successfully destroyed.' }
@@ -91,6 +91,49 @@ class ParticipantsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def match_rank
+
+    participants = Participant.all.reverse
+    @names_with_ranks = {}
+
+    participants.map do |participant|
+      rank_participant = RankParticipant.find_by(name: participant.name, bib_number: participant.bib_number)
+      rank = -1
+      end_time = -1
+      start_time = -1
+      time_delta = -1
+
+      unless rank_participant.nil?
+        #if we have a participant with a rank, get the timing object to check end time
+        rank = rank_participant.rank
+        timing_object = Rank.find_by(rank: rank)
+
+        unless timing_object.nil?
+          #if we do have a timing object, get the end time
+          end_time = timing_object.end_time
+          #get a wave object to check for a start time
+          wave_object = Wave.find_by(wave_number: participant.wave_number)
+
+          unless wave_object.nil?
+            start_time = wave_object.start_time
+
+            #time delta is in MINUTES
+            time_delta = (end_time - start_time).to_i / 60
+          end
+
+        end
+      else
+        rank = -1
+      end
+
+      #create final hash as key pointing to array of values
+      @names_with_ranks[participant.name] = [rank, start_time, end_time, time_delta]
+
+    end
+
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

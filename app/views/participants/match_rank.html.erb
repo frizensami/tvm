@@ -1,0 +1,28 @@
+<h1> Rank Matching </h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Rank</th>
+      <th>Start Time</th>
+      <th>End Time</th>
+      <th>Timing (minutes)</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @names_with_ranks.each do |name, rank_timing| %>
+      <tr>
+        <td><%= name %></td>
+        <td><%= rank_timing[0] %></td>
+        <% Time.zone = "Singapore" %>
+        <td><%= rank_timing[1] %></td>
+        <% Time.zone = "Singapore" %>
+        <td><%= rank_timing[2] %></td>
+        <% Time.zone = "Singapore" %>
+        <td><%= rank_timing[3] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
