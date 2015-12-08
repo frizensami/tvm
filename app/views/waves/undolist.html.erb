@@ -1,0 +1,28 @@
+<h1> Undo List </h1>
+
+<h1>Listing Waves</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Wave number</th>
+      <th>Start time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @waves.each do |wave| %>
+      <tr>
+        <td><%= wave.wave_number %></td>
+        <td><%= wave.start_time %></td>
+        <td><%= link_to 'Show', wave %></td>
+
+        <td><%= link_to 'Undo Deletion', "/waves/#{wave.id}/undo_deletion", method: :patch, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', "/waves/#{wave.id}/really_delete", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

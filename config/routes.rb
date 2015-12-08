@@ -3,14 +3,28 @@ Rails.application.routes.draw do
 
   get 'static_pages/home'
   get 'overview' => 'static_pages#overview'
-  #get 'static_pages/overview'
-
   get 'static_pages/about'
 
+  get '/rank_participants/undolist'
+  delete '/rank_participants/:id/really_delete' => 'rank_participants#really_delete'
+  patch '/rank_participants/:id/undo_deletion' => 'rank_participants#undo_deletion'
   resources :rank_participants
+
+  get '/ranks/undolist'
+  delete '/ranks/:id/really_delete' => 'ranks#really_delete'
+  patch '/ranks/:id/undo_deletion' => 'ranks#undo_deletion'
   resources :ranks
+
+  get '/waves/undolist'
+  delete '/waves/:id/really_delete' => 'waves#really_delete'
+  patch '/waves/:id/undo_deletion' => 'waves#undo_deletion'
   resources :waves
+
+  get '/participants/undolist'
+  delete '/participants/:id/really_delete' => 'participants#really_delete'
+  patch '/participants/:id/undo_deletion' => 'participants#undo_deletion'
   resources :participants
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
