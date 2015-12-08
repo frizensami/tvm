@@ -29,7 +29,8 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Waves</h1>
-<%= button_to 'Undo', '/waves/undolist', :method => "get" %> <br>
+<%= button_to 'Undo', '/waves/undolist', :method => "get" %>
+<%= button_to 'Update Numbers', '/waves/update_nums', :method => "get", remote: true %> <br>
 <table>
   <thead>
     <tr>
@@ -40,7 +41,7 @@
   </thead>
 
   <tbody>
-    <% @waves.each do |wave| %>
+    <% @waves.sort_by { |x| [x.wave_number] }.reverse.each do |wave| %>
       <tr>
         <td><%= wave.wave_number %></td>
         <% Time.zone = "Singapore" %>

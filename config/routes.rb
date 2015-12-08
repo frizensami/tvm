@@ -14,7 +14,10 @@ Rails.application.routes.draw do
 
 
   get '/ranks/auto' => 'ranks#auto'
+  get '/ranks/update_nums' => 'ranks#update_nums'
   get '/waves/auto' => 'waves#auto'
+  get '/waves/update_nums' => 'waves#update_nums'
+
   get '/ranks/undolist'
   delete '/ranks/:id/really_delete' => 'ranks#really_delete'
   patch '/ranks/:id/undo_deletion' => 'ranks#undo_deletion'

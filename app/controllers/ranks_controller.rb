@@ -118,6 +118,22 @@ class RanksController < ApplicationController
         format.json { render json: @new_rank.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+
+  def update_nums
+    @ranks = Rank.all
+    @new_ranks = @ranks.sort_by { |x| [x.end_time] }
+
+    #render plain: @new_ranks.inspect
+
+    counter = 1
+    @new_ranks.each do |new_rank|
+      new_rank.update_attribute(:rank, counter)
+      counter = counter + 1
+    end
+
+    render plain: @new_ranks.inspect
 
   end
 
