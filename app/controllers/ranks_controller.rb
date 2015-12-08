@@ -101,11 +101,9 @@ class RanksController < ApplicationController
 
     # Edit the new_rank to be added to the database
     if @ranks.blank?
-      @new_rank.rank = 1
-      @new_rank.id = 1  
+      @new_rank.rank = 1  
     else
       @new_rank.rank = @ranks.last.rank + 1
-      @new_rank.id = @ranks.last.id + 1
     end
     @new_rank.end_time = time_now
     @new_rank.created_at = time_now

@@ -102,10 +102,8 @@ class WavesController < ApplicationController
     # Edit the new_wave to be added to the database
     if @waves.blank?
       @new_wave.wave_number = 1
-      @new_wave.id = 1  
     else
       @new_wave.wave_number = @waves.last.wave_number + 1
-      @new_wave.id = @waves.last.id + 1
     end
     @new_wave.start_time = time_now
     @new_wave.created_at = time_now
