@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
+
   root 'static_pages#home'
 
   get 'static_pages/home'
@@ -9,14 +9,12 @@ Rails.application.routes.draw do
   get '/rank_participants/undolist'
   delete '/rank_participants/:id/really_delete' => 'rank_participants#really_delete'
   patch '/rank_participants/:id/undo_deletion' => 'rank_participants#undo_deletion'
-=======
 
-  get 'ranks/auto' => 'ranks#auto'
-  get 'waves/auto' => 'waves#auto'
-  
->>>>>>> feature/spacebar
   resources :rank_participants
 
+
+  get '/ranks/auto' => 'ranks#auto'
+  get '/waves/auto' => 'waves#auto'
   get '/ranks/undolist'
   delete '/ranks/:id/really_delete' => 'ranks#really_delete'
   patch '/ranks/:id/undo_deletion' => 'ranks#undo_deletion'
@@ -32,11 +30,7 @@ Rails.application.routes.draw do
   patch '/participants/:id/undo_deletion' => 'participants#undo_deletion'
   resources :participants
 
-<<<<<<< HEAD
-=======
-  
 
->>>>>>> feature/spacebar
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
