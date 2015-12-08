@@ -4,7 +4,7 @@ class RankParticipantsController < ApplicationController
   # GET /rank_participants
   # GET /rank_participants.json
   def index
-    @rank_participants = RankParticipant.all
+    @rank_participants = RankParticipant.all.reverse
     @rank_participant = RankParticipant.new
   end
 
@@ -59,6 +59,31 @@ class RankParticipantsController < ApplicationController
     @rank_participant.destroy
     respond_to do |format|
       format.html { redirect_to rank_participants_url, notice: 'Rank participant was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
+  #lists ALL the deleted participants in order so that we can undo
+  def undolist
+    @rank_participants = RankParticipant.only_deleted.reverse
+  end
+
+  #controller to fully delete a participant
+  def undo_deletion
+    RankParticipant.only_deleted.find(params[:id]).restore
+
+    respond_to do |format|
+      format.html { redirect_to rank_participants_url, notice: 'RankParticipant was successfully recovered.' }
+      format.json { head :no_content }
+    end
+  end
+
+  #controller to fully delete a participant
+  def really_delete
+    RankParticipant.only_deleted.find(params[:id]).really_destroy!
+
+    respond_to do |format|
+      format.html { redirect_to rank_participants_url, notice: 'RankParticipant was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

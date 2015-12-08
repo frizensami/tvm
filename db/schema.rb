@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151205084636) do
+ActiveRecord::Schema.define(version: 20151207154710) do
 
   create_table "participants", force: :cascade do |t|
     t.string   "name"
@@ -19,7 +19,10 @@ ActiveRecord::Schema.define(version: 20151205084636) do
     t.integer  "wave_number"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.datetime "deleted_at"
   end
+
+  add_index "participants", ["deleted_at"], name: "index_participants_on_deleted_at"
 
   create_table "rank_participants", force: :cascade do |t|
     t.integer  "rank"
@@ -27,20 +30,29 @@ ActiveRecord::Schema.define(version: 20151205084636) do
     t.string   "bib_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
   end
+
+  add_index "rank_participants", ["deleted_at"], name: "index_rank_participants_on_deleted_at"
 
   create_table "ranks", force: :cascade do |t|
     t.integer  "rank"
     t.datetime "end_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
   end
+
+  add_index "ranks", ["deleted_at"], name: "index_ranks_on_deleted_at"
 
   create_table "waves", force: :cascade do |t|
     t.integer  "wave_number"
     t.datetime "start_time"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.datetime "deleted_at"
   end
+
+  add_index "waves", ["deleted_at"], name: "index_waves_on_deleted_at"
 
 end

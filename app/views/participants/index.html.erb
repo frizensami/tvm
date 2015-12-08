@@ -1,5 +1,4 @@
-<!-- Everything below is CopyPasted from form.html -->
-<%= form_for(@participant, remote: true, html: {role: :form, 'data-model' => 'person'}) do |f| %>
+<%= form_for(@participant, remote: true) do |f| %>
   <% if @participant.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@participant.errors.count, "error") %> prohibited this participant from being saved:</h2>
@@ -30,7 +29,7 @@
 <% end %>
 
 <h1>Listing Participants</h1>
-
+<%= button_to 'Undo', '/participants/undolist', :method => "get" %> <br>
 <table>
   <thead>
     <tr>

@@ -4,7 +4,7 @@ class WavesController < ApplicationController
   # GET /waves
   # GET /waves.json
   def index
-    @waves = Wave.all
+    @waves = Wave.all.reverse
     @wave = Wave.new
   end
 
@@ -57,6 +57,31 @@ class WavesController < ApplicationController
   # DELETE /waves/1.json
   def destroy
     @wave.destroy
+    respond_to do |format|
+      format.html { redirect_to waves_url, notice: 'Wave was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
+  #lists ALL the deleted Waves in order so that we can undo
+  def undolist
+    @waves = Wave.only_deleted.reverse
+  end
+
+  #controller to fully delete a Wave
+  def undo_deletion
+    Wave.only_deleted.find(params[:id]).restore
+
+    respond_to do |format|
+      format.html { redirect_to waves_url, notice: 'Wave was successfully recovered.' }
+      format.json { head :no_content }
+    end
+  end
+
+  #controller to fully delete a Wave
+  def really_delete
+    Wave.only_deleted.find(params[:id]).really_destroy!
+
     respond_to do |format|
       format.html { redirect_to waves_url, notice: 'Wave was successfully destroyed.' }
       format.json { head :no_content }

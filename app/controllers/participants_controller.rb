@@ -58,7 +58,34 @@ class ParticipantsController < ApplicationController
   # DELETE /participants/1
   # DELETE /participants/1.json
   def destroy
-    @participant.destroy
+      @participant.destroy
+    
+
+    respond_to do |format|
+      format.html { redirect_to participants_url, notice: 'Participant was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
+  #lists ALL the deleted participants in order so that we can undo
+  def undolist
+    @participants = Participant.only_deleted.reverse
+  end
+
+  #controller to fully delete a participant
+  def undo_deletion
+    Participant.only_deleted.find(params[:id]).restore
+
+    respond_to do |format|
+      format.html { redirect_to participants_url, notice: 'Participant was successfully recovered.' }
+      format.json { head :no_content }
+    end
+  end
+
+  #controller to fully delete a participant
+  def really_delete
+    Participant.only_deleted.find(params[:id]).really_destroy!
+
     respond_to do |format|
       format.html { redirect_to participants_url, notice: 'Participant was successfully destroyed.' }
       format.json { head :no_content }
