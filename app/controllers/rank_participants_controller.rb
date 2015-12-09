@@ -88,6 +88,33 @@ class RankParticipantsController < ApplicationController
     end
   end
 
+  #checks the order of the ranks and gets the ranks that are not filled in yet
+  def check_order
+    rps = RankParticipant.all
+
+    #sort the rank participants and extract an array of only the ranks (that are sorted)
+    all_ranks_sorted = rps.sort_by { |x| [x.rank] }.map { |rp| rp.rank }
+
+    #array of missing ranks
+    @missing = []
+
+    all_ranks_sorted.each_with_index do |item, index|
+      if index > 0
+        #difference between consecutive ranks, should be 1
+        difference = all_ranks_sorted[index] - all_ranks_sorted[index - 1]
+
+        if difference > 1
+         @missing.concat(((all_ranks_sorted[index - 1] + 1)...(all_ranks_sorted[index])).to_a)
+        end
+      end
+    end
+
+
+
+
+
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_rank_participant
