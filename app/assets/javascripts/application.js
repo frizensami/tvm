@@ -14,7 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
+//= require jquery
+//= require bootstrap-sprockets
 
 //This code catches all ajax calls and forces a page refresh
 $(document).ready(function(){

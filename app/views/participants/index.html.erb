@@ -1,3 +1,5 @@
+<h1 class = "fronttitle">Listing Participants</h1>
+
 <%= form_for(@participant, remote: true) do |f| %>
   <% if @participant.errors.any? %>
     <div id="error_explanation">
@@ -28,7 +30,6 @@
   </div>
 <% end %>
 
-<h1>Listing Participants</h1>
 <%= button_to 'Undo', '/participants/undolist', :method => "get" %> <br>
 <table>
   <thead>

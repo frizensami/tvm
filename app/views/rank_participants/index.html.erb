@@ -1,3 +1,5 @@
+<h1 class = "fronttitle">Listing Rank Participants</h1>
+
 <%= form_for(@rank_participant, remote: true) do |f| %>
   <% if @rank_participant.errors.any? %>
     <div id="error_explanation">
@@ -27,12 +29,10 @@
     <%= f.submit %>
   </div>
 <% end %>
- 
 
+<%= button_to 'Undo', '/rank_participants/undolist', :method => "get" %> <br>
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Rank Participants</h1>
-<%= button_to 'Undo', '/rank_participants/undolist', :method => "get" %> <br>
 <table>
   <thead>
     <tr>

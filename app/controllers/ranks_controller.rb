@@ -125,16 +125,15 @@ class RanksController < ApplicationController
     @ranks = Rank.all
     @new_ranks = @ranks.sort_by { |x| [x.end_time] }
 
-    #render plain: @new_ranks.inspect
-
     counter = 1
     @new_ranks.each do |new_rank|
       new_rank.update_attribute(:rank, counter)
       counter = counter + 1
     end
 
-    render plain: @new_ranks.inspect
-
+    respond_to do |format|
+      format.html { redirect_to waves_url, notice: "Waves were successfully updated"}
+    end
   end
 
 

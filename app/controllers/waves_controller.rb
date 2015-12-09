@@ -130,7 +130,10 @@ class WavesController < ApplicationController
       new_wave.update_attribute(:wave_number, counter)
       counter = counter + 1
     end
-  render plain: @new_waves.inspect
+
+    respond_to do |format|
+      format.html { redirect_to waves_url, notice: "Waves were successfully updated"}
+    end
 
   end
 

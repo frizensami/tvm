@@ -1,3 +1,5 @@
+<h1 class = "fronttitle">Listing Waves</h1>
+
 <%= form_for(@wave, remote: true) do |f| %>
   <% if @wave.errors.any? %>
     <div id="error_explanation">
@@ -25,12 +27,12 @@
 <% end %>
 
 
-
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Waves</h1>
 <%= button_to 'Undo', '/waves/undolist', :method => "get" %>
-<%= button_to 'Update Numbers', '/waves/update_nums', :method => "get", remote: true %> <br>
+<%= button_to 'Update Numbers', '/waves/update_nums', :method => "get", remote: true %> 
+<p id="notice"><%= notice %></p>
+<br>
+
+
 <table>
   <thead>
     <tr>
