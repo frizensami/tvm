@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Number</th>
       <th>Name</th>
       <th>Rank</th>
       <th>Start Time</th>
@@ -12,8 +13,11 @@
   </thead>
 
   <tbody>
-    <% @names_with_ranks.each do |name, rank_timing| %>
+    <% count = 1 %>
+    <% @names_with_ranks.sort_by { |x| [x[1]] }.reverse.each do |name, rank_timing| %>
       <tr>
+        <td><%= count %></td>
+        <% count = count + 1 %>
         <td><%= name %></td>
         <td><%= rank_timing[0] %></td>
         <td><%= rank_timing[1] %></td>

@@ -26,13 +26,20 @@ $(document).ready(function(){
     Turbolinks.visit(location.toString());
 
   }).bind('ajaxError', function(event, jqxhr, settings, exception){
-  	alert("AJAX Error: Whatever you were saving was not saved.")
-  	//ok lo you want then can
-    //Turbolinks.visit(location.toString());
+
+    if ($(location).attr('pathname') === '/rank_participants') {
+      alert("The Bib number you tried to enter was not registered at the start of the Vertical Marathon");
+
+    } else {
+    	alert("AJAX Error: Whatever you were saving was not saved.");
+    	//ok lo you want then can
+      //Turbolinks.visit(location.toString());
+    }
 
   });
 
 
+  // When the "enter" button is pressed and released, add a new entry to waves or ranks
   $(document).keyup(function(event) {
 
   	var pathname = $(location).attr('pathname');
@@ -49,6 +56,14 @@ $(document).ready(function(){
   		}
   	}
   });
+
+
+  // Refresh the overview page once in a while
+  /*
+  if ($(location).attr('pathname') == '/overview') {
+    setInterval(function() { window.location.reload(); }, 20000)
+  }
+  */
 
 });
 
