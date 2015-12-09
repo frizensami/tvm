@@ -93,6 +93,7 @@ class ParticipantsController < ApplicationController
   end
 
   def match_rank
+    Time.zone = "Singapore"
 
     participants = Participant.all.reverse
     @names_with_ranks = {}
