@@ -30,6 +30,9 @@ gem "paranoia", "~> 2.0"
 # Bootstrap Gem
 gem 'bootstrap-sass', '~> 3.3.6'
 
+#add codeclimate
+gem "codeclimate-test-reporter", group: :test, require: nil
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
