@@ -37,7 +37,7 @@ $(document).ready(function(){
 
   	var pathname = $(location).attr('pathname');
 
-  	if (event.keyCode === 20) {
+  	if (event.keyCode === 187) {
   		if (pathname === '/waves') {
 	  		$.ajax({url: "/waves/auto", success: function(result){
 		        Turbolinks.visit(location.toString());
