@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'overview' => 'static_pages#overview'
   get 'static_pages/about'
 
+  get '/rank_participants/check_order'
   get '/rank_participants/undolist'
   delete '/rank_participants/:id/really_delete' => 'rank_participants#really_delete'
   patch '/rank_participants/:id/undo_deletion' => 'rank_participants#undo_deletion'
