@@ -98,7 +98,7 @@ class ParticipantsController < ApplicationController
     @names_with_ranks = {}
 
     participants.map do |participant|
-      rank_participant = RankParticipant.find_by(name: participant.name, bib_number: participant.bib_number)
+      rank_participant = RankParticipant.find_by(bib_number: participant.bib_number)
       rank = -1
       end_time = -1
       start_time = -1
