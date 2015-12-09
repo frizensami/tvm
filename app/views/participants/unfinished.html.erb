@@ -1,0 +1,52 @@
+<h1 class = "fronttitle">Unfinished Participants</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Bib number</th>
+      <th>Wave number</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @unfinished_participants.each do |participant| %>
+      <tr>
+        <td><%= participant.name %></td>
+        <td><%= participant.bib_number %></td>
+        <td><%= participant.wave_number %></td>
+        <td><%= link_to 'Show', participant %></td>
+        <td><%= link_to 'Edit', edit_participant_path(participant) %></td>
+        <td><%= link_to 'Destroy', participant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<h1 class = "fronttitle">Unregistered Participants</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Name</th>
+      <th>Bib number</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @unregistered_rank_participants.each do |rank_participant| %>
+      <tr>
+        <td><%= rank_participant.rank %></td>
+        <td><%= rank_participant.name %></td>
+        <td><%= rank_participant.bib_number %></td>
+        <td><%= link_to 'Show', rank_participant %></td>
+        <td><%= link_to 'Edit', edit_rank_participant_path(rank_participant) %></td>
+        <td><%= link_to 'Destroy', rank_participant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

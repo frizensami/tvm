@@ -134,6 +134,28 @@ class ParticipantsController < ApplicationController
 
   end
 
+  def unfinished
+    @participants = Participant.all
+    @rank_participants = RankParticipant.all
+
+    # Select from the list of participants, those that hasn't finished the race
+    # @rank_participants.any checks for any rank_participant within the @rank_participants array and returns those whose bib_number is the
+    # same as participant.bib_number
+    # "!" chooses the participants whose bib number isn't registered in rank_participants' bib numbers
+    @unfinished_participants = @participants.select { |x| !@rank_participants.any? { 
+        |rank_participant| rank_participant.bib_number == x.bib_number 
+      } }
+
+    # Select from the list of rank_participants those that has finished the race and got a rank registered BUT are not registered at the start
+    # @participants.any checks for an participant within the @participants array and returns those whose bib_number is the
+    # same as rank_participant.bib_number
+    # "!" chooses the rank_participants whose bib number isn't registered in participants' bib numbers
+    @unregistered_rank_participants = @rank_participants.select { |x| !@participants.any? {
+        |participant| participant.bib_number == x.bib_number
+      } }
+
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

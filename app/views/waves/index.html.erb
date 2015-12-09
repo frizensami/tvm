@@ -19,6 +19,7 @@
   </div>
   <div class="field">
     <%= f.label :start_time %><br>
+    <% Time.zone = "Singapore" %>
     <%= f.datetime_select :start_time %>
   </div>
   <div class="actions">
