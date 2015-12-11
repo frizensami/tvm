@@ -120,7 +120,7 @@ class ParticipantsController < ApplicationController
             start_time = wave_object.start_time
 
             #time delta is in MINUTES
-            time_delta = (end_time - start_time).to_i / 60
+            time_delta = Time.at((end_time - start_time).to_i).utc.strftime("%H:%M:%S")
           end
 
         end
@@ -143,8 +143,8 @@ class ParticipantsController < ApplicationController
     # @rank_participants.any checks for any rank_participant within the @rank_participants array and returns those whose bib_number is the
     # same as participant.bib_number
     # "!" chooses the participants whose bib number isn't registered in rank_participants' bib numbers
-    @unfinished_participants = @participants.select { |x| !@rank_participants.any? { 
-        |rank_participant| rank_participant.bib_number == x.bib_number 
+    @unfinished_participants = @participants.select { |x| !@rank_participants.any? {
+        |rank_participant| rank_participant.bib_number == x.bib_number
       } }
 
     # Select from the list of rank_participants those that has finished the race and got a rank registered BUT are not registered at the start
