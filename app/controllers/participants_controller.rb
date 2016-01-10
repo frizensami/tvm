@@ -101,9 +101,9 @@ class ParticipantsController < ApplicationController
     participants.map do |participant|
       rank_participant = RankParticipant.find_by(bib_number: participant.bib_number)
       rank = -1
-      end_time = -1
-      start_time = -1
-      time_delta = -1
+      end_time = DateTime.new
+      start_time = DateTime.new
+      time_delta = DateTime.new
 
       unless rank_participant.nil?
         #if we have a participant with a rank, get the timing object to check end time
@@ -120,7 +120,7 @@ class ParticipantsController < ApplicationController
             start_time = wave_object.start_time
 
             #time delta is in MINUTES
-            time_delta = Time.at((end_time - start_time).to_i).utc.strftime("%H:%M:%S")
+            time_delta = Time.at((end_time.to_f - start_time.to_f)).utc.strftime("%H:%M:%S.%3N")
           end
 
         end
@@ -129,7 +129,7 @@ class ParticipantsController < ApplicationController
       end
 
       #create final hash as key pointing to array of values
-      @names_with_ranks[participant.name] = [rank, start_time, end_time, time_delta]
+      @names_with_ranks[participant.name] = [rank, start_time.strftime("%d/%m/%Y %H:%M:%S.%3N"), end_time.strftime("%d/%m/%Y %H:%M:%S.%3N"), time_delta]
 
     end
 

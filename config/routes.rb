@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get '/rank_participants/check_order'
   get '/rank_participants/undolist'
-  delete '/rank_participants/:id/really_delete' => 'rank_participants#really_delete'
+  #delete '/rank_participants/:id/really_delete' => 'rank_participants#really_delete'
   patch '/rank_participants/:id/undo_deletion' => 'rank_participants#undo_deletion'
 
   resources :rank_participants
@@ -20,19 +20,19 @@ Rails.application.routes.draw do
   get '/waves/update_nums' => 'waves#update_nums'
 
   get '/ranks/undolist'
-  delete '/ranks/:id/really_delete' => 'ranks#really_delete'
+  #delete '/ranks/:id/really_delete' => 'ranks#really_delete'
   patch '/ranks/:id/undo_deletion' => 'ranks#undo_deletion'
   resources :ranks
 
   get '/waves/undolist'
-  delete '/waves/:id/really_delete' => 'waves#really_delete'
+  #delete '/waves/:id/really_delete' => 'waves#really_delete'
   patch '/waves/:id/undo_deletion' => 'waves#undo_deletion'
   resources :waves
 
   get '/participants/match_rank'
   get '/participants/undolist'
   get '/participants/unfinished'
-  delete '/participants/:id/really_delete' => 'participants#really_delete'
+  #delete '/participants/:id/really_delete' => 'participants#really_delete'
   patch '/participants/:id/undo_deletion' => 'participants#undo_deletion'
   resources :participants
 

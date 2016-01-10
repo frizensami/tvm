@@ -92,7 +92,7 @@ class RankParticipantsController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
+
 
   #checks the order of the ranks and gets the ranks that are not filled in yet
   def check_order
