@@ -26,7 +26,7 @@ class ParticipantsController < ApplicationController
   def search_bib
     if params[:search]
       puts "Searching with param #{params[:search]}"
-      @participant = Participant.where(bib_number: params[:search]).first
+      @participant = Participant.where(bib_number: params[:search].upcase.strip).first
       unless @participant.present?
         flash[:notice] = "Participant could not be found!"
         redirect_to participants_path
@@ -130,6 +130,7 @@ class ParticipantsController < ApplicationController
           end_time = timing_object.end_time
           #get a wave object to check for a start time
           wave_object = Wave.find_by(wave_number: participant.wave_number)
+          waveid = wave_object.id
 
           unless wave_object.nil?
             start_time = wave_object.start_time
@@ -144,7 +145,7 @@ class ParticipantsController < ApplicationController
       end
 
       #create final hash as key pointing to array of values
-      @names_with_ranks[participant.name] = [rank, start_time.strftime("%d/%m/%Y %H:%M:%S.%3N"), end_time.strftime("%d/%m/%Y %H:%M:%S.%3N"), time_delta]
+      @names_with_ranks[participant.name] = [rank, start_time.strftime("%d/%m/%Y %H:%M:%S.%3N"), end_time.strftime("%d/%m/%Y %H:%M:%S.%3N"), time_delta, waveid]
 
     end
 
