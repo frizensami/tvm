@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :wave_number %><br>
-    <%= f.number_field :wave_number, autofocus: true %>
+    <%= f.number_field :wave_number, min: 1, autofocus: true %>
   </div>
   <div class="actions">
     <%= f.submit %>
