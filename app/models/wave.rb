@@ -3,4 +3,6 @@ class Wave < ActiveRecord::Base
 
 	#PARANOID MODE: Nothing really gets deleted
 	acts_as_paranoid
+
+
 end

@@ -36,6 +36,10 @@ class ParticipantsController < ApplicationController
     end
   end
 
+  def by_wave
+    @participants = Participant.where(wave_number: params[:wave_number])
+  end
+
   # POST /participants
   # POST /participants.json
   def create

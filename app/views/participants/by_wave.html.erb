@@ -1,23 +1,7 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Wave number:</strong>
-  <%= @wave.wave_number %>
-</p>
-
-<p>
-  <strong>Start time:</strong>
-  <%= @wave.start_time %>
-</p>
-
-<% if flash[:notice] %>
-  <div class="notice" style='color: red; font-size: 24px'><%= flash[:notice] %></div>
-<% end %>
-
 
 <br><br>
 
-<h2> Participants in Wave <%= @wave.wave_number %>
+<h2> Participants in Wave <%= params[:wave_number] %>
 <br>
 <br>
 <%= form_tag search_bib_participants_path, :method => 'get' do %>
@@ -51,5 +35,3 @@
   </tbody>
 </table>
 
-<%= link_to 'Edit', edit_wave_path(@wave) %> |
-<%= link_to 'Back', waves_path %>

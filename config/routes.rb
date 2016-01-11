@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   get '/participants/match_rank'
   get '/participants/undolist'
   get '/participants/unfinished'
+  get '/participants/by_wave/:wave_number' => 'participants#by_wave'
   #delete '/participants/:id/really_delete' => 'participants#really_delete'
   patch '/participants/:id/undo_deletion' => 'participants#undo_deletion'
   resources :participants do

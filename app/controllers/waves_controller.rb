@@ -11,6 +11,7 @@ class WavesController < ApplicationController
   # GET /waves/1
   # GET /waves/1.json
   def show
+    @participants = Participant.where(wave_number: @wave.wave_number)
   end
 
   # GET /waves/new
