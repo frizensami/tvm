@@ -34,7 +34,11 @@ Rails.application.routes.draw do
   get '/participants/unfinished'
   #delete '/participants/:id/really_delete' => 'participants#really_delete'
   patch '/participants/:id/undo_deletion' => 'participants#undo_deletion'
-  resources :participants
+  resources :participants do
+    collection do
+      get :search_bib
+    end
+  end
 
 
   # The priority is based upon order of creation: first created -> highest priority.

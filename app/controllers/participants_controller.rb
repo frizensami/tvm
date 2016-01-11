@@ -5,7 +5,7 @@ class ParticipantsController < ApplicationController
   # GET /participants.json
   def index
     #@participants = Participant.all
-    @participants = Participant.all.reverse
+    @participants = Participant.order('wave_number DESC')
     @participant = Participant.new
   end
 
@@ -23,6 +23,19 @@ class ParticipantsController < ApplicationController
   def edit
   end
 
+  def search_bib
+    if params[:search]
+      puts "Searching with param #{params[:search]}"
+      @participant = Participant.where(bib_number: params[:search]).first
+      unless @participant.present?
+        flash[:notice] = "Participant could not be found!"
+        redirect_to participants_path
+      end
+    else
+      render plain: "No search parameter!"
+    end
+  end
+
   # POST /participants
   # POST /participants.json
   def create
@@ -30,7 +43,8 @@ class ParticipantsController < ApplicationController
 
     respond_to do |format|
       if @participant.save
-        format.html { redirect_to @participant, notice: 'Participant was successfully created.' }
+        #format.html { redirect_to @participant, notice: 'Participant was successfully created.' }
+        format.html { redirect_to participants_path, notice: 'Participant was successfully created.' }
         format.json { render :show, status: :created, location: @participant }
         #format.js   { }
       else
@@ -46,7 +60,8 @@ class ParticipantsController < ApplicationController
   def update
     respond_to do |format|
       if @participant.update(participant_params)
-        format.html { redirect_to @participant, notice: 'Participant was successfully updated.' }
+        #format.html { redirect_to @participant, notice: 'Participant was successfully updated.' }
+        format.html { redirect_to participants_path, notice: 'Participant was successfully updated.' }
         format.json { render :show, status: :ok, location: @participant }
       else
         format.html { render :edit }

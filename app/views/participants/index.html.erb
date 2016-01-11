@@ -1,5 +1,7 @@
 <h1 class = "fronttitle">Listing Participants</h1>
 
+
+<!--
 <%= form_for(@participant, remote: true) do |f| %>
   <% if @participant.errors.any? %>
     <div id="error_explanation">
@@ -12,7 +14,8 @@
       </ul>
     </div>
   <% end %>
-
+  -->
+<!--
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -29,8 +32,22 @@
     <%= f.submit %>
   </div>
 <% end %>
+-->
 
-<%= button_to 'Undo', '/participants/undolist', :method => "get" %> <br>
+<!--<%= button_to 'Undo', '/participants/undolist', :method => "get" %> <br> -->
+
+<% if flash[:notice] %>
+  <div class="notice" style='color: red; font-size: 24px'><%= flash[:notice] %></div>
+<% end %>
+
+<%= form_tag search_bib_participants_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search], autofocus: true%>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
+
 <table>
   <thead>
     <tr>
@@ -49,7 +66,7 @@
         <td><%= participant.wave_number %></td>
         <td><%= link_to 'Show', participant %></td>
         <td><%= link_to 'Edit', edit_participant_path(participant) %></td>
-        <td><%= link_to 'Destroy', participant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <!--<td><%= link_to 'Destroy', participant, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
@@ -61,4 +78,4 @@
 
 
 
-<%= link_to 'New Participant', new_participant_path %>
+<!-- <%= link_to 'New Participant', new_participant_path %> -->
