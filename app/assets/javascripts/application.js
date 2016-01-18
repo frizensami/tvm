@@ -28,7 +28,8 @@ $(document).ready(function(){
   }).bind('ajaxError', function(event, jqxhr, settings, exception){
 
     if ($(location).attr('pathname') === '/rank_participants') {
-      alert("The Bib number you tried to enter was not registered at the start of the Vertical Marathon");
+
+      alert("Either: The Bib number you tried to enter was not registered at the start of the Vertical Marathon \n OR \n Not all fields are filled up (i.e. name, rank or bib number) \n OR \n This rank is missing! Confirm with the rank chip giver if this rank has been cancelled.");
 
     } else {
     	alert("AJAX Error: Whatever you were saving was not saved.");

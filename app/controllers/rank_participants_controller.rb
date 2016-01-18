@@ -119,10 +119,16 @@ class RankParticipantsController < ApplicationController
   end
  #check existence of participant bib number before creating
     def soft_create(rank_participant_params)
+
       @rank_participant = RankParticipant.new(rank_participant_params)
 
+      #Check for rank participant as existent in the participants list, and make sure we don't enter a cancelled
+      #rank chip number
       respond_to do |format|
-        if Participant.find_by(bib_number: @rank_participant.bib_number) and @rank_participant.save
+        if Participant.find_by(bib_number: @rank_participant.bib_number) &&
+           !(missing_numbers.include?(@rank_participant.rank)) &&
+           @rank_participant.save
+
           format.html { redirect_to @rank_participant, notice: 'Rank participant was successfully created.' }
           format.json { render :show, status: :created, location: @rank_participant }
         else
@@ -138,6 +144,12 @@ class RankParticipantsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_rank_participant
       @rank_participant = RankParticipant.find(params[:id])
+    end
+
+    def cannot_register_missing_rank
+      if missing_numbers.include?(self.rank)
+        errors.add(:rank, "is missing! Confirm with the rank chip giver that this rank is cancelled.")
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
