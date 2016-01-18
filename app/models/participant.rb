@@ -15,7 +15,7 @@ class Participant < ActiveRecord::Base
   end
 
   def only_five_in_a_wave
-    if Participant.where(wave_number: self.wave_number).count >= 5
+    if self.wave_number.present? && Participant.where(wave_number: self.wave_number).count >= 5
       errors.add(:wave_number, "is incorrect, only 5 people can be in one wave. Please allocate participant to the next wave.")
     end
   end
