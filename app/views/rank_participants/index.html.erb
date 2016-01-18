@@ -34,6 +34,9 @@
 <%= button_to 'Undo', '/rank_participants/undolist', :method => "get" %> <br>
 <p id="notice"><%= notice %></p>
 
+
+<h3> Missing Ranks: <%= @missing %> </h3>
+
 <table>
   <thead>
     <tr>

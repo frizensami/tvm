@@ -1,11 +1,12 @@
 class RankParticipantsController < ApplicationController
   before_action :set_rank_participant, only: [:show, :edit, :update, :destroy]
-
+  include RankParticipantsHelper
   # GET /rank_participants
   # GET /rank_participants.json
   def index
     @rank_participants = RankParticipant.all.reverse
     @rank_participant = RankParticipant.new
+    @missing = missing_numbers
   end
 
   # GET /rank_participants/1
@@ -21,6 +22,7 @@ class RankParticipantsController < ApplicationController
   # GET /rank_participants/1/edit
   def edit
   end
+
 
   # POST /rank_participants
   # POST /rank_participants.json
