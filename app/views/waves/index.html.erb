@@ -25,8 +25,9 @@
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>
 -->
+<% end %>
+
 
 <%= button_to 'Undo', '/waves/undolist', :method => "get" %>
 <%= button_to 'Update Numbers', '/waves/update_nums', :method => "get", remote: true %> 
@@ -59,4 +60,17 @@
 
 <br>
 
-<%= link_to 'New Wave', new_wave_path %>
+<br>
+<h2 class = "fronttitle">Instructions</h2>
+<p class="instructions">FOR START TIMER</p>
+<p class="instructions">1) Work with the TAGGERS to release each wave smoothly. Only release a wave when you know the TAGGERS have completed tagging that wave.</p>
+<p class="instructions">To prevent an abrupt start to the race, make use of the timer which will be shown to the runners and release the wave when the timer hits 0.</p>
+<p class="instructions">2) Tap "=" when you release the wave to record the timing for the Wave.</p>
+
+<h2 class = "fronttitle">Problems</h2>
+<p class="instructions">1) IN CASE YOU TAPPED "=" TWICE: Delete the wrong wave by clicking "Destroy"</p>
+<p class="instructions">2) IN CASE YOU DELETED A WRONG WAVE: Click "Undo" and restore the wave you deleted</p>
+<br>
+<br>
+
+<!--<%= link_to 'New Wave', new_wave_path %>-->

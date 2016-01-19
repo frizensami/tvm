@@ -1,5 +1,7 @@
 <h1 class = "fronttitle">Listing Rank Participants</h1>
 
+<h3 style="color: red"> Missing Ranks: <%= @missing %> </h3>
+
 <%= form_for(@rank_participant, remote: true) do |f| %>
   <% if @rank_participant.errors.any? %>
     <div id="error_explanation">
@@ -27,6 +29,8 @@
   </div>
   <div class="actions">
     <%= f.submit 'Submit' %>
+    <br>
+    <br>
     <%= f.submit 'Force Submit' %>
   </div>
 <% end %>
@@ -34,8 +38,6 @@
 <%= button_to 'Undo', '/rank_participants/undolist', :method => "get" %> <br>
 <p id="notice"><%= notice %></p>
 
-
-<h3> Missing Ranks: <%= @missing %> </h3>
 
 <table>
   <thead>
@@ -63,4 +65,17 @@
 
 <br>
 
-<%= link_to 'New Rank participant', new_rank_participant_path %>
+<br>
+<h2 class = "fronttitle">Instructions</h2>
+<p class="instructions">FOR RANK TAGGER</p>
+<p class="instructions">1) Take the Rank chip of the runner and ask for their name. Record down their Rank (from rank chip), Name and Bib number</p>
+<p class="instructions"> Then click "Submit" (Don't click "Force Submit")</p>
+<p class="instructions"> If their Rank chip is part of the "Missing Ranks" which are colored red, it means their Rank chip has been issued incorrectly. Do not submit the form, inform Yew Siang or Sriram.</p>
+
+<h2 class = "fronttitle">Problems</h2>
+<p class="instructions">1) IN CASE YOU ARE UNABLE TO SUBMIT THE FORM DUE TO ERRORS: Inform Yew Siang or Sriram</p>
+<p class="instructions">2) IN CASE YOU ENTERED THE WRONG INFORMATION: Click "Edit" or "Destroy"</p>
+<br>
+<br>
+
+<!--<%= link_to 'New Rank participant', new_rank_participant_path %>-->
