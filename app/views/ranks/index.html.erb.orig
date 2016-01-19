@@ -1,0 +1,89 @@
+<h1 class = "fronttitle">Listing Ranks</h1>
+
+<%= form_for(@rank, remote: true) do |f| %>
+  <% if @rank.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rank.errors.count, "error") %> prohibited this rank from being saved:</h2>
+
+      <ul>
+      <% @rank.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<!--
+  <div class="field">
+    <%= f.label :rank %><br>
+    <%= f.number_field :rank %>
+  </div>
+  <div class="field">
+    <%= f.label :end_time %><br>
+    <% Time.zone = "Singapore" %>
+    <%= f.datetime_select :end_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<<<<<<< HEAD
+-->
+=======
+  -->
+>>>>>>> 7a074019a345c5d8ff6fc8a4b8ac58c249ea04a9
+<% end %>
+
+
+<%= button_to 'Undo', '/ranks/undolist', :method => "get" %>
+<!--
+<%= button_to 'Update Numbers', '/ranks/update_nums', :method => "get", remote: true %>
+-->
+<p id="notice"><%= notice %></p>
+<br>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>End time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ranks.sort_by { |x| [x.rank] }.reverse.each do |rank| %>
+      <tr>
+        <td><%= rank.rank %></td>
+        <% Time.zone = "Singapore" %>
+        <td><%= rank.end_time %></td>
+        <td><%= link_to 'Show', rank %></td>
+        <td><%= link_to 'Edit', edit_rank_path(rank) %></td>
+        <td><%= link_to 'Destroy', rank, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<br>
+<h2 class = "fronttitle">Instructions</h2>
+<p class="instructions">FOR PULSER</p>
+<p class="instructions">1) Tap "=" whenever a runner runs past the finishing line.</p>
+<p class="instructions">DON'T DO ANYTHING ELSE. Just focus on Tapping. Ask the DELETER to help you with deleting wrong entries.</p>
+<p class="instructions">2) Each click may have a slight lag, it's normal. Do not press twice.</p>
+<p class="instructions">3) If a group of people runs past the finishing line, tap an equal numbers of times</p>
+
+<br>
+<p class="instructions">FOR DELETER</p>
+<p class="instructions">1) If the PULSER presses wrongly and shouts "SKIP 15", click "Destroy" beside Rank 15 to delete the entry</p>
+<p class="instructions">DO NOT TAP "=" AT ALL TIMES.</p>
+<p class="instructions">If you accidentally deleted a wrong Rank, click "Undo" and choose the rank to restore</p>
+
+<h2 class = "fronttitle">Problems</h2>
+<p class="instructions">1) IN CASE YOU TAPPED "=" TWICE: Shout "SKIP 15" to RANK CHIPS GIVER and DELETER if Rank 15 is the rank that is not supposed to be there.</p>
+<p class="instructions">This is so that the RANK CHIPS GIVER can skip that rank and the DELETER can delete that particular rank</p>
+<br>
+<br>
+
+<!--<%= link_to 'New Rank', new_rank_path %>-->
