@@ -134,7 +134,7 @@ class ParticipantsController < ApplicationController
           end_time = timing_object.end_time
           #get a wave object to check for a start time
           wave_object = Wave.find_by(wave_number: participant.wave_number)
-          waveid = wave_object.try(:id)
+          waveid = wave_object.try(:wave_number)
 
           unless wave_object.nil?
             start_time = wave_object.start_time
