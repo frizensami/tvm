@@ -1,0 +1,593 @@
+I, [2016-01-20T00:36:48.180823 #6573]  INFO -- : Refreshing Gem list
+I, [2016-01-20T00:36:50.656282 #6573]  INFO -- : listening on addr=/home/rails/rails_project/shared/sockets/unicorn.sock fd=10
+I, [2016-01-20T00:36:50.656702 #6573]  INFO -- : worker=0 spawning...
+I, [2016-01-20T00:36:50.660398 #6573]  INFO -- : worker=1 spawning...
+I, [2016-01-20T00:36:50.666946 #6575]  INFO -- : worker=0 spawned pid=6575
+I, [2016-01-20T00:36:50.667573 #6575]  INFO -- : worker=0 ready
+I, [2016-01-20T00:36:50.671630 #6578]  INFO -- : worker=1 spawned pid=6578
+I, [2016-01-20T00:36:50.672549 #6578]  INFO -- : worker=1 ready
+I, [2016-01-20T00:36:50.673336 #6573]  INFO -- : master process ready
+180.76.15.27 - - [20/Jan/2016:00:36:55 -0500] "GET / HTTP/1.0" 200 - 2.0008
+172.23.54.168, 137.132.250.12 - - [20/Jan/2016:00:37:04 -0500] "GET / HTTP/1.0" 200 - 2.4899
+172.23.54.168, 137.132.250.12 - - [20/Jan/2016:00:37:04 -0500] "GET /application.self-8877fa66c5301bf80d494f68e3fa5d853edd722409fddd8ec705057200469bef.css?body=1 HTTP/1.0" 200 325848 0.0690
+172.23.54.168, 137.132.3.8 - - [20/Jan/2016:00:37:04 -0500] "GET /bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1 HTTP/1.0" 200 3547 0.0380
+172.23.54.168, 137.132.250.12 - - [20/Jan/2016:00:37:04 -0500] "GET /bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1 HTTP/1.0" 200 4744 0.0523
+172.23.54.168, 137.132.250.12 - - [20/Jan/2016:00:37:04 -0500] "GET /bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1 HTTP/1.0" 200 9939 0.0537
+172.23.54.168, 137.132.3.8 - - [20/Jan/2016:00:37:04 -0500] "GET /bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1 HTTP/1.0" 200 7142 0.0399
+172.23.54.168, 137.132.3.8 - - [20/Jan/2016:00:37:04 -0500] "GET /bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1 HTTP/1.0" 200 5964 0.0368
+172.23.54.168, 137.132.250.12 - - [20/Jan/2016:00:37:04 -0500] "GET /bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1 HTTP/1.0" 200 4708 0.0359
+172.23.54.168, 137.132.3.8 - - [20/Jan/2016:00:37:04 -0500] "GET /bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1 HTTP/1.0" 200 3906 0.0364
+172.23.54.168, 137.132.250.12 - - [20/Jan/2016:00:37:04 -0500] "GET /bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1 HTTP/1.0" 200 1832 0.0360
+172.23.54.168, 137.132.250.12 - - [20/Jan/2016:00:37:04 -0500] "GET /bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1 HTTP/1.0" 200 16346 0.0365
+172.23.54.168, 137.132.3.8 - - [20/Jan/2016:00:37:04 -0500] "GET /bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1 HTTP/1.0" 200 3164 0.0334
+172.23.54.168, 137.132.3.8 - - [20/Jan/2016:00:37:05 -0500] "GET /bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1 HTTP/1.0" 200 12 0.0423
+172.23.54.168, 137.132.250.12 - - [20/Jan/2016:00:37:05 -0500] "GET /application.self-147b4e6874dbf9f31e4c6a6c6791e1e33f6f2d7831863729f9695b64ea803ed5.js?body=1 HTTP/1.0" 200 2228 0.0390
+172.23.54.168, 137.132.250.12 - - [20/Jan/2016:00:37:05 -0500] "GET /tembusucollege.jpeg HTTP/1.0" 200 23474 0.0179
+66.249.64.122 - - [20/Jan/2016:00:37:07 -0500] "GET /mp3/download-lagu-dangdut-sodiq-mp3 HTTP/1.0" 404 40815 0.1787
+I, [2016-01-20T00:37:18.286203 #6573]  INFO -- : reaped #<Process::Status: pid 6575 exit 0> worker=0
+I, [2016-01-20T00:37:18.286735 #6573]  INFO -- : reaped #<Process::Status: pid 6578 exit 0> worker=1
+I, [2016-01-20T00:37:18.288483 #6573]  INFO -- : master complete
+I, [2016-01-20T00:38:53.174057 #6625]  INFO -- : Refreshing Gem list
+I, [2016-01-20T00:38:55.776326 #6625]  INFO -- : unlinking existing socket=/home/rails/rails_project/shared/sockets/unicorn.sock
+I, [2016-01-20T00:38:55.776682 #6625]  INFO -- : listening on addr=/home/rails/rails_project/shared/sockets/unicorn.sock fd=11
+I, [2016-01-20T00:38:55.776940 #6625]  INFO -- : worker=0 spawning...
+I, [2016-01-20T00:38:55.779863 #6625]  INFO -- : worker=1 spawning...
+I, [2016-01-20T00:38:55.781040 #6628]  INFO -- : worker=0 spawned pid=6628
+I, [2016-01-20T00:38:55.781286 #6628]  INFO -- : worker=0 ready
+I, [2016-01-20T00:38:55.783023 #6625]  INFO -- : master process ready
+I, [2016-01-20T00:38:55.790476 #6631]  INFO -- : worker=1 spawned pid=6631
+I, [2016-01-20T00:38:55.790681 #6631]  INFO -- : worker=1 ready
+172.23.54.168, 137.132.250.12 - - [20/Jan/2016:00:39:03 -0500] "GET / HTTP/1.0" 200 - 1.3620
+172.23.54.168, 137.132.250.12 - - [20/Jan/2016:00:39:03 -0500] "GET /participants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1 HTTP/1.0" 200 31 0.0227
+172.23.54.168, 137.132.3.8 - - [20/Jan/2016:00:39:03 -0500] "GET /jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1 HTTP/1.0" 200 284395 0.0641
+172.23.54.168, 137.132.3.8 - - [20/Jan/2016:00:39:03 -0500] "GET /rank_participants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1 HTTP/1.0" 200 31 0.0178
+172.23.54.168, 137.132.3.8 - - [20/Jan/2016:00:39:03 -0500] "GET /turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1 HTTP/1.0" 200 24817 0.0463
+172.23.54.168, 137.132.250.12 - - [20/Jan/2016:00:39:03 -0500] "GET /ranks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1 HTTP/1.0" 200 31 0.0287
+172.23.54.168, 137.132.3.8 - - [20/Jan/2016:00:39:03 -0500] "GET /static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1 HTTP/1.0" 200 31 0.0265
+172.23.54.168, 137.132.250.12 - - [20/Jan/2016:00:39:03 -0500] "GET /waves.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1 HTTP/1.0" 200 31 0.0270
+172.23.54.168, 137.132.3.8 - - [20/Jan/2016:00:39:03 -0500] "GET /bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1 HTTP/1.0" 200 4839 0.0268
+172.23.54.168, 137.132.3.8 - - [20/Jan/2016:00:39:03 -0500] "GET /bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1 HTTP/1.0" 200 2261 0.0289
+172.23.54.168, 137.132.250.12 - - [20/Jan/2016:00:39:03 -0500] "GET /jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1 HTTP/1.0" 200 19542 0.0326
+172.23.54.168, 137.132.250.12 - - [20/Jan/2016:00:39:03 -0500] "GET /bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1 HTTP/1.0" 304 - 0.0334
+172.23.54.168, 137.132.3.8 - - [20/Jan/2016:00:39:03 -0500] "GET /bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1 HTTP/1.0" 304 - 0.0317
+172.23.54.168, 137.132.3.8 - - [20/Jan/2016:00:39:03 -0500] "GET /bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1 HTTP/1.0" 304 - 0.1232
+172.23.54.168, 137.132.250.12 - - [20/Jan/2016:00:39:03 -0500] "GET /bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1 HTTP/1.0" 304 - 0.0143
+172.23.54.168, 137.132.3.8 - - [20/Jan/2016:00:39:04 -0500] "GET /bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1 HTTP/1.0" 304 - 0.0136
+172.23.54.168, 137.132.250.12 - - [20/Jan/2016:00:39:04 -0500] "GET /application.self-8877fa66c5301bf80d494f68e3fa5d853edd722409fddd8ec705057200469bef.css?body=1 HTTP/1.0" 304 - 0.9740
+172.23.54.168, 137.132.250.12 - - [20/Jan/2016:00:39:04 -0500] "GET /bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1 HTTP/1.0" 304 - 0.0135
+172.23.54.168, 137.132.250.12 - - [20/Jan/2016:00:39:04 -0500] "GET /bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1 HTTP/1.0" 304 - 0.0109
+172.23.54.168, 137.132.250.12 - - [20/Jan/2016:00:39:04 -0500] "GET /bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1 HTTP/1.0" 304 - 0.0137
+172.23.54.168, 137.132.250.12 - - [20/Jan/2016:00:39:04 -0500] "GET /bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1 HTTP/1.0" 304 - 0.0105
+172.23.54.168, 137.132.3.8 - - [20/Jan/2016:00:39:04 -0500] "GET /bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1 HTTP/1.0" 304 - 0.0068
+172.23.54.168, 137.132.3.8 - - [20/Jan/2016:00:39:04 -0500] "GET /bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1 HTTP/1.0" 304 - 0.0258
+172.23.54.168, 137.132.250.12 - - [20/Jan/2016:00:39:04 -0500] "GET /application.self-147b4e6874dbf9f31e4c6a6c6791e1e33f6f2d7831863729f9695b64ea803ed5.js?body=1 HTTP/1.0" 304 - 0.0682
+172.23.54.168, 137.132.250.12 - - [20/Jan/2016:00:39:04 -0500] "GET /tembusucollege.jpeg HTTP/1.0" 304 - 0.0090
+66.249.64.127 - - [20/Jan/2016:00:40:55 -0500] "GET /mp3/Youth%20Tamil%20Mp3%20Songs%20Download HTTP/1.0" 404 40822 0.2451
+66.249.64.127 - - [20/Jan/2016:00:44:42 -0500] "GET /mp3/fitri-tamara-terbaru-opo-salah HTTP/1.0" 404 40814 0.3858
+40.77.167.18 - - [20/Jan/2016:00:45:21 -0500] "GET /music/mp3/Scorpion_clasik.html HTTP/1.0" 404 40818 0.3229
+157.55.39.247 - - [20/Jan/2016:00:47:33 -0500] "GET /music/mp3/dj_switch_ke_patry_ya_mang.html HTTP/1.0" 404 40829 0.1644
+66.249.64.4 - - [20/Jan/2016:00:48:28 -0500] "GET /mp3/ora-kuat-mbok-om-scorpio-mp3 HTTP/1.0" 404 40812 0.2152
+66.249.64.122 - - [20/Jan/2016:00:52:16 -0500] "GET /mp3/dangdut-orgen-pelaminan-kelabu HTTP/1.0" 404 40814 0.2787
+222.186.30.211 - - [20/Jan/2016:00:52:34 -0500] "POST /POST_ip_port.php HTTP/1.0" 404 40775 0.2308
+66.249.64.127 - - [20/Jan/2016:00:56:02 -0500] "GET /mp3/chord-lagu-zias-ku-harus-pergi HTTP/1.0" 404 40814 0.2103
+40.77.167.18 - - [20/Jan/2016:00:56:14 -0500] "GET /music/mp3/boa_disturbed.html HTTP/1.0" 404 40816 0.1148
+40.77.167.18 - - [20/Jan/2016:00:57:26 -0500] "GET /music/mp3/SAMRAH_ARAB_INDONESIA.html HTTP/1.0" 404 40824 0.1951
+66.249.64.4 - - [20/Jan/2016:00:59:50 -0500] "GET /mp3/mp3-eny-sagita-nyawang-foto-mu HTTP/1.0" 404 40814 0.2341
+66.249.64.4 - - [20/Jan/2016:01:03:37 -0500] "GET /mp3/kumpulan-lagu-the-rosta-vol-10 HTTP/1.0" 404 40814 0.2340
+5.9.132.67 - - [20/Jan/2016:01:07:00 -0500] "GET / HTTP/1.0" 200 - 0.3370
+66.249.64.89 - - [20/Jan/2016:01:07:23 -0500] "GET /song/christmas-song-with-lyrics HTTP/1.0" 404 40809 0.1051
+66.249.64.122 - - [20/Jan/2016:01:11:10 -0500] "GET /mp3/chord-dasar-gitar-warung-pojok HTTP/1.0" 404 40814 0.2136
+66.249.64.122 - - [20/Jan/2016:01:14:58 -0500] "GET /mp3/l-samb-terbaru-lagu-banyuwangi HTTP/1.0" 404 40814 0.3085
+66.249.64.4 - - [20/Jan/2016:01:18:44 -0500] "GET /mp3/download-photo-steffan-william HTTP/1.0" 404 40814 0.1325
+66.249.64.4 - - [20/Jan/2016:01:19:34 -0500] "GET / HTTP/1.0" 200 - 0.3950
+66.249.64.99 - - [20/Jan/2016:01:19:57 -0500] "GET /song/jatwal-jaranan-jombang HTTP/1.0" 404 40805 0.1956
+66.249.64.89 - - [20/Jan/2016:01:19:58 -0500] "GET /song/sera-live-oktober-2015 HTTP/1.0" 404 40805 0.1636
+66.249.64.99 - - [20/Jan/2016:01:22:31 -0500] "GET /song/katra-katra-zara-zara-song HTTP/1.0" 404 40809 0.1013
+40.77.167.18 - - [20/Jan/2016:01:23:34 -0500] "GET /music/mp3/Elvis_Presley_Welcome_to_my_world.html HTTP/1.0" 404 40836 0.2282
+66.249.64.127 - - [20/Jan/2016:01:24:33 -0500] "GET /application.self-8877fa66c5301bf80d494f68e3fa5d853edd722409fddd8ec705057200469bef.css?body=1 HTTP/1.0" 200 325848 0.0632
+66.249.64.122 - - [20/Jan/2016:01:24:34 -0500] "GET /static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1 HTTP/1.0" 200 31 0.0072
+66.249.64.122 - - [20/Jan/2016:01:24:35 -0500] "GET /jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1 HTTP/1.0" 200 19542 0.0085
+66.249.64.122 - - [20/Jan/2016:01:24:37 -0500] "GET /bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1 HTTP/1.0" 200 16346 0.0086
+66.249.64.122 - - [20/Jan/2016:01:24:38 -0500] "GET /bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1 HTTP/1.0" 200 4839 0.0153
+66.249.64.122 - - [20/Jan/2016:01:24:39 -0500] "GET /turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1 HTTP/1.0" 200 24817 0.0069
+66.249.64.122 - - [20/Jan/2016:01:24:40 -0500] "GET /ranks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1 HTTP/1.0" 200 31 0.0086
+66.249.64.122 - - [20/Jan/2016:01:24:42 -0500] "GET /bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1 HTTP/1.0" 200 4708 0.0162
+66.249.64.122 - - [20/Jan/2016:01:24:43 -0500] "GET /application.self-147b4e6874dbf9f31e4c6a6c6791e1e33f6f2d7831863729f9695b64ea803ed5.js?body=1 HTTP/1.0" 200 2228 0.0088
+66.249.64.122 - - [20/Jan/2016:01:24:44 -0500] "GET /bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1 HTTP/1.0" 200 2261 0.0066
+66.249.64.122 - - [20/Jan/2016:01:24:45 -0500] "GET /bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1 HTTP/1.0" 200 1832 0.0142
+66.249.64.122 - - [20/Jan/2016:01:24:47 -0500] "GET /waves.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1 HTTP/1.0" 200 31 0.0098
+66.249.64.122 - - [20/Jan/2016:01:24:48 -0500] "GET /bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1 HTTP/1.0" 200 3547 0.0192
+66.249.64.122 - - [20/Jan/2016:01:24:50 -0500] "GET /bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1 HTTP/1.0" 200 9939 0.0176
+66.249.64.122 - - [20/Jan/2016:01:24:51 -0500] "GET /jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1 HTTP/1.0" 200 284395 0.0281
+66.249.64.122 - - [20/Jan/2016:01:24:52 -0500] "GET /bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1 HTTP/1.0" 200 5964 0.0167
+66.249.64.122 - - [20/Jan/2016:01:24:54 -0500] "GET /bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1 HTTP/1.0" 200 3164 0.0135
+66.249.64.122 - - [20/Jan/2016:01:24:55 -0500] "GET /bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1 HTTP/1.0" 200 4744 0.0167
+66.249.64.122 - - [20/Jan/2016:01:24:56 -0500] "GET /rank_participants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1 HTTP/1.0" 200 31 0.0127
+66.249.64.122 - - [20/Jan/2016:01:24:58 -0500] "GET /bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1 HTTP/1.0" 200 7142 0.0175
+66.249.64.127 - - [20/Jan/2016:01:25:16 -0500] "GET /participants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1 HTTP/1.0" 200 31 0.0146
+66.249.64.122 - - [20/Jan/2016:01:26:18 -0500] "GET /mp3/the-christmas-song-gilbert-o%5C%5C%5C'sullivan HTTP/1.0" 404 40834 0.1162
+66.249.64.130 - - [20/Jan/2016:01:28:42 -0500] "GET /music/id/download/MTIxMw/dj_muharram_naat/songs.html HTTP/1.0" 404 40826 0.2366
+66.249.64.127 - - [20/Jan/2016:01:30:06 -0500] "GET /mp3/download-lagu-kerjo-ng-malaysia HTTP/1.0" 404 40815 0.2493
+37.229.44.33 - - [20/Jan/2016:01:30:07 -0500] "GET /wp-login.php HTTP/1.0" 404 40695 0.2570
+37.229.44.33 - - [20/Jan/2016:01:30:08 -0500] "POST /wp-login.php HTTP/1.0" 404 40810 0.1852
+66.249.64.127 - - [20/Jan/2016:01:33:52 -0500] "GET /mp3/Tubidy%20Mobi%20Mp3%20Music%20Download HTTP/1.0" 404 40822 0.0933
+180.76.15.139 - - [20/Jan/2016:01:35:00 -0500] "GET / HTTP/1.0" 200 - 0.3052
+180.76.15.8 - - [20/Jan/2016:01:35:47 -0500] "GET / HTTP/1.0" 200 - 0.3106
+207.46.13.0 - - [20/Jan/2016:01:36:10 -0500] "GET /music/mp3/Julio_iglesias_con_una_pinta_asi.html HTTP/1.0" 404 40835 0.2596
+66.249.64.122 - - [20/Jan/2016:01:37:40 -0500] "GET /mp3/Tubidy%20Mp3%20Download%20Free%20Songs HTTP/1.0" 404 40822 0.2399
+40.77.167.18 - - [20/Jan/2016:01:40:41 -0500] "GET /music/mp3/Khaba_Lenja.html HTTP/1.0" 404 40814 0.2323
+66.249.64.4 - - [20/Jan/2016:01:41:26 -0500] "GET /mp3/download-lagu-rasta-morena-2015 HTTP/1.0" 404 40815 0.1940
+66.249.64.89 - - [20/Jan/2016:01:45:13 -0500] "GET /song/christmas-song-notes-piano HTTP/1.0" 404 40809 0.1107
+66.249.64.122 - - [20/Jan/2016:01:49:01 -0500] "GET /mp3/Matargashti%20Mp3%20Download%20Wapking HTTP/1.0" 404 40822 0.2675
+222.186.30.211 - - [20/Jan/2016:01:51:50 -0500] "POST /POST_ip_port.php HTTP/1.0" 404 40775 0.2242
+66.249.64.127 - - [20/Jan/2016:01:52:48 -0500] "GET /mp3/merry-christmas-i%5C%5C%5C'll-give-you-my-heart-lyrics HTTP/1.0" 404 40842 0.3028
+66.249.64.130 - - [20/Jan/2016:01:56:04 -0500] "GET /music/id/download/MjkxMDEz/thalaiva_karoeke.html HTTP/1.0" 404 40822 0.2663
+66.249.64.4 - - [20/Jan/2016:01:56:35 -0500] "GET /mp3/Tubidy%20Mobi%20Mp3%20Songs%20Download HTTP/1.0" 404 40822 0.2900
+157.55.39.247 - - [20/Jan/2016:01:56:44 -0500] "GET /music/mp3/Helvy_sllow_rock_golden_sweet_memory.html HTTP/1.0" 404 40839 0.2241
+61.147.70.111 - - [20/Jan/2016:01:57:43 -0500] "POST /POST_ip_port.php HTTP/1.0" 404 40775 0.1334
+162.243.87.252 - - [20/Jan/2016:01:59:37 -0500] "GET / HTTP/1.0" 200 - 0.1832
+66.249.64.122 - - [20/Jan/2016:02:00:21 -0500] "GET /mp3/Tubidy%20Mp3%20Video%20Download%20Free HTTP/1.0" 404 40822 0.1022
+80.82.70.24 - - [20/Jan/2016:02:00:34 -0500] "GET / HTTP/1.0" 200 - 0.1775
+66.249.64.250 - - [20/Jan/2016:02:04:08 -0500] "GET /music/id/download/MDcxMTEz/PiL.html HTTP/1.0" 404 40809 0.0981
+79.114.249.28 - - [20/Jan/2016:02:07:27 -0500] "GET / HTTP/1.0" 200 - 0.3024
+79.114.249.28 - - [20/Jan/2016:02:07:27 -0500] "GET /application.self-147b4e6874dbf9f31e4c6a6c6791e1e33f6f2d7831863729f9695b64ea803ed5.js?body=1 HTTP/1.0" 200 2228 0.0151
+79.114.249.28 - - [20/Jan/2016:02:07:28 -0500] "GET /bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1 HTTP/1.0" 200 12 0.0261
+79.114.249.28 - - [20/Jan/2016:02:07:28 -0500] "GET /jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1 HTTP/1.0" 200 284395 0.0159
+79.114.249.28 - - [20/Jan/2016:02:07:34 -0500] "GET /jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1 HTTP/1.0" 200 19542 0.0153
+79.114.249.28 - - [20/Jan/2016:02:07:35 -0500] "GET /participants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1 HTTP/1.0" 200 31 0.0517
+79.114.249.28 - - [20/Jan/2016:02:07:36 -0500] "GET /rank_participants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1 HTTP/1.0" 200 31 0.0081
+79.114.249.28 - - [20/Jan/2016:02:07:37 -0500] "GET /ranks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1 HTTP/1.0" 200 31 0.0087
+79.114.249.28 - - [20/Jan/2016:02:07:38 -0500] "GET /static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1 HTTP/1.0" 200 31 0.0143
+79.114.249.28 - - [20/Jan/2016:02:07:39 -0500] "GET /turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1 HTTP/1.0" 200 24817 0.0091
+79.114.249.28 - - [20/Jan/2016:02:07:40 -0500] "GET /waves.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1 HTTP/1.0" 200 31 0.0169
+79.114.249.28 - - [20/Jan/2016:02:07:42 -0500] "GET /assets/+%20(Link.HTML_EXTENSIONS.join( HTTP/1.0" 404 40785 0.2600
+79.114.249.28 - - [20/Jan/2016:02:07:43 -0500] "GET /bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1 HTTP/1.0" 200 4839 0.0168
+79.114.249.28 - - [20/Jan/2016:02:07:43 -0500] "GET /bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1 HTTP/1.0" 200 2261 0.0191
+79.114.249.28 - - [20/Jan/2016:02:07:44 -0500] "GET /bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1 HTTP/1.0" 200 3547 0.0116
+79.114.249.28 - - [20/Jan/2016:02:07:44 -0500] "GET /bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1 HTTP/1.0" 200 7142 0.0123
+79.114.249.28 - - [20/Jan/2016:02:07:45 -0500] "GET /bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1 HTTP/1.0" 200 5964 0.0139
+79.114.249.28 - - [20/Jan/2016:02:07:47 -0500] "GET /bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1 HTTP/1.0" 200 4744 0.0144
+79.114.249.28 - - [20/Jan/2016:02:07:48 -0500] "GET /bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1 HTTP/1.0" 200 9939 0.0255
+79.114.249.28 - - [20/Jan/2016:02:07:48 -0500] "GET /bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1 HTTP/1.0" 200 3164 0.0154
+79.114.249.28 - - [20/Jan/2016:02:07:48 -0500] "GET /bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1 HTTP/1.0" 200 4708 0.0074
+79.114.249.28 - - [20/Jan/2016:02:07:49 -0500] "GET /bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1 HTTP/1.0" 200 3906 0.0089
+79.114.249.28 - - [20/Jan/2016:02:07:49 -0500] "GET /bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1 HTTP/1.0" 200 16346 0.0109
+79.114.249.28 - - [20/Jan/2016:02:07:50 -0500] "GET /bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1 HTTP/1.0" 200 1832 0.0063
+79.114.249.28 - - [20/Jan/2016:02:07:50 -0500] "GET /users/5 HTTP/1.0" 404 40754 0.1005
+79.114.249.28 - - [20/Jan/2016:02:07:51 -0500] "GET /assets/bootstrap/).html())%20$tip.find( HTTP/1.0" 404 40786 0.2421
+79.114.249.28 - - [20/Jan/2016:02:07:52 -0500] "GET /assets/bootstrap/)[this.options.html%20 HTTP/1.0" 404 40786 0.2311
+66.249.64.122 - - [20/Jan/2016:02:07:55 -0500] "GET /mp3/Tamil%20Christian%20Mp3%20Songs%20Download.com HTTP/1.0" 404 40830 0.1533
+95.82.130.35 - - [20/Jan/2016:02:10:33 -0500] "GET / HTTP/1.0" 200 - 0.1873
+66.249.64.99 - - [20/Jan/2016:02:11:42 -0500] "GET /song/roy-song-download-mp3-free HTTP/1.0" 404 40809 0.1184
+31.177.83.242 - - [20/Jan/2016:02:13:52 -0500] "GET / HTTP/1.0" 200 - 0.4118
+66.249.64.94 - - [20/Jan/2016:02:15:30 -0500] "GET /song/christmas-song-united-cube HTTP/1.0" 404 40809 0.2049
+157.55.39.1 - - [20/Jan/2016:02:18:04 -0500] "GET /music/mp3/jkt48_karena_kusuka_dirimu_clean_version.html HTTP/1.0" 404 40843 0.2495
+157.55.39.1 - - [20/Jan/2016:02:18:05 -0500] "GET /music/mp3/tere_jesa_yaar_kha.html HTTP/1.0" 404 40821 0.2528
+157.55.39.1 - - [20/Jan/2016:02:18:05 -0500] "GET /music/mp3/lagu_batak_trio_simorangkir_ho_do_bulanku.html HTTP/1.0" 404 40844 0.2203
+157.55.39.1 - - [20/Jan/2016:02:18:06 -0500] "GET / HTTP/1.0" 200 - 0.2989
+66.249.64.250 - - [20/Jan/2016:02:19:01 -0500] "GET / HTTP/1.0" 200 - 0.2871
+66.249.64.94 - - [20/Jan/2016:02:19:16 -0500] "GET /song/christmas-song-about-shoes HTTP/1.0" 404 40809 0.1058
+66.249.64.94 - - [20/Jan/2016:02:23:04 -0500] "GET /song/christmas-song-with-chords HTTP/1.0" 404 40809 0.1969
+66.249.64.250 - - [20/Jan/2016:02:26:50 -0500] "GET /music/id/download/MjUxMDEz/28_brondong_tua.html HTTP/1.0" 404 40821 0.1191
+180.76.15.137 - - [20/Jan/2016:02:28:16 -0500] "GET / HTTP/1.0" 200 - 0.3427
+66.249.64.250 - - [20/Jan/2016:02:28:32 -0500] "GET /bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1 HTTP/1.0" 200 3906 0.0274
+66.249.64.245 - - [20/Jan/2016:02:28:32 -0500] "GET /bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1 HTTP/1.0" 200 7142 0.0154
+66.249.64.245 - - [20/Jan/2016:02:28:33 -0500] "GET /participants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1 HTTP/1.0" 200 31 0.0155
+66.249.64.245 - - [20/Jan/2016:02:28:33 -0500] "GET /bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1 HTTP/1.0" 200 4839 0.0183
+66.249.64.245 - - [20/Jan/2016:02:28:34 -0500] "GET /static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1 HTTP/1.0" 200 31 0.0126
+66.249.64.245 - - [20/Jan/2016:02:28:35 -0500] "GET /waves.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1 HTTP/1.0" 200 31 0.0138
+66.249.64.245 - - [20/Jan/2016:02:28:35 -0500] "GET /bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1 HTTP/1.0" 200 3547 0.0195
+66.249.64.245 - - [20/Jan/2016:02:28:36 -0500] "GET /bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1 HTTP/1.0" 200 12 0.0171
+66.249.64.245 - - [20/Jan/2016:02:28:36 -0500] "GET /bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1 HTTP/1.0" 200 2261 0.0065
+66.249.64.245 - - [20/Jan/2016:02:28:37 -0500] "GET /bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1 HTTP/1.0" 200 3164 0.0082
+66.249.64.245 - - [20/Jan/2016:02:28:38 -0500] "GET /jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1 HTTP/1.0" 200 284395 0.0336
+66.249.64.245 - - [20/Jan/2016:02:28:39 -0500] "GET /bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1 HTTP/1.0" 200 16346 0.0150
+66.249.64.245 - - [20/Jan/2016:02:28:39 -0500] "GET /bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1 HTTP/1.0" 200 4708 0.0119
+66.249.64.245 - - [20/Jan/2016:02:28:40 -0500] "GET /bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1 HTTP/1.0" 200 5964 0.0154
+66.249.64.245 - - [20/Jan/2016:02:28:41 -0500] "GET /jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1 HTTP/1.0" 200 19542 0.0123
+66.249.64.245 - - [20/Jan/2016:02:28:41 -0500] "GET /rank_participants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1 HTTP/1.0" 200 31 0.0063
+66.249.64.245 - - [20/Jan/2016:02:28:42 -0500] "GET /bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1 HTTP/1.0" 200 1832 0.0093
+66.249.64.245 - - [20/Jan/2016:02:28:43 -0500] "GET /application.self-147b4e6874dbf9f31e4c6a6c6791e1e33f6f2d7831863729f9695b64ea803ed5.js?body=1 HTTP/1.0" 200 2228 0.0094
+66.249.64.245 - - [20/Jan/2016:02:28:44 -0500] "GET /bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1 HTTP/1.0" 200 4744 0.0058
+66.249.64.245 - - [20/Jan/2016:02:28:44 -0500] "GET /application.self-8877fa66c5301bf80d494f68e3fa5d853edd722409fddd8ec705057200469bef.css?body=1 HTTP/1.0" 200 325848 0.0303
+66.249.64.245 - - [20/Jan/2016:02:28:46 -0500] "GET /turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1 HTTP/1.0" 200 24817 0.0228
+66.249.64.245 - - [20/Jan/2016:02:28:46 -0500] "GET /bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1 HTTP/1.0" 200 9939 0.0241
+180.76.15.138 - - [20/Jan/2016:02:28:50 -0500] "GET / HTTP/1.0" 200 - 0.1412
+66.249.64.245 - - [20/Jan/2016:02:28:52 -0500] "GET /ranks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1 HTTP/1.0" 200 31 0.0307
+66.249.64.250 - - [20/Jan/2016:02:30:38 -0500] "GET /music/id/download/NDYtMTAxMw/taylor_swift_speak_now.html HTTP/1.0" 404 40830 0.2042
+66.249.64.99 - - [20/Jan/2016:02:34:24 -0500] "GET /song/christmas-song-kenny-g-mp3 HTTP/1.0" 404 40809 0.1742
+66.249.64.89 - - [20/Jan/2016:02:38:12 -0500] "GET /song/u2-christmas-song-download HTTP/1.0" 404 40809 0.2851
+61.147.70.111 - - [20/Jan/2016:02:38:30 -0500] "POST /POST_ip_port.php HTTP/1.0" 404 40775 0.2424
+222.186.30.211 - - [20/Jan/2016:02:38:47 -0500] "POST /POST_ip_port.php HTTP/1.0" 404 40775 0.2042
+40.77.167.18 - - [20/Jan/2016:02:41:15 -0500] "GET /music/mp3/mohammad_alizadeh_bargard.html HTTP/1.0" 404 40828 0.1058
+66.249.64.89 - - [20/Jan/2016:02:41:58 -0500] "GET /song/christmas-song-parampampam HTTP/1.0" 404 40809 0.1215
+66.249.64.94 - - [20/Jan/2016:02:45:46 -0500] "GET /song/i-work-alone-song-download HTTP/1.0" 404 40809 0.2309
+222.186.30.211 - - [20/Jan/2016:02:46:03 -0500] "POST /POST_ip_port.php HTTP/1.0" 404 40775 0.1473
+66.249.64.94 - - [20/Jan/2016:02:49:33 -0500] "GET /song/christmas-song-in-hawaiian HTTP/1.0" 404 40809 0.3092
+40.77.167.18 - - [20/Jan/2016:02:50:36 -0500] "GET /music/mp3/NT_XTC_.html HTTP/1.0" 404 40810 0.2105
+66.249.64.89 - - [20/Jan/2016:02:53:20 -0500] "GET /song/christmas-song-easy-chords HTTP/1.0" 404 40809 0.2194
+66.249.64.250 - - [20/Jan/2016:02:54:43 -0500] "GET /music/id/download/MjYxMDEz/hampura.html HTTP/1.0" 404 40813 0.2125
+66.249.64.94 - - [20/Jan/2016:02:57:07 -0500] "GET /song/download-lagu-salah-tompo-gerry-dan-ayu HTTP/1.0" 404 40822 0.1931
+66.249.64.94 - - [20/Jan/2016:03:00:53 -0500] "GET /song/christmas-song-ding-a-ling HTTP/1.0" 404 40809 0.1704
+66.249.64.250 - - [20/Jan/2016:03:04:41 -0500] "GET /music/id/download/NDYtMTAxMw/terlalu_jauh_the_sister.html HTTP/1.0" 404 40831 0.1162
+40.77.167.18 - - [20/Jan/2016:03:06:07 -0500] "GET /music/mp3/BIMBO_RASUL_MENYURUH_KITA.html HTTP/1.0" 404 40828 0.1204
+66.249.64.89 - - [20/Jan/2016:03:08:28 -0500] "GET /song/i-walk-alone-song-download HTTP/1.0" 404 40809 0.2886
+61.147.70.111 - - [20/Jan/2016:03:10:03 -0500] "POST /POST_ip_port.php HTTP/1.0" 404 40775 0.2486
+66.249.64.89 - - [20/Jan/2016:03:12:15 -0500] "GET /song/christmas-song-drummer-boy HTTP/1.0" 404 40809 0.2902
+66.249.64.99 - - [20/Jan/2016:03:16:02 -0500] "GET /song/christmas-song-quotes-cute HTTP/1.0" 404 40809 0.2443
+40.77.167.18 - - [20/Jan/2016:03:17:36 -0500] "GET /music/mp3/seperti_dia_amylea.html HTTP/1.0" 404 40821 0.2207
+66.249.64.144 - - [20/Jan/2016:03:18:17 -0500] "GET /song/Ray-Minor-Ray/8668036 HTTP/1.0" 404 40810 0.1529
+66.249.64.94 - - [20/Jan/2016:03:19:48 -0500] "GET /song/christmas-song-sheet-music HTTP/1.0" 404 40809 0.0975
+207.46.13.0 - - [20/Jan/2016:03:21:13 -0500] "GET /music/mp3/Sera_Jangan_Pikirin_Abang.html HTTP/1.0" 404 40828 0.2299
+157.55.39.247 - - [20/Jan/2016:03:22:37 -0500] "GET /music/id/download/MDIxMTEz/vivah_a2z_song.html HTTP/1.0" 404 40838 0.2546
+66.249.64.89 - - [20/Jan/2016:03:23:35 -0500] "GET /song/x HTTP/1.0" 404 40784 0.1068
+66.249.64.99 - - [20/Jan/2016:03:27:22 -0500] "GET /song/g HTTP/1.0" 404 40784 0.1322
+66.249.64.4 - - [20/Jan/2016:03:28:22 -0500] "GET /wp-content/themes/nichelite/js/modernizr.min.js HTTP/1.0" 404 40771 0.0995
+66.249.64.122 - - [20/Jan/2016:03:28:22 -0500] "GET /wp-content/plugins/agk-mp3/custom.js?ver=4.3.1 HTTP/1.0" 404 40795 0.0978
+66.249.64.122 - - [20/Jan/2016:03:28:23 -0500] "GET /wp-content/themes/nichelite/js/adsensiascript.js HTTP/1.0" 404 40772 0.2110
+66.249.64.122 - - [20/Jan/2016:03:28:23 -0500] "GET /wp-includes/js/jquery/jquery.js?ver=1.11.3 HTTP/1.0" 404 40791 0.1880
+66.249.64.122 - - [20/Jan/2016:03:28:24 -0500] "GET /wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1 HTTP/1.0" 404 40802 0.2525
+66.249.64.122 - - [20/Jan/2016:03:28:24 -0500] "GET /wp-includes/js/wp-emoji-release.min.js?ver=4.3.1 HTTP/1.0" 404 40797 0.1969
+66.249.64.245 - - [20/Jan/2016:03:28:25 -0500] "GET /music/id/download/MTAxMTEz/gee_i_love_you.html HTTP/1.0" 404 40820 0.1868
+157.55.39.247 - - [20/Jan/2016:03:29:33 -0500] "GET /song/download-lagu-via-vallen-tetap-dalam-jiwa HTTP/1.0" 404 40838 0.1952
+157.55.39.247 - - [20/Jan/2016:03:29:34 -0500] "GET /music/mp3/dj_crystal_powermix_2013.html HTTP/1.0" 404 40827 0.2061
+66.249.64.89 - - [20/Jan/2016:03:31:10 -0500] "GET /song/f HTTP/1.0" 404 40784 0.2136
+180.76.15.7 - - [20/Jan/2016:03:32:13 -0500] "GET / HTTP/1.0" 200 - 0.3555
+180.76.15.155 - - [20/Jan/2016:03:32:56 -0500] "GET / HTTP/1.0" 200 - 0.1504
+66.249.64.99 - - [20/Jan/2016:03:34:56 -0500] "GET /song/y HTTP/1.0" 404 40784 0.1127
+66.249.64.245 - - [20/Jan/2016:03:38:44 -0500] "GET /music/id/mp3/MTIxMw/Suara_desahan_wanita_lagi_ngentot.html HTTP/1.0" 404 40832 0.1209
+207.46.13.0 - - [20/Jan/2016:03:40:14 -0500] "GET /music/mp3/dingin_hetty_koesendangband.html HTTP/1.0" 404 40830 0.1136
+222.186.30.211 - - [20/Jan/2016:03:40:59 -0500] "POST /POST_ip_port.php HTTP/1.0" 404 40775 0.2064
+66.249.64.89 - - [20/Jan/2016:03:42:30 -0500] "GET /song/q HTTP/1.0" 404 40784 0.1593
+157.55.39.1 - - [20/Jan/2016:03:45:46 -0500] "GET /music/mp3/_jomari_off.html HTTP/1.0" 404 40814 0.2385
+157.55.39.1 - - [20/Jan/2016:03:45:47 -0500] "GET /music/mp3/akb48_anata_ga_ite_kureta_kara.html HTTP/1.0" 404 40833 0.0968
+157.55.39.1 - - [20/Jan/2016:03:45:47 -0500] "GET /music/mp3/yesterdays_dream_instrumental_free_mp3_download.html HTTP/1.0" 404 40850 0.1026
+157.55.39.1 - - [20/Jan/2016:03:45:47 -0500] "GET /music/mp3/Bilal_ik_wari_das_day_zara.html HTTP/1.0" 404 40829 0.2161
+157.55.39.1 - - [20/Jan/2016:03:45:48 -0500] "GET /music/mp3/poto_ngentot_tante_bokong_besar.html HTTP/1.0" 404 40834 0.2296
+157.55.39.175 - - [20/Jan/2016:03:45:50 -0500] "GET /music/mp3/Kids_song_twincle_twincle_little_star.html HTTP/1.0" 404 40840 0.0957
+66.249.64.94 - - [20/Jan/2016:03:46:18 -0500] "GET /song/christmas-song-violin-sheet HTTP/1.0" 404 40810 0.2388
+207.46.13.0 - - [20/Jan/2016:03:47:39 -0500] "GET /song/Diy-Summer-Room-Decor-2015-Tumblr-Pinterest-Inspired HTTP/1.0" 404 40849 0.2235
+66.249.64.4 - - [20/Jan/2016:03:50:04 -0500] "GET /mp3/download-lagu-syahdu-via-vallen HTTP/1.0" 404 40815 0.1856
+157.55.39.247 - - [20/Jan/2016:03:52:23 -0500] "GET /music/mp3/7argetli_galbi_men_nadhra.html HTTP/1.0" 404 40828 0.2030
+66.249.64.4 - - [20/Jan/2016:03:53:51 -0500] "GET /mp3/nike-ardilla-album-nonstopmp3 HTTP/1.0" 404 40813 0.2038
+66.249.64.122 - - [20/Jan/2016:03:57:39 -0500] "GET /mp3/download-lagu-sayang-dan-perang HTTP/1.0" 404 40815 0.2727
+66.249.64.4 - - [20/Jan/2016:04:01:26 -0500] "GET /mp3/brodin-koplo-dibatas-kota-ini HTTP/1.0" 404 40813 0.2847
+207.46.13.0 - - [20/Jan/2016:04:03:13 -0500] "GET /music/mp3/A_Lo_more_than_friends.html HTTP/1.0" 404 40825 0.2566
+144.76.155.8 - - [20/Jan/2016:04:03:49 -0500] "GET /music/id/download/MTIxMw/hutang_budi_cipt_muchtar_penyanyi_asli/songs.html HTTP/1.0" 404 40691 0.1200
+66.249.64.127 - - [20/Jan/2016:04:05:12 -0500] "GET /mp3/kumpulan-lagu-koplo-the-rosta HTTP/1.0" 404 40813 0.2026
+66.249.64.4 - - [20/Jan/2016:04:09:00 -0500] "GET /mp3/mp3-lagu-tarling-versi-palapa HTTP/1.0" 404 40813 0.2243
+66.249.64.245 - - [20/Jan/2016:04:10:03 -0500] "GET /music/id/download/NDYtMTAxMw/dabang_2_mash_up_dj_chetas_.html HTTP/1.0" 404 40835 0.2180
+180.76.15.147 - - [20/Jan/2016:04:11:17 -0500] "GET /music/id/download/MDIxMTEz/Lahbitri.html HTTP/1.0" 404 40736 0.1041
+66.249.64.99 - - [20/Jan/2016:04:12:19 -0500] "GET / HTTP/1.0" 200 - 0.1916
+66.249.64.127 - - [20/Jan/2016:04:12:46 -0500] "GET /mp3/om-new-scorpio-kesekso-kangen HTTP/1.0" 404 40813 0.2054
+66.249.64.127 - - [20/Jan/2016:04:16:34 -0500] "GET /mp3/monata-live-solo-oktober-2015 HTTP/1.0" 404 40813 0.2369
+66.249.64.122 - - [20/Jan/2016:04:20:21 -0500] "GET /mp3/Tamil%20Mp3%20Songs%20Download%20Neram HTTP/1.0" 404 40822 0.2708
+66.249.64.127 - - [20/Jan/2016:04:24:08 -0500] "GET /mp3/Tamil%20Mp3%20Songs%20Download%20Links HTTP/1.0" 404 40822 0.2755
+120.17.224.139, 66.249.84.104 - - [20/Jan/2016:04:24:08 -0500] "GET / HTTP/1.0" 200 - 0.3410
+61.147.70.111 - - [20/Jan/2016:04:26:02 -0500] "POST /POST_ip_port.php HTTP/1.0" 404 40775 0.2968
+40.77.167.18 - - [20/Jan/2016:04:26:50 -0500] "GET /music/mp3/sekandal_video_mesum_anak_smp.html HTTP/1.0" 404 40832 0.2605
+66.249.64.94 - - [20/Jan/2016:04:27:55 -0500] "GET /song/download-mp3-dj-freedy-bulan-10-terbaru HTTP/1.0" 404 40822 0.1958
+180.76.15.23 - - [20/Jan/2016:04:30:11 -0500] "GET / HTTP/1.0" 200 - 0.2934
+180.76.15.23 - - [20/Jan/2016:04:30:52 -0500] "GET / HTTP/1.0" 200 - 0.2989
+66.249.64.89 - - [20/Jan/2016:04:31:41 -0500] "GET /song/christmas-song-greensleeves HTTP/1.0" 404 40810 0.1763
+66.220.158.113 - - [20/Jan/2016:04:33:46 -0500] "GET /mp3croplogo.png HTTP/1.0" 404 40680 0.2280
+66.249.64.94 - - [20/Jan/2016:04:35:29 -0500] "GET /song/alone-punjabi-song-download HTTP/1.0" 404 40810 0.2545
+207.46.13.0 - - [20/Jan/2016:04:38:34 -0500] "GET /music/mp3/Fairies_Hikari_no_hate_ni.html HTTP/1.0" 404 40828 0.2437
+66.249.64.89 - - [20/Jan/2016:04:39:15 -0500] "GET /song/christmas-song-instrumental HTTP/1.0" 404 40810 0.1796
+207.46.13.0 - - [20/Jan/2016:04:40:07 -0500] "GET /music/mp3/malligai_poovae_malligai_poovae_parthaya.html HTTP/1.0" 404 40843 0.2194
+54.153.33.152 - - [20/Jan/2016:04:41:57 -0500] "GET / HTTP/1.0" 200 - 0.2027
+157.55.39.1 - - [20/Jan/2016:04:41:57 -0500] "GET /music/mp3/Frank_reyes_24_horas_pm3.html HTTP/1.0" 404 40827 0.2266
+66.249.64.89 - - [20/Jan/2016:04:43:03 -0500] "GET /song/christmas-song-ukulele-tabs HTTP/1.0" 404 40810 0.2253
+40.77.167.18 - - [20/Jan/2016:04:45:47 -0500] "GET /music/mp3/Bangla_Diya_Gadi_Di_Bhakti_Mix_.html HTTP/1.0" 404 40834 0.0932
+66.249.64.94 - - [20/Jan/2016:04:46:50 -0500] "GET /song/christmas-song-owl-city-mp3 HTTP/1.0" 404 40810 0.2263
+66.249.64.89 - - [20/Jan/2016:04:50:37 -0500] "GET /song/download-song-by-anupam-roy HTTP/1.0" 404 40810 0.2595
+40.77.167.18 - - [20/Jan/2016:04:52:59 -0500] "GET /music/id/download/MTExMw/nonstop_hits.html HTTP/1.0" 404 40834 0.2648
+66.249.64.99 - - [20/Jan/2016:04:54:24 -0500] "GET /song/tevar-song-download-320kbps HTTP/1.0" 404 40810 0.2569
+207.46.13.0 - - [20/Jan/2016:04:55:28 -0500] "GET /music/mp3/BEKZIN_TERRIS_Our_Warriors.html HTTP/1.0" 404 40829 0.1198
+66.249.64.245 - - [20/Jan/2016:04:58:11 -0500] "GET /music/id/download/MTIxMw/Bokep_3gp_abg.html HTTP/1.0" 404 40817 0.3209
+66.249.64.130 - - [20/Jan/2016:05:01:47 -0500] "GET /music/id/download/NDYtMTAxMw/lolipop_kamseupay_.html HTTP/1.0" 404 40826 0.2505
+66.249.64.130 - - [20/Jan/2016:05:01:57 -0500] "GET /music/id/download/MjYxMDEz/Cewek_lagi_tidur_di_perkosa.html HTTP/1.0" 404 40833 0.1283
+/usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:195:in `pid=': Already running on PID:6625 (or pid=/home/rails/rails_project/shared/pids/unicorn.pid is stale) (ArgumentError)
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:127:in `start'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/bin/unicorn:126:in `<top (required)>'
+	from /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `load'
+	from /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `<main>'
+	from /usr/local/rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
+	from /usr/local/rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
+/usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:195:in `pid=': Already running on PID:6625 (or pid=/home/rails/rails_project/shared/pids/unicorn.pid is stale) (ArgumentError)
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:127:in `start'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/bin/unicorn:126:in `<top (required)>'
+	from /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `load'
+	from /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `<main>'
+	from /usr/local/rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
+	from /usr/local/rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
+I, [2016-01-20T05:05:04.475984 #6625]  INFO -- : reaped #<Process::Status: pid 6628 exit 0> worker=0
+I, [2016-01-20T05:05:04.577932 #6625]  INFO -- : reaped #<Process::Status: pid 6631 exit 0> worker=1
+I, [2016-01-20T05:05:04.578770 #6625]  INFO -- : master complete
+I, [2016-01-20T05:05:08.921136 #8503]  INFO -- : Refreshing Gem list
+/usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/spec_set.rb:92:in `block in materialize': Could not find figaro-1.1.1 in any of the sources (Bundler::GemNotFound)
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/spec_set.rb:85:in `map!'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/spec_set.rb:85:in `materialize'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/definition.rb:132:in `specs'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/definition.rb:177:in `specs_for'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/definition.rb:166:in `requested_specs'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/environment.rb:18:in `requested_specs'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/runtime.rb:13:in `setup'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler.rb:122:in `setup'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/setup.rb:18:in `<top (required)>'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /home/rails/rails_project/config/boot.rb:3:in `<top (required)>'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /home/rails/rails_project/config/application.rb:1:in `<top (required)>'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /home/rails/rails_project/config/environment.rb:2:in `<top (required)>'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from config.ru:4:in `block in <main>'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/rack-1.6.4/lib/rack/builder.rb:55:in `instance_eval'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/rack-1.6.4/lib/rack/builder.rb:55:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1:in `<main>'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn.rb:46:in `eval'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn.rb:46:in `block in builder'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:752:in `call'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:752:in `build_app!'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:129:in `start'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/bin/unicorn:126:in `<top (required)>'
+	from /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `load'
+	from /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `<main>'
+	from /usr/local/rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
+	from /usr/local/rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
+I, [2016-01-20T05:05:18.104257 #8512]  INFO -- : Refreshing Gem list
+/usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/spec_set.rb:92:in `block in materialize': Could not find figaro-1.1.1 in any of the sources (Bundler::GemNotFound)
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/spec_set.rb:85:in `map!'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/spec_set.rb:85:in `materialize'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/definition.rb:132:in `specs'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/definition.rb:177:in `specs_for'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/definition.rb:166:in `requested_specs'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/environment.rb:18:in `requested_specs'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/runtime.rb:13:in `setup'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler.rb:122:in `setup'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/setup.rb:18:in `<top (required)>'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /home/rails/rails_project/config/boot.rb:3:in `<top (required)>'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /home/rails/rails_project/config/application.rb:1:in `<top (required)>'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /home/rails/rails_project/config/environment.rb:2:in `<top (required)>'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from config.ru:4:in `block in <main>'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/rack-1.6.4/lib/rack/builder.rb:55:in `instance_eval'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/rack-1.6.4/lib/rack/builder.rb:55:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1:in `<main>'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn.rb:46:in `eval'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn.rb:46:in `block in builder'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:752:in `call'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:752:in `build_app!'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:129:in `start'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/bin/unicorn:126:in `<top (required)>'
+	from /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `load'
+	from /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `<main>'
+	from /usr/local/rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
+	from /usr/local/rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
+I, [2016-01-20T05:05:44.415294 #8518]  INFO -- : Refreshing Gem list
+/usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/spec_set.rb:92:in `block in materialize': Could not find figaro-1.1.1 in any of the sources (Bundler::GemNotFound)
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/spec_set.rb:85:in `map!'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/spec_set.rb:85:in `materialize'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/definition.rb:132:in `specs'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/definition.rb:177:in `specs_for'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/definition.rb:166:in `requested_specs'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/environment.rb:18:in `requested_specs'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/runtime.rb:13:in `setup'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler.rb:122:in `setup'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/setup.rb:18:in `<top (required)>'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /home/rails/rails_project/config/boot.rb:3:in `<top (required)>'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /home/rails/rails_project/config/application.rb:1:in `<top (required)>'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /home/rails/rails_project/config/environment.rb:2:in `<top (required)>'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from config.ru:4:in `block in <main>'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/rack-1.6.4/lib/rack/builder.rb:55:in `instance_eval'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/rack-1.6.4/lib/rack/builder.rb:55:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1:in `<main>'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn.rb:46:in `eval'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn.rb:46:in `block in builder'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:752:in `call'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:752:in `build_app!'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:129:in `start'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/bin/unicorn:126:in `<top (required)>'
+	from /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `load'
+	from /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `<main>'
+	from /usr/local/rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
+	from /usr/local/rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
+I, [2016-01-20T05:18:02.577722 #9066]  INFO -- : Refreshing Gem list
+I, [2016-01-20T05:18:04.150177 #9066]  INFO -- : unlinking existing socket=/home/rails/rails_project/shared/sockets/unicorn.sock
+I, [2016-01-20T05:18:04.150433 #9066]  INFO -- : listening on addr=/home/rails/rails_project/shared/sockets/unicorn.sock fd=10
+I, [2016-01-20T05:18:04.150563 #9066]  INFO -- : worker=0 spawning...
+I, [2016-01-20T05:18:04.152619 #9066]  INFO -- : worker=1 spawning...
+I, [2016-01-20T05:18:04.153588 #9068]  INFO -- : worker=0 spawned pid=9068
+I, [2016-01-20T05:18:04.153775 #9068]  INFO -- : worker=0 ready
+I, [2016-01-20T05:18:04.155316 #9066]  INFO -- : master process ready
+I, [2016-01-20T05:18:04.156337 #9071]  INFO -- : worker=1 spawned pid=9071
+I, [2016-01-20T05:18:04.156506 #9071]  INFO -- : worker=1 ready
+E, [2016-01-20T05:18:05.603320 #9068] ERROR -- : app error: Missing `secret_token` and `secret_key_base` for 'production' environment, set these values in `config/secrets.yml` (RuntimeError)
+E, [2016-01-20T05:18:05.603437 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/application.rb:534:in `validate_secret_key_config!'
+E, [2016-01-20T05:18:05.603478 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/application.rb:246:in `env_config'
+E, [2016-01-20T05:18:05.603518 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/engine.rb:514:in `call'
+E, [2016-01-20T05:18:05.603565 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/application.rb:165:in `call'
+E, [2016-01-20T05:18:05.603628 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:562:in `process_client'
+E, [2016-01-20T05:18:05.603684 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:658:in `worker_loop'
+E, [2016-01-20T05:18:05.603730 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:508:in `spawn_missing_workers'
+E, [2016-01-20T05:18:05.603770 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:132:in `start'
+E, [2016-01-20T05:18:05.603808 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/bin/unicorn:126:in `<top (required)>'
+E, [2016-01-20T05:18:05.603835 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `load'
+E, [2016-01-20T05:18:05.603872 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `<main>'
+E, [2016-01-20T05:18:05.603904 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
+E, [2016-01-20T05:18:05.603954 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
+E, [2016-01-20T05:18:08.928040 #9071] ERROR -- : app error: Missing `secret_token` and `secret_key_base` for 'production' environment, set these values in `config/secrets.yml` (RuntimeError)
+E, [2016-01-20T05:18:08.928241 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/application.rb:534:in `validate_secret_key_config!'
+E, [2016-01-20T05:18:08.928287 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/application.rb:246:in `env_config'
+E, [2016-01-20T05:18:08.928334 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/engine.rb:514:in `call'
+E, [2016-01-20T05:18:08.928393 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/application.rb:165:in `call'
+E, [2016-01-20T05:18:08.928443 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:562:in `process_client'
+E, [2016-01-20T05:18:08.928488 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:658:in `worker_loop'
+E, [2016-01-20T05:18:08.928543 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:508:in `spawn_missing_workers'
+E, [2016-01-20T05:18:08.928597 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:132:in `start'
+E, [2016-01-20T05:18:08.928638 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/bin/unicorn:126:in `<top (required)>'
+E, [2016-01-20T05:18:08.928676 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `load'
+E, [2016-01-20T05:18:08.928731 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `<main>'
+E, [2016-01-20T05:18:08.928783 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
+E, [2016-01-20T05:18:08.928819 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
+E, [2016-01-20T05:18:09.469660 #9068] ERROR -- : app error: Missing `secret_token` and `secret_key_base` for 'production' environment, set these values in `config/secrets.yml` (RuntimeError)
+E, [2016-01-20T05:18:09.469849 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/application.rb:534:in `validate_secret_key_config!'
+E, [2016-01-20T05:18:09.469924 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/application.rb:246:in `env_config'
+E, [2016-01-20T05:18:09.469984 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/engine.rb:514:in `call'
+E, [2016-01-20T05:18:09.470028 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/application.rb:165:in `call'
+E, [2016-01-20T05:18:09.470083 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:562:in `process_client'
+E, [2016-01-20T05:18:09.470159 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:658:in `worker_loop'
+E, [2016-01-20T05:18:09.470231 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:508:in `spawn_missing_workers'
+E, [2016-01-20T05:18:09.470278 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:132:in `start'
+E, [2016-01-20T05:18:09.470331 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/bin/unicorn:126:in `<top (required)>'
+E, [2016-01-20T05:18:09.470395 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `load'
+E, [2016-01-20T05:18:09.470460 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `<main>'
+E, [2016-01-20T05:18:09.470556 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
+E, [2016-01-20T05:18:09.470614 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
+E, [2016-01-20T05:18:10.468559 #9071] ERROR -- : app error: Missing `secret_token` and `secret_key_base` for 'production' environment, set these values in `config/secrets.yml` (RuntimeError)
+E, [2016-01-20T05:18:10.468714 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/application.rb:534:in `validate_secret_key_config!'
+E, [2016-01-20T05:18:10.468764 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/application.rb:246:in `env_config'
+E, [2016-01-20T05:18:10.468800 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/engine.rb:514:in `call'
+E, [2016-01-20T05:18:10.468839 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/application.rb:165:in `call'
+E, [2016-01-20T05:18:10.468883 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:562:in `process_client'
+E, [2016-01-20T05:18:10.468935 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:658:in `worker_loop'
+E, [2016-01-20T05:18:10.468977 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:508:in `spawn_missing_workers'
+E, [2016-01-20T05:18:10.469013 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:132:in `start'
+E, [2016-01-20T05:18:10.469061 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/bin/unicorn:126:in `<top (required)>'
+E, [2016-01-20T05:18:10.469104 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `load'
+E, [2016-01-20T05:18:10.469146 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `<main>'
+E, [2016-01-20T05:18:10.469183 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
+E, [2016-01-20T05:18:10.469281 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
+E, [2016-01-20T05:18:11.414693 #9068] ERROR -- : app error: Missing `secret_token` and `secret_key_base` for 'production' environment, set these values in `config/secrets.yml` (RuntimeError)
+E, [2016-01-20T05:18:11.414871 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/application.rb:534:in `validate_secret_key_config!'
+E, [2016-01-20T05:18:11.414950 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/application.rb:246:in `env_config'
+E, [2016-01-20T05:18:11.415041 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/engine.rb:514:in `call'
+E, [2016-01-20T05:18:11.415107 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/application.rb:165:in `call'
+E, [2016-01-20T05:18:11.415148 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:562:in `process_client'
+E, [2016-01-20T05:18:11.415193 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:658:in `worker_loop'
+E, [2016-01-20T05:18:11.415245 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:508:in `spawn_missing_workers'
+E, [2016-01-20T05:18:11.415311 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:132:in `start'
+E, [2016-01-20T05:18:11.415355 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/bin/unicorn:126:in `<top (required)>'
+E, [2016-01-20T05:18:11.415424 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `load'
+E, [2016-01-20T05:18:11.415477 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `<main>'
+E, [2016-01-20T05:18:11.415524 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
+E, [2016-01-20T05:18:11.415558 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
+E, [2016-01-20T05:18:11.576815 #9071] ERROR -- : app error: Missing `secret_token` and `secret_key_base` for 'production' environment, set these values in `config/secrets.yml` (RuntimeError)
+E, [2016-01-20T05:18:11.576936 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/application.rb:534:in `validate_secret_key_config!'
+E, [2016-01-20T05:18:11.576976 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/application.rb:246:in `env_config'
+E, [2016-01-20T05:18:11.577027 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/engine.rb:514:in `call'
+E, [2016-01-20T05:18:11.577067 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/application.rb:165:in `call'
+E, [2016-01-20T05:18:11.577104 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:562:in `process_client'
+E, [2016-01-20T05:18:11.577139 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:658:in `worker_loop'
+E, [2016-01-20T05:18:11.577171 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:508:in `spawn_missing_workers'
+E, [2016-01-20T05:18:11.577195 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:132:in `start'
+E, [2016-01-20T05:18:11.577257 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/bin/unicorn:126:in `<top (required)>'
+E, [2016-01-20T05:18:11.577284 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `load'
+E, [2016-01-20T05:18:11.577307 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `<main>'
+E, [2016-01-20T05:18:11.577329 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
+E, [2016-01-20T05:18:11.577360 #9071] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
+E, [2016-01-20T05:18:29.337742 #9068] ERROR -- : app error: Missing `secret_token` and `secret_key_base` for 'production' environment, set these values in `config/secrets.yml` (RuntimeError)
+E, [2016-01-20T05:18:29.338000 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/application.rb:534:in `validate_secret_key_config!'
+E, [2016-01-20T05:18:29.338060 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/application.rb:246:in `env_config'
+E, [2016-01-20T05:18:29.338116 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/engine.rb:514:in `call'
+E, [2016-01-20T05:18:29.338169 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/application.rb:165:in `call'
+E, [2016-01-20T05:18:29.338208 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:562:in `process_client'
+E, [2016-01-20T05:18:29.338245 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:658:in `worker_loop'
+E, [2016-01-20T05:18:29.338296 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:508:in `spawn_missing_workers'
+E, [2016-01-20T05:18:29.338347 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:132:in `start'
+E, [2016-01-20T05:18:29.338403 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/bin/unicorn:126:in `<top (required)>'
+E, [2016-01-20T05:18:29.338452 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `load'
+E, [2016-01-20T05:18:29.338502 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `<main>'
+E, [2016-01-20T05:18:29.338567 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
+E, [2016-01-20T05:18:29.338616 #9068] ERROR -- : /usr/local/rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
+I, [2016-01-20T05:18:32.326311 #9066]  INFO -- : reaped #<Process::Status: pid 9068 exit 0> worker=0
+I, [2016-01-20T05:18:32.326556 #9066]  INFO -- : reaped #<Process::Status: pid 9071 exit 0> worker=1
+I, [2016-01-20T05:18:32.326731 #9066]  INFO -- : master complete
+I, [2016-01-20T05:21:46.211507 #9367]  INFO -- : Refreshing Gem list
+I, [2016-01-20T05:21:48.112824 #9367]  INFO -- : unlinking existing socket=/home/rails/rails_project/shared/sockets/unicorn.sock
+I, [2016-01-20T05:21:48.113443 #9367]  INFO -- : listening on addr=/home/rails/rails_project/shared/sockets/unicorn.sock fd=10
+I, [2016-01-20T05:21:48.113766 #9367]  INFO -- : worker=0 spawning...
+I, [2016-01-20T05:21:48.118974 #9370]  INFO -- : worker=0 spawned pid=9370
+I, [2016-01-20T05:21:48.119528 #9370]  INFO -- : worker=0 ready
+I, [2016-01-20T05:21:48.120076 #9367]  INFO -- : worker=1 spawning...
+I, [2016-01-20T05:21:48.122751 #9367]  INFO -- : master process ready
+I, [2016-01-20T05:21:48.124875 #9373]  INFO -- : worker=1 spawned pid=9373
+I, [2016-01-20T05:21:48.125379 #9373]  INFO -- : worker=1 ready
+I, [2016-01-20T05:22:01.161651 #9367]  INFO -- : reaped #<Process::Status: pid 9370 exit 0> worker=0
+I, [2016-01-20T05:22:01.162022 #9367]  INFO -- : reaped #<Process::Status: pid 9373 exit 0> worker=1
+I, [2016-01-20T05:22:01.162273 #9367]  INFO -- : master complete
+I, [2016-01-20T05:22:27.724395 #9390]  INFO -- : Refreshing Gem list
+I, [2016-01-20T05:22:29.750856 #9390]  INFO -- : unlinking existing socket=/home/rails/rails_project/shared/sockets/unicorn.sock
+I, [2016-01-20T05:22:29.751113 #9390]  INFO -- : listening on addr=/home/rails/rails_project/shared/sockets/unicorn.sock fd=10
+I, [2016-01-20T05:22:29.751267 #9390]  INFO -- : worker=0 spawning...
+I, [2016-01-20T05:22:29.753783 #9390]  INFO -- : worker=1 spawning...
+I, [2016-01-20T05:22:29.754817 #9392]  INFO -- : worker=0 spawned pid=9392
+I, [2016-01-20T05:22:29.755001 #9392]  INFO -- : worker=0 ready
+I, [2016-01-20T05:22:29.756795 #9390]  INFO -- : master process ready
+I, [2016-01-20T05:22:29.759647 #9395]  INFO -- : worker=1 spawned pid=9395
+I, [2016-01-20T05:22:29.759801 #9395]  INFO -- : worker=1 ready
+I, [2016-01-20T05:22:57.900153 #9390]  INFO -- : reaped #<Process::Status: pid 9392 exit 0> worker=0
+I, [2016-01-20T05:22:58.154858 #9390]  INFO -- : reaped #<Process::Status: pid 9395 exit 0> worker=1
+I, [2016-01-20T05:22:58.155323 #9390]  INFO -- : master complete
+I, [2016-01-20T05:23:09.002589 #9406]  INFO -- : Refreshing Gem list
+I, [2016-01-20T05:23:11.333969 #9406]  INFO -- : unlinking existing socket=/home/rails/rails_project/shared/sockets/unicorn.sock
+I, [2016-01-20T05:23:11.334586 #9406]  INFO -- : listening on addr=/home/rails/rails_project/shared/sockets/unicorn.sock fd=10
+I, [2016-01-20T05:23:11.334976 #9406]  INFO -- : worker=0 spawning...
+I, [2016-01-20T05:23:11.340141 #9406]  INFO -- : worker=1 spawning...
+I, [2016-01-20T05:23:11.343210 #9408]  INFO -- : worker=0 spawned pid=9408
+I, [2016-01-20T05:23:11.343790 #9408]  INFO -- : worker=0 ready
+I, [2016-01-20T05:23:11.345824 #9406]  INFO -- : master process ready
+I, [2016-01-20T05:23:11.347252 #9411]  INFO -- : worker=1 spawned pid=9411
+I, [2016-01-20T05:23:11.347462 #9411]  INFO -- : worker=1 ready
+I, [2016-01-20T05:23:18.213349 #9406]  INFO -- : reaped #<Process::Status: pid 9408 exit 0> worker=0
+I, [2016-01-20T05:23:18.213652 #9406]  INFO -- : reaped #<Process::Status: pid 9411 exit 0> worker=1
+I, [2016-01-20T05:23:18.213869 #9406]  INFO -- : master complete
+I, [2016-01-20T05:24:52.960413 #9649]  INFO -- : Refreshing Gem list
+I, [2016-01-20T05:24:54.447786 #9649]  INFO -- : unlinking existing socket=/home/rails/rails_project/shared/sockets/unicorn.sock
+I, [2016-01-20T05:24:54.448001 #9649]  INFO -- : listening on addr=/home/rails/rails_project/shared/sockets/unicorn.sock fd=10
+I, [2016-01-20T05:24:54.448149 #9649]  INFO -- : worker=0 spawning...
+I, [2016-01-20T05:24:54.450023 #9649]  INFO -- : worker=1 spawning...
+I, [2016-01-20T05:24:54.451053 #9649]  INFO -- : master process ready
+I, [2016-01-20T05:24:54.452074 #9651]  INFO -- : worker=0 spawned pid=9651
+I, [2016-01-20T05:24:54.452245 #9651]  INFO -- : worker=0 ready
+I, [2016-01-20T05:24:54.453256 #9653]  INFO -- : worker=1 spawned pid=9653
+I, [2016-01-20T05:24:54.453509 #9653]  INFO -- : worker=1 ready
+I, [2016-01-20T05:25:00.141408 #9649]  INFO -- : reaped #<Process::Status: pid 9651 exit 0> worker=0
+I, [2016-01-20T05:25:00.141594 #9649]  INFO -- : reaped #<Process::Status: pid 9653 exit 0> worker=1
+I, [2016-01-20T05:25:00.141720 #9649]  INFO -- : master complete
+I, [2016-01-20T05:28:11.004353 #10062]  INFO -- : Refreshing Gem list
+I, [2016-01-20T05:28:12.540352 #10062]  INFO -- : unlinking existing socket=/home/rails/rails_project/shared/sockets/unicorn.sock
+I, [2016-01-20T05:28:12.540834 #10062]  INFO -- : listening on addr=/home/rails/rails_project/shared/sockets/unicorn.sock fd=10
+I, [2016-01-20T05:28:12.541072 #10062]  INFO -- : worker=0 spawning...
+I, [2016-01-20T05:28:12.543875 #10062]  INFO -- : worker=1 spawning...
+I, [2016-01-20T05:28:12.545829 #10064]  INFO -- : worker=0 spawned pid=10064
+I, [2016-01-20T05:28:12.546220 #10064]  INFO -- : worker=0 ready
+I, [2016-01-20T05:28:12.548623 #10062]  INFO -- : master process ready
+I, [2016-01-20T05:28:12.550753 #10067]  INFO -- : worker=1 spawned pid=10067
+I, [2016-01-20T05:28:12.551188 #10067]  INFO -- : worker=1 ready
+I, [2016-01-20T05:28:33.193832 #10062]  INFO -- : reaped #<Process::Status: pid 10064 exit 0> worker=0
+I, [2016-01-20T05:28:33.194110 #10062]  INFO -- : reaped #<Process::Status: pid 10067 exit 0> worker=1
+I, [2016-01-20T05:28:33.194402 #10062]  INFO -- : master complete
