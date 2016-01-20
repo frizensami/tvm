@@ -649,3 +649,16 @@ I, [2016-01-20T07:00:52.251021 #12366]  INFO -- : worker=1 ready
 I, [2016-01-20T07:04:01.803828 #12360]  INFO -- : reaped #<Process::Status: pid 12363 exit 0> worker=0
 I, [2016-01-20T07:04:01.804504 #12360]  INFO -- : reaped #<Process::Status: pid 12366 exit 0> worker=1
 I, [2016-01-20T07:04:01.804914 #12360]  INFO -- : master complete
+I, [2016-01-20T07:05:47.012076 #12416]  INFO -- : Refreshing Gem list
+I, [2016-01-20T07:05:49.072295 #12416]  INFO -- : unlinking existing socket=/home/rails/rails_project/shared/sockets/unicorn.sock
+I, [2016-01-20T07:05:49.072535 #12416]  INFO -- : listening on addr=/home/rails/rails_project/shared/sockets/unicorn.sock fd=11
+I, [2016-01-20T07:05:49.072667 #12416]  INFO -- : worker=0 spawning...
+I, [2016-01-20T07:05:49.074468 #12416]  INFO -- : worker=1 spawning...
+I, [2016-01-20T07:05:49.075412 #12420]  INFO -- : worker=0 spawned pid=12420
+I, [2016-01-20T07:05:49.075628 #12420]  INFO -- : worker=0 ready
+I, [2016-01-20T07:05:49.077136 #12416]  INFO -- : master process ready
+I, [2016-01-20T07:05:49.082350 #12423]  INFO -- : worker=1 spawned pid=12423
+I, [2016-01-20T07:05:49.082643 #12423]  INFO -- : worker=1 ready
+I, [2016-01-20T07:05:53.525723 #12416]  INFO -- : reaped #<Process::Status: pid 12420 exit 0> worker=0
+I, [2016-01-20T07:05:53.526104 #12416]  INFO -- : reaped #<Process::Status: pid 12423 exit 0> worker=1
+I, [2016-01-20T07:05:53.526375 #12416]  INFO -- : master complete
