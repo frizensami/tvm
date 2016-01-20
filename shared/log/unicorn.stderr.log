@@ -662,3 +662,154 @@ I, [2016-01-20T07:05:49.082643 #12423]  INFO -- : worker=1 ready
 I, [2016-01-20T07:05:53.525723 #12416]  INFO -- : reaped #<Process::Status: pid 12420 exit 0> worker=0
 I, [2016-01-20T07:05:53.526104 #12416]  INFO -- : reaped #<Process::Status: pid 12423 exit 0> worker=1
 I, [2016-01-20T07:05:53.526375 #12416]  INFO -- : master complete
+I, [2016-01-20T07:10:05.642652 #12515]  INFO -- : Refreshing Gem list
+/usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/spec_set.rb:92:in `block in materialize': Could not find flipclockjs-rails-0.7.7 in any of the sources (Bundler::GemNotFound)
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/spec_set.rb:85:in `map!'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/spec_set.rb:85:in `materialize'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/definition.rb:132:in `specs'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/definition.rb:177:in `specs_for'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/definition.rb:166:in `requested_specs'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/environment.rb:18:in `requested_specs'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/runtime.rb:13:in `setup'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler.rb:122:in `setup'
+	from /usr/local/rvm/gems/ruby-2.2.1@global/gems/bundler-1.8.4/lib/bundler/setup.rb:18:in `<top (required)>'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /home/rails/rails_project/config/boot.rb:3:in `<top (required)>'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /home/rails/rails_project/config/application.rb:1:in `<top (required)>'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /home/rails/rails_project/config/environment.rb:2:in `<top (required)>'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from config.ru:4:in `block in <main>'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/rack-1.6.4/lib/rack/builder.rb:55:in `instance_eval'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/rack-1.6.4/lib/rack/builder.rb:55:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1:in `<main>'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn.rb:46:in `eval'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn.rb:46:in `block in builder'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:752:in `call'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:752:in `build_app!'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:129:in `start'
+	from /usr/local/rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/bin/unicorn:126:in `<top (required)>'
+	from /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `load'
+	from /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `<main>'
+	from /usr/local/rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
+	from /usr/local/rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
+I, [2016-01-20T07:11:21.906209 #12539]  INFO -- : Refreshing Gem list
+I, [2016-01-20T07:11:23.428661 #12539]  INFO -- : unlinking existing socket=/home/rails/rails_project/shared/sockets/unicorn.sock
+I, [2016-01-20T07:11:23.428958 #12539]  INFO -- : listening on addr=/home/rails/rails_project/shared/sockets/unicorn.sock fd=11
+I, [2016-01-20T07:11:23.429159 #12539]  INFO -- : worker=0 spawning...
+I, [2016-01-20T07:11:23.432448 #12539]  INFO -- : worker=1 spawning...
+I, [2016-01-20T07:11:23.433704 #12542]  INFO -- : worker=0 spawned pid=12542
+I, [2016-01-20T07:11:23.433912 #12542]  INFO -- : worker=0 ready
+I, [2016-01-20T07:11:23.435907 #12539]  INFO -- : master process ready
+I, [2016-01-20T07:11:23.442479 #12545]  INFO -- : worker=1 spawned pid=12545
+I, [2016-01-20T07:11:23.442683 #12545]  INFO -- : worker=1 ready
+I, [2016-01-20T07:13:21.512103 #12539]  INFO -- : reaped #<Process::Status: pid 12542 exit 0> worker=0
+I, [2016-01-20T07:13:21.512495 #12539]  INFO -- : reaped #<Process::Status: pid 12545 exit 0> worker=1
+I, [2016-01-20T07:13:21.512743 #12539]  INFO -- : master complete
+I, [2016-01-20T07:13:24.091123 #12712]  INFO -- : Refreshing Gem list
+I, [2016-01-20T07:13:25.838259 #12712]  INFO -- : unlinking existing socket=/home/rails/rails_project/shared/sockets/unicorn.sock
+I, [2016-01-20T07:13:25.838506 #12712]  INFO -- : listening on addr=/home/rails/rails_project/shared/sockets/unicorn.sock fd=11
+I, [2016-01-20T07:13:25.838676 #12712]  INFO -- : worker=0 spawning...
+I, [2016-01-20T07:13:25.840555 #12712]  INFO -- : worker=1 spawning...
+I, [2016-01-20T07:13:25.841570 #12715]  INFO -- : worker=0 spawned pid=12715
+I, [2016-01-20T07:13:25.841749 #12715]  INFO -- : worker=0 ready
+I, [2016-01-20T07:13:25.843016 #12712]  INFO -- : master process ready
+I, [2016-01-20T07:13:25.850345 #12718]  INFO -- : worker=1 spawned pid=12718
+I, [2016-01-20T07:13:25.850535 #12718]  INFO -- : worker=1 ready
+I, [2016-01-20T08:06:45.092507 #12712]  INFO -- : reaped #<Process::Status: pid 12715 exit 0> worker=0
+I, [2016-01-20T08:06:45.092868 #12712]  INFO -- : reaped #<Process::Status: pid 12718 exit 0> worker=1
+I, [2016-01-20T08:06:45.093143 #12712]  INFO -- : master complete
+I, [2016-01-20T08:06:49.705280 #13435]  INFO -- : Refreshing Gem list
+I, [2016-01-20T08:06:51.615665 #13435]  INFO -- : unlinking existing socket=/home/rails/rails_project/shared/sockets/unicorn.sock
+I, [2016-01-20T08:06:51.615902 #13435]  INFO -- : listening on addr=/home/rails/rails_project/shared/sockets/unicorn.sock fd=11
+I, [2016-01-20T08:06:51.616059 #13435]  INFO -- : worker=0 spawning...
+I, [2016-01-20T08:06:51.617916 #13435]  INFO -- : worker=1 spawning...
+I, [2016-01-20T08:06:51.619072 #13435]  INFO -- : master process ready
+I, [2016-01-20T08:06:51.626492 #13439]  INFO -- : worker=0 spawned pid=13439
+I, [2016-01-20T08:06:51.626734 #13439]  INFO -- : worker=0 ready
+I, [2016-01-20T08:06:51.627797 #13441]  INFO -- : worker=1 spawned pid=13441
+I, [2016-01-20T08:06:51.627973 #13441]  INFO -- : worker=1 ready
+I, [2016-01-20T09:41:23.228056 #13435]  INFO -- : reaped #<Process::Status: pid 13439 exit 0> worker=0
+I, [2016-01-20T09:41:23.228770 #13435]  INFO -- : reaped #<Process::Status: pid 13441 exit 0> worker=1
+I, [2016-01-20T09:41:23.229372 #13435]  INFO -- : master complete
+I, [2016-01-20T09:41:26.883953 #14213]  INFO -- : Refreshing Gem list
+I, [2016-01-20T09:41:28.536620 #14213]  INFO -- : unlinking existing socket=/home/rails/rails_project/shared/sockets/unicorn.sock
+I, [2016-01-20T09:41:28.539437 #14213]  INFO -- : listening on addr=/home/rails/rails_project/shared/sockets/unicorn.sock fd=11
+I, [2016-01-20T09:41:28.539616 #14213]  INFO -- : worker=0 spawning...
+I, [2016-01-20T09:41:28.541792 #14213]  INFO -- : worker=1 spawning...
+I, [2016-01-20T09:41:28.543303 #14213]  INFO -- : master process ready
+I, [2016-01-20T09:41:28.550702 #14216]  INFO -- : worker=0 spawned pid=14216
+I, [2016-01-20T09:41:28.550980 #14216]  INFO -- : worker=0 ready
+I, [2016-01-20T09:41:28.552168 #14218]  INFO -- : worker=1 spawned pid=14218
+I, [2016-01-20T09:41:28.552439 #14218]  INFO -- : worker=1 ready
+I, [2016-01-20T09:42:46.663690 #14213]  INFO -- : reaped #<Process::Status: pid 14216 exit 0> worker=0
+I, [2016-01-20T09:42:46.663877 #14213]  INFO -- : reaped #<Process::Status: pid 14218 exit 0> worker=1
+I, [2016-01-20T09:42:46.664018 #14213]  INFO -- : master complete
+I, [2016-01-20T09:42:52.076089 #14258]  INFO -- : Refreshing Gem list
+I, [2016-01-20T09:42:53.533615 #14258]  INFO -- : unlinking existing socket=/home/rails/rails_project/shared/sockets/unicorn.sock
+I, [2016-01-20T09:42:53.533848 #14258]  INFO -- : listening on addr=/home/rails/rails_project/shared/sockets/unicorn.sock fd=11
+I, [2016-01-20T09:42:53.533981 #14258]  INFO -- : worker=0 spawning...
+I, [2016-01-20T09:42:53.535702 #14258]  INFO -- : worker=1 spawning...
+I, [2016-01-20T09:42:53.536531 #14261]  INFO -- : worker=0 spawned pid=14261
+I, [2016-01-20T09:42:53.536690 #14261]  INFO -- : worker=0 ready
+I, [2016-01-20T09:42:53.537910 #14258]  INFO -- : master process ready
+I, [2016-01-20T09:42:53.542066 #14264]  INFO -- : worker=1 spawned pid=14264
+I, [2016-01-20T09:42:53.542234 #14264]  INFO -- : worker=1 ready
+I, [2016-01-20T09:44:22.984346 #14258]  INFO -- : reaped #<Process::Status: pid 14261 exit 0> worker=0
+I, [2016-01-20T09:44:22.984733 #14258]  INFO -- : reaped #<Process::Status: pid 14264 exit 0> worker=1
+I, [2016-01-20T09:44:22.984986 #14258]  INFO -- : master complete
+I, [2016-01-20T09:44:28.548057 #14554]  INFO -- : Refreshing Gem list
+I, [2016-01-20T09:44:30.117843 #14554]  INFO -- : unlinking existing socket=/home/rails/rails_project/shared/sockets/unicorn.sock
+I, [2016-01-20T09:44:30.118092 #14554]  INFO -- : listening on addr=/home/rails/rails_project/shared/sockets/unicorn.sock fd=11
+I, [2016-01-20T09:44:30.118234 #14554]  INFO -- : worker=0 spawning...
+I, [2016-01-20T09:44:30.120212 #14554]  INFO -- : worker=1 spawning...
+I, [2016-01-20T09:44:30.122239 #14554]  INFO -- : master process ready
+I, [2016-01-20T09:44:30.121122 #14557]  INFO -- : worker=0 spawned pid=14557
+I, [2016-01-20T09:44:30.129718 #14557]  INFO -- : worker=0 ready
+I, [2016-01-20T09:44:30.130855 #14560]  INFO -- : worker=1 spawned pid=14560
+I, [2016-01-20T09:44:30.131079 #14560]  INFO -- : worker=1 ready
+I, [2016-01-20T09:45:19.265471 #14554]  INFO -- : reaped #<Process::Status: pid 14557 exit 0> worker=0
+I, [2016-01-20T09:45:19.265653 #14554]  INFO -- : reaped #<Process::Status: pid 14560 exit 0> worker=1
+I, [2016-01-20T09:45:19.265800 #14554]  INFO -- : master complete
+I, [2016-01-20T09:46:22.692345 #14601]  INFO -- : Refreshing Gem list
+I, [2016-01-20T09:46:24.222056 #14601]  INFO -- : unlinking existing socket=/home/rails/rails_project/shared/sockets/unicorn.sock
+I, [2016-01-20T09:46:24.222304 #14601]  INFO -- : listening on addr=/home/rails/rails_project/shared/sockets/unicorn.sock fd=11
+I, [2016-01-20T09:46:24.222457 #14601]  INFO -- : worker=0 spawning...
+I, [2016-01-20T09:46:24.225368 #14601]  INFO -- : worker=1 spawning...
+I, [2016-01-20T09:46:24.226377 #14604]  INFO -- : worker=0 spawned pid=14604
+I, [2016-01-20T09:46:24.226618 #14604]  INFO -- : worker=0 ready
+I, [2016-01-20T09:46:24.228697 #14601]  INFO -- : master process ready
+I, [2016-01-20T09:46:24.234487 #14607]  INFO -- : worker=1 spawned pid=14607
+I, [2016-01-20T09:46:24.234721 #14607]  INFO -- : worker=1 ready
+I, [2016-01-20T09:47:28.571240 #14601]  INFO -- : reaped #<Process::Status: pid 14604 exit 0> worker=0
+I, [2016-01-20T09:47:28.571439 #14601]  INFO -- : reaped #<Process::Status: pid 14607 exit 0> worker=1
+I, [2016-01-20T09:47:28.571549 #14601]  INFO -- : master complete
+I, [2016-01-20T09:47:33.495391 #14628]  INFO -- : Refreshing Gem list
+I, [2016-01-20T09:47:35.271360 #14628]  INFO -- : unlinking existing socket=/home/rails/rails_project/shared/sockets/unicorn.sock
+I, [2016-01-20T09:47:35.271641 #14628]  INFO -- : listening on addr=/home/rails/rails_project/shared/sockets/unicorn.sock fd=11
+I, [2016-01-20T09:47:35.271819 #14628]  INFO -- : worker=0 spawning...
+I, [2016-01-20T09:47:35.274842 #14628]  INFO -- : worker=1 spawning...
+I, [2016-01-20T09:47:35.275827 #14631]  INFO -- : worker=0 spawned pid=14631
+I, [2016-01-20T09:47:35.276014 #14631]  INFO -- : worker=0 ready
+I, [2016-01-20T09:47:35.277429 #14628]  INFO -- : master process ready
+I, [2016-01-20T09:47:35.282157 #14634]  INFO -- : worker=1 spawned pid=14634
+I, [2016-01-20T09:47:35.282329 #14634]  INFO -- : worker=1 ready
+I, [2016-01-20T09:49:32.032877 #14628]  INFO -- : reaped #<Process::Status: pid 14631 exit 0> worker=0
+I, [2016-01-20T09:49:32.033199 #14628]  INFO -- : reaped #<Process::Status: pid 14634 exit 0> worker=1
+I, [2016-01-20T09:49:32.033590 #14628]  INFO -- : master complete
+I, [2016-01-20T09:49:55.093364 #14708]  INFO -- : Refreshing Gem list
+I, [2016-01-20T09:49:56.931039 #14708]  INFO -- : unlinking existing socket=/home/rails/rails_project/shared/sockets/unicorn.sock
+I, [2016-01-20T09:49:56.931296 #14708]  INFO -- : listening on addr=/home/rails/rails_project/shared/sockets/unicorn.sock fd=11
+I, [2016-01-20T09:49:56.931464 #14708]  INFO -- : worker=0 spawning...
+I, [2016-01-20T09:49:56.933833 #14708]  INFO -- : worker=1 spawning...
+I, [2016-01-20T09:49:56.935337 #14708]  INFO -- : master process ready
+I, [2016-01-20T09:49:56.942415 #14711]  INFO -- : worker=0 spawned pid=14711
+I, [2016-01-20T09:49:56.942602 #14711]  INFO -- : worker=0 ready
+I, [2016-01-20T09:49:56.943609 #14713]  INFO -- : worker=1 spawned pid=14713
+I, [2016-01-20T09:49:56.943769 #14713]  INFO -- : worker=1 ready
