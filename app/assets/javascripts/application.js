@@ -16,6 +16,7 @@
 //= require_tree .
 //= require jquery
 //= require bootstrap-sprockets
+//= require flipclock.min
 
 //This code catches all ajax calls and forces a page refresh
 $(document).ready(function(){
@@ -58,6 +59,31 @@ $(document).ready(function(){
   	}
   });
 
+
+  // Countdown clock in Participants for a particular wave
+  var clock;
+  clock = $('.clock').FlipClock(60, {
+        clockFace: 'MinuteCounter',
+        countdown: true,
+        autoStart: false,
+        callbacks: {
+          start: function() {
+            $('.message').html('');
+          }
+        }
+    });
+
+    $('.Start').click(function(e) {
+      clock.start();
+    });
+
+    $('.Stop').click(function(e) {
+      clock.stop();
+    });
+
+    $('.Reset').click(function(e) {
+      clock.reset();
+    });
 
   // Refresh the overview page once in a while
   /*

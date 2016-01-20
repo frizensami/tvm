@@ -1,15 +1,12 @@
 
-<br><br>
+<h2 class="fronttitle"> Participants in Wave <%= params[:wave_number] %></h2>
 
-<h2> Participants in Wave <%= params[:wave_number] %>
-<br>
-<br>
-<%= form_tag search_bib_participants_path, :method => 'get' do %>
+<!--<%= form_tag search_bib_participants_path, :method => 'get' do %>
   <p>
     <%= text_field_tag :search, params[:search], autofocus: true%>
     <%= submit_tag "Search", :name => nil %>
   </p>
-<% end %>
+<% end %>-->  
 <br>
 <table>
   <thead>
@@ -27,11 +24,20 @@
         <td><%= participant.name %></td>
         <td><%= participant.bib_number %></td>
         <td><%= participant.wave_number %></td>
-        <td><%= link_to 'Show', participant %></td>
-        <td><%= link_to 'Edit', edit_participant_path(participant) %></td>
+        <!--<td><%= link_to 'Show', participant %></td>
+        <td><%= link_to 'Edit', edit_participant_path(participant) %></td>-->
         <!--<td><%= link_to 'Destroy', participant, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
 </table>
 
+<div style="left: 25%">
+<div class="clock" style="margin:2em; left: 25%;"></div>
+</div>
+<div class="message"></div>
+<div>
+  <button class="Start">Start</button>
+  <button class="Stop">Stop</button>
+  <button class="Reset">Reset</button>
+</div>
