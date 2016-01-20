@@ -69,6 +69,9 @@ $(document).ready(function(){
         callbacks: {
           start: function() {
             $('.message').html('');
+          },
+          reset: function() {
+            $('.message').html('Reset has been clicked');
           }
         }
     });
@@ -82,7 +85,8 @@ $(document).ready(function(){
     });
 
     $('.Reset').click(function(e) {
-      clock.reset();
+      clock.stop();
+      clock.setTime(60);
     });
 
   // Refresh the overview page once in a while
