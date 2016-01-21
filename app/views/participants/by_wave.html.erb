@@ -40,8 +40,16 @@
     </table>
 
     <br>
-     <%= button_to('Back', "/participants/by_wave/" + (params[:wave_number].to_i - 1).to_s, {method: :get}) %>
-    <%= button_to('Next', "/participants/by_wave/" + (params[:wave_number].to_i + 1).to_s, {method: :get}) %>
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-2">
+        <%= button_to('Back', "/participants/by_wave/" + (params[:wave_number].to_i - 1).to_s, {method: :get}) %>
+      </div>
+      <div class="col-md-2">
+        <%= button_to('Next', "/participants/by_wave/" + (params[:wave_number].to_i + 1).to_s, {method: :get}) %>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
   </div>
 
   <div class="col-xs-4">
@@ -51,7 +59,7 @@
     <button class="Start">Start</button>
     <button class="Stop">Stop</button>
     <button class="Reset">Reset</button> <br> <br>
-    <button class="Change Timing" onclick="changeTiming()">Change Timing</button>
+    <button class="ChangeTiming" onclick="changeTiming()">Change Timing</button>
   </div>
 
   <div class="col-xs-2"></div>

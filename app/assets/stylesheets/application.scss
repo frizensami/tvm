@@ -55,7 +55,7 @@ p {
 	font-size: 16px; 
 }
 
-input[type="submit"], .Start, .Stop, .Reset {
+input[type="submit"], .Start, .Stop, .Reset, .ChangeTiming {
 	font-family: Times New Roman;
 	font-size: 16px; 
 	border-radius: 8px;
@@ -66,7 +66,7 @@ input[type="submit"], .Start, .Stop, .Reset {
 	padding-right: 10px;
 }
 
-input[type="submit"]:hover, .Start:hover, .Stop:hover, .Reset:hover {
+input[type="submit"]:hover, .Start:hover, .Stop:hover, .Reset:hover, .ChangeTiming:hover {
 	/*background-color: #d2a679;*/
 	background-color: #008000;
 }
