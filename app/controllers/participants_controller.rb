@@ -5,7 +5,7 @@ class ParticipantsController < ApplicationController
   # GET /participants.json
   def index
     #@participants = Participant.all
-    @participants = Participant.order('wave_number DESC')
+    @participants = Participant.order('wave_number ASC')
     @participant = Participant.new
   end
 
