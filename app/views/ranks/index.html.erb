@@ -50,7 +50,7 @@
       <tr>
         <td><%= rank.rank %></td>
         <% Time.zone = "Singapore" %>
-        <td><%= rank.end_time %></td>
+        <td><%= rank.end_time.strftime("%H:%M:%S") %></td>
         <!--<td><%= link_to 'Show', rank %></td>
         <td><%= link_to 'Edit', edit_rank_path(rank) %></td>-->
         <td><%= link_to 'Destroy', rank, method: :delete, data: { confirm: 'Are you sure?' } %></td>
