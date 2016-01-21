@@ -18,6 +18,8 @@
 //= require bootstrap-sprockets
 //= require flipclock.min
 
+
+// GLOBAL VARIABLE FOR CLOCK
 //This code catches all ajax calls and forces a page refresh
 $(document).ready(function(){
 
@@ -62,7 +64,7 @@ $(document).ready(function(){
 
   // Countdown clock in Participants for a particular wave
   var clock;
-  clock = $('.clock').FlipClock(60, {
+  clock = $('.clock').FlipClock((sessionStorage.getItem('start_time') || 60), {
         clockFace: 'MinuteCounter',
         countdown: true,
         autoStart: false,
@@ -86,7 +88,7 @@ $(document).ready(function(){
 
     $('.Reset').click(function(e) {
       clock.stop();
-      clock.setTime(60);
+      clock.setTime((sessionStorage.getItem('start_time') || 60));
     });
 
   // Refresh the overview page once in a while

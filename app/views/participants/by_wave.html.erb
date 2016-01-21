@@ -1,7 +1,12 @@
+<script>
+  function changeTiming() {
+    var timing = prompt("Please enter new timing in seconds")
+    sessionStorage.setItem('start_time', timing)
+  }
+</script>
 <div class="row">
 
   <div class="col-xs-2"></div>
-
   <div class="col-xs-4">
     <h2 class="fronttitle"> Participants in Wave <%= params[:wave_number] %></h2>
     <!--<%= form_tag search_bib_participants_path, :method => 'get' do %>
@@ -45,7 +50,8 @@
     <div class="message"></div>
     <button class="Start">Start</button>
     <button class="Stop">Stop</button>
-    <button class="Reset">Reset</button>
+    <button class="Reset">Reset</button> <br> <br>
+    <button class="Change Timing" onclick="changeTiming()">Change Timing</button>
   </div>
 
   <div class="col-xs-2"></div>
