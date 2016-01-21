@@ -1,4 +1,4 @@
-<div class="row">  
+<div class="row">
 
   <div class="col-xs-2"></div>
 
@@ -9,7 +9,7 @@
         <%= text_field_tag :search, params[:search], autofocus: true%>
         <%= submit_tag "Search", :name => nil %>
       </p>
-    <% end %>-->  
+    <% end %>-->
     <table>
       <thead>
         <tr>
@@ -35,8 +35,8 @@
     </table>
 
     <br>
-    <button class="">Back</button>
-    <button class="">Next</button>
+     <%= button_to('Back', "/participants/by_wave/" + (params[:wave_number].to_i - 1).to_s, {method: :get}) %>
+    <%= button_to('Next', "/participants/by_wave/" + (params[:wave_number].to_i + 1).to_s, {method: :get}) %>
   </div>
 
   <div class="col-xs-4">
