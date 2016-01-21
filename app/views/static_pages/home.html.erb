@@ -9,10 +9,11 @@
 <%= button_to 'Wave', waves_path, :method => "get"  %> <br>
 <%= button_to 'Rank-Timing', ranks_path, :method => "get"  %> <br>
 <%= button_to 'Rank Participants', rank_participants_path, :method => "get"  %> <br>
+<%= button_to 'By Wave List', '/participants/by_wave/' + @latest_wave_number, :method => "get"  %> <br>
+
+
+<br>
+<br>
 <%= button_to 'Overall Participants Results', 'participants/match_rank', :method => "get"  %> <br>
-
-
-<br>
-<br>
 <%= button_to 'Overview <admin>', '/overview', :method => "get"  %> <br>
 
