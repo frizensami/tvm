@@ -92,22 +92,20 @@ class RanksController < ApplicationController
 
 
   def auto
-    @ranks = Rank.all
+    #@ranks = Rank.all
     @new_rank = Rank.new
 
     # Current time
     Time.zone = "Singapore"
-    time_now = Time.zone.now
+    @new_rank.end_time = Time.zone.now
 
     # Edit the new_rank to be added to the database
-    if @ranks.blank?
-      @new_rank.rank = 1  
+    if Rank.count.zero?
+      @new_rank.rank = 1
     else
-      @new_rank.rank = @ranks.last.rank + 1
+      @new_rank.rank = Rank.maximum("rank") + 1
     end
-    @new_rank.end_time = time_now
-    @new_rank.created_at = time_now
-    @new_rank.updated_at = time_now
+
 
     respond_to do |format|
       if @new_rank.save
@@ -126,9 +124,11 @@ class RanksController < ApplicationController
     @new_ranks = @ranks.sort_by { |x| [x.end_time] }
 
     counter = 1
-    @new_ranks.each do |new_rank|
-      new_rank.update_attribute(:rank, counter)
-      counter = counter + 1
+    ActiveRecord::Base.transaction do
+      @new_ranks.each do |new_rank|
+        new_rank.update_attribute(:rank, counter)
+        counter = counter + 1
+      end
     end
 
     respond_to do |format|
