@@ -127,13 +127,15 @@ class WavesController < ApplicationController
     @new_waves = @waves.sort_by { |x| [x.start_time] }
 
     counter = 1
-    @new_waves.each do |new_wave|
-      new_wave.update_attribute(:wave_number, counter)
-      counter = counter + 1
-    end
+    ActiveRecord::Base.transaction do
+      @new_waves.each do |new_wave|
+        new_wave.update_attribute(:wave_number, counter)
+        counter = counter + 1
+      end
 
-    respond_to do |format|
-      format.html { redirect_to waves_url, notice: "Waves were successfully updated"}
+      respond_to do |format|
+        format.html { redirect_to waves_url, notice: "Waves were successfully updated"}
+      end
     end
 
   end
