@@ -1,0 +1,72 @@
+<div class="row">  
+
+  <div class="col-xs-2"></div>
+
+<<<<<<< HEAD
+  <div class="col-xs-4">
+    <h2 class="fronttitle"> Participants in Wave <%= params[:wave_number] %></h2>
+    <!--<%= form_tag search_bib_participants_path, :method => 'get' do %>
+      <p>
+        <%= text_field_tag :search, params[:search], autofocus: true%>
+        <%= submit_tag "Search", :name => nil %>
+      </p>
+    <% end %>-->  
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Bib number</th>
+          <th>Wave number</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+=======
+<!--<%= form_tag search_bib_participants_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search], autofocus: true%>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>-->
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Bib number</th>
+      <th>Wave number</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+>>>>>>> 34cf7968a6e6daa310bc0c6a2fcd7b4f0f6f9c36
+
+      <tbody>
+        <% @participants.each do |participant| %>
+          <tr>
+            <td><%= participant.name %></td>
+            <td><%= participant.bib_number %></td>
+            <td><%= participant.wave_number %></td>
+            <!--<td><%= link_to 'Show', participant %></td>
+            <td><%= link_to 'Edit', edit_participant_path(participant) %></td>-->
+            <!--<td><%= link_to 'Destroy', participant, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+    <button class="">Back</button>
+    <button class="">Next</button>
+  </div>
+
+  <div class="col-xs-4">
+    <h2 class="fronttitle"> Time to start of race</h2>
+    <div class="clock" style="margin:2em; width: 300px; margin-left: auto; margin-right: auto"></div>
+    <div class="message"></div>
+    <button class="Start">Start</button>
+    <button class="Stop">Stop</button>
+    <button class="Reset">Reset</button>
+  </div>
+
+  <div class="col-xs-2"></div>
+
+</div>

@@ -21,3 +21,6 @@
 
 # Ignore shared files
 /shared/*
+
+#ignore public assets
+/public/assets/*
