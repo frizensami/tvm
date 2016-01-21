@@ -93,20 +93,33 @@ class RanksController < ApplicationController
 
   def auto
     #@ranks = Rank.all
-    @new_rank = Rank.new
+    #@new_rank = Rank.new
 
     # Current time
-    Time.zone = "Singapore"
-    @new_rank.end_time = Time.zone.now
+    #Time.zone = "Singapore"
+    #@new_rank.end_time = Time.zone.now
 
     # Edit the new_rank to be added to the database
-    if Rank.count.zero?
-      @new_rank.rank = 1
-    else
-      @new_rank.rank = Rank.maximum("rank") + 1
+    #if Rank.count == 0
+    #  @new_rank.rank = 1
+    #else
+    #  @new_rank.rank = Rank.last.rank + 1
+    #end
+
+    ActiveRecord::Base.transaction do
+	@new_rank = Rank.new
+	Time.zone = "Singapore"
+	@new_rank.end_time = Time.zone.now
+	@new_rank.rank = (Rank.last.try(:rank) || 0) + 1
+   
+	    if @new_rank.save
+		head :ok, content_type: "text/html"
+	    else
+		head :unprocessable_entity, content_type: "text/html"
+	    end
     end
-
-
+	
+=begin
     respond_to do |format|
       if @new_rank.save
         format.html { redirect_to @new_rank, notice: 'Rank was successfully created.' }
@@ -116,6 +129,7 @@ class RanksController < ApplicationController
         format.json { render json: @new_rank.errors, status: :unprocessable_entity }
       end
     end
+=end
   end
 
 

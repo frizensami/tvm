@@ -35,9 +35,13 @@ $(document).ready(function(){
       alert("Either: The Bib number you tried to enter was not registered at the start of the Vertical Marathon \n OR \n Not all fields are filled up (i.e. name, rank or bib number) \n OR \n This rank is missing! Confirm with the rank chip giver if this rank has been cancelled.");
 
     } else {
-    	alert("AJAX Error: Whatever you were saving was not saved.");
+    	//alert("AJAX Error: Whatever you were saving was not saved.");
     	//ok lo you want then can
-      //Turbolinks.visit(location.toString());
+      console.log("-----------");
+      console.log(Date.now());
+      console.log("AJAX ERROR: Error raised in xhr call");
+      console.log("-----------");
+      Turbolinks.visit(location.toString());
     }
 
   });
