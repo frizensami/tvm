@@ -19,10 +19,12 @@
     <%= f.label :rank %><br>
     <%= f.number_field :rank %>
   </div>
+  <!--
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
+  -->
   <div class="field">
     <%= f.label :bib_number %><br>
     <%= f.text_field :bib_number %>
@@ -55,7 +57,7 @@
         <td><%= rank_participant.rank %></td>
         <td><%= rank_participant.name %></td>
         <td><%= rank_participant.bib_number %></td>
-        <td><%= link_to 'Show', rank_participant %></td>
+        <!--<td><%= link_to 'Show', rank_participant %></td> -->
         <td><%= link_to 'Edit', edit_rank_participant_path(rank_participant) %></td>
         <td><%= link_to 'Destroy', rank_participant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -68,9 +70,9 @@
 <br>
 <h2 class = "fronttitle">Instructions</h2>
 <p class="instructions">FOR RANK TAGGER</p>
-<p class="instructions">1) Take the Rank chip of the runner and ask for their name. Record down their Rank (from rank chip), Name and Bib number</p>
+<p class="instructions">1) Take the Rank chip of the runner. Record down their Rank (from rank chip) and Bib number</p>
 <p class="instructions"> Then click "Submit" (Don't click "Force Submit")</p>
-<p class="instructions"> If their Rank chip is part of the "Missing Ranks" which are colored red, it means their Rank chip has been issued incorrectly. Do not submit the form, inform Yew Siang or Sriram.</p>
+<p class="instructions"> Look at the list and ask them if their name is as shown.</p>
 
 <h2 class = "fronttitle">Problems</h2>
 <p class="instructions">1) IN CASE YOU ARE UNABLE TO SUBMIT THE FORM DUE TO ERRORS: Inform Yew Siang or Sriram</p>

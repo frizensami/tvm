@@ -41,8 +41,8 @@
 
 <%= form_tag search_bib_participants_path, :method => 'get' do %>
   <p>
-    <%= text_field_tag :search, params[:search], autofocus: true%>
-    <%= submit_tag "Search Bib Number", :name => nil %>
+    <%= text_field_tag :search, params[:search], autofocus: true, style: "width: 50%; height: 75%"%>
+    <%= submit_tag "Search Bib Number", :name => nil, style: "width: 30%; height: 75%"%>
   </p>
 <% end %>
 

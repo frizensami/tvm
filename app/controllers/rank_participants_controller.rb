@@ -29,7 +29,7 @@ class RankParticipantsController < ApplicationController
   def create
     if params[:commit] == "Force Submit"
       @rank_participant = RankParticipant.new(rank_participant_params)
-
+      @rank_participant.name = "HARD CREATED!" if @rank_participant.name.blank?
       respond_to do |format|
         if @rank_participant.save
           format.html { redirect_to @rank_participant, notice: 'Rank participant was successfully created.' }
@@ -121,6 +121,8 @@ class RankParticipantsController < ApplicationController
     def soft_create(rank_participant_params)
 
       @rank_participant = RankParticipant.new(rank_participant_params)
+
+      @rank_participant.name = Participant.where(bib_number: rank_participant_params[:bib_number]).first.name || "Cannot find name!"
 
       #Check for rank participant as existent in the participants list, and make sure we don't enter a cancelled
       #rank chip number
