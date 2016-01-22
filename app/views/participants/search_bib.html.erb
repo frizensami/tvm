@@ -1,3 +1,4 @@
+<div style="zoom: 500%"
 <h1>Editing Participant</h1>
 <%= form_for(@participant) do |f| %>
   <% if @participant.errors.any? %>
@@ -22,12 +23,14 @@
   </div>
   <div class="field">
     <%= f.label :wave_number %><br>
-    <%= f.number_field :wave_number, min: 1, autofocus: true %>
+    <%= f.number_field :wave_number, min: 1, autofocus: true%>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Update' %>
   </div>
 <% end %>
 
 <%= link_to 'Show', @participant %> |
 <%= link_to 'Back', participants_path %>
+
+</div>

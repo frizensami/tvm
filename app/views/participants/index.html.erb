@@ -1,3 +1,4 @@
+<div style="zoom: 500%;">
 <h1 class = "fronttitle">Listing Participants</h1>
 
 <!--
@@ -41,8 +42,8 @@
 
 <%= form_tag search_bib_participants_path, :method => 'get' do %>
   <p>
-    <%= text_field_tag :search, params[:search], autofocus: true, style: "width: 80vw; height: 10vh;"%>
-    <%= submit_tag "Search Bib Number", :name => nil, style: "width: 50vw; height: 10vh; font-size: 250%"%>
+    <%= text_field_tag :search, params[:search], autofocus: true%>
+    <%= submit_tag "Search Bib Number", :name => nil%>
   </p>
 <% end %>
 
@@ -86,3 +87,4 @@
 <p class="instructions">1) IN CASE YOU ENTERED THE WRONG WAVE NUMBER: Click "Edit" and change to the correct Wave number.</p>
 <br>
 <br>
+</div>
