@@ -16,9 +16,9 @@
       <tr>
         <td><%= rank.rank %></td>
         <td><%= rank.end_time %></td>
-        <td><%= link_to 'Show', rank %></td>
+        <!-- <td><%= link_to 'Show', rank %></td> -->
         <td><%= link_to 'Undo Deletion', "/ranks/#{rank.id}/undo_deletion", method: :patch, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to 'Destroy', "/ranks/#{rank.id}/really_delete", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<!--        <td><%= link_to 'Destroy', "/ranks/#{rank.id}/really_delete", method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>

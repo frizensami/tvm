@@ -43,6 +43,9 @@ gem 'unicorn'
 #for secrets in application.yml file
 gem "figaro"
 
+#check for n + 1 queries now
+#gem "bullet", :group => "production"
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

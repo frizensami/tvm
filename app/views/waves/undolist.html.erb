@@ -16,10 +16,10 @@
       <tr>
         <td><%= wave.wave_number %></td>
         <td><%= wave.start_time %></td>
-        <td><%= link_to 'Show', wave %></td>
+<!--        <td><%= link_to 'Show', wave %></td> -->
 
         <td><%= link_to 'Undo Deletion', "/waves/#{wave.id}/undo_deletion", method: :patch, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to 'Destroy', "/waves/#{wave.id}/really_delete", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<!--        <td><%= link_to 'Destroy', "/waves/#{wave.id}/really_delete", method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>

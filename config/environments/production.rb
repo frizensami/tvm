@@ -1,4 +1,14 @@
 Rails.application.configure do
+=begin
+  config.after_initialize do
+	  Bullet.enable = true
+	  Bullet.alert = true
+	  Bullet.bullet_logger = true
+	  Bullet.console = true
+	  Bullet.rails_logger = true
+	  Bullet.add_footer = true
+  end
+=end
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -77,3 +87,5 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end
+
+
