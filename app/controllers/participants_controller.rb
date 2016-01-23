@@ -113,13 +113,35 @@ class ParticipantsController < ApplicationController
 
   def match_rank
     Time.zone = "Singapore"
-
-    participants = Participant.all.reverse
+=begin
+    participants = Participant.all
     @names_with_ranks = {}
+
+    participants.each do |participant|
+
+      rp = RankParticipant.where(bib_number: participant.bib_number).first
+      end_time = Rank.where(rank: rp.rank).first.end_time
+      wave = Wave.where(wave_number: participant.try(:wave_number)).first
+
+      rank = rp.rank
+      start_time = wave.start_time
+
+      time_delta = Time.at((end_time.to_f - start_time.to_f)).utc.strftime("%H:%M:%S.%3N")
+      waveId = wave.wave_number
+
+
+       @names_with_ranks[participant.name] = [rank, start_time.strftime("%d/%m/%Y %H:%M:%S.%3N"), end_time.strftime("%d/%m/%Y %H:%M:%S.%3N"), time_delta, wave_number]
+    end
+=end
+
+
+    participants = Participant.order("wave_number ASC")
+    @all_info = []
 
     participants.map do |participant|
       rank_participant = RankParticipant.find_by(bib_number: participant.bib_number)
-      rank = -1
+      rank = -3000
+      wave_number = -2000
       end_time = DateTime.new
       start_time = DateTime.new
       time_delta = DateTime.new
@@ -133,11 +155,11 @@ class ParticipantsController < ApplicationController
           #if we do have a timing object, get the end time
           end_time = timing_object.end_time
           #get a wave object to check for a start time
-          wave_object = Wave.find_by(wave_number: participant.wave_number)
-          waveid = wave_object.try(:wave_number)
+          wave_number = Wave.find_by(wave_number: participant.wave_number).wave_number
 
-          unless wave_object.nil?
-            start_time = wave_object.start_time
+
+          unless wave_number.blank?
+            start_time = Wave.find_by(wave_number: participant.wave_number).start_time
 
             #time delta is in MINUTES
             time_delta = Time.at((end_time.to_f - start_time.to_f)).utc.strftime("%H:%M:%S.%3N")
@@ -145,15 +167,32 @@ class ParticipantsController < ApplicationController
 
         end
       else
-        rank = -1
+        rank = -2000
       end
 
       #create final hash as key pointing to array of values
-      @names_with_ranks[participant.name] = [rank, start_time.strftime("%d/%m/%Y %H:%M:%S.%3N"), end_time.strftime("%d/%m/%Y %H:%M:%S.%3N"), time_delta, waveid]
+      @all_info << {name: participant.name,
+                    rank: rank,
+                    start_time: start_time.strftime("%d/%m/%Y %H:%M:%S.%3N"),
+                    end_time: end_time.strftime("%d/%m/%Y %H:%M:%S.%3N"),
+                    timing: time_delta, wave_number: wave_number
+                  }
+      puts "APPENDED!"
+      puts "APPENDED!"
+      puts "APPENDED!"
+      puts "APPENDED!"
+      puts "APPENDED!"
 
+
+
+
+      #@names_with_ranks[participant.name] = [rank, start_time.strftime("%d/%m/%Y %H:%M:%S.%3N"), end_time.strftime("%d/%m/%Y %H:%M:%S.%3N"), time_delta, waveid]
     end
 
+    p "All info!!"
+    p @all_info
   end
+
 
   def unfinished
     @participants = Participant.all

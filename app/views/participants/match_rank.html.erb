@@ -1,5 +1,4 @@
 <h1> Rank Matching </h1>
-
 <table>
   <thead>
     <tr>
@@ -15,17 +14,17 @@
   </thead>
 
   <tbody>
-    <% count = 1 %>
-    <% @names_with_ranks.sort_by { |x| [x[1]] }.reverse.each do |name, rank_timing| %>
+    <td><%= count = 1 %></td>
+    <% @all_info.sort_by{|h| h[:timing]}.each do |info| %>
       <tr>
         <td><%= count %></td>
         <% count = count + 1 %>
-        <td><%= name %></td>
-        <td><%= rank_timing[4] %></td>
-        <td><%= rank_timing[0] %></td>
-        <td><%= rank_timing[1] %></td>
-        <td><%= rank_timing[2] %></td>
-        <td><%= rank_timing[3] %></td>
+        <td><%= info[:name] %></td>
+        <td><%= info[:wave_number] %></td>
+        <td><%= info[:rank] %></td>
+        <td><%= info[:start_time] %></td>
+        <td><%= info[:end_time] %></td>
+        <td><%= info[:timing] %></td>
       </tr>
     <% end %>
   </tbody>

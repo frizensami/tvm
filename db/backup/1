@@ -1,0 +1,556 @@
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: participants; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE participants (
+    id integer NOT NULL,
+    name character varying,
+    bib_number character varying,
+    wave_number integer,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL,
+    deleted_at timestamp without time zone
+);
+
+
+ALTER TABLE public.participants OWNER TO postgres;
+
+--
+-- Name: participants_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE participants_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.participants_id_seq OWNER TO postgres;
+
+--
+-- Name: participants_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE participants_id_seq OWNED BY participants.id;
+
+
+--
+-- Name: rank_participants; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE rank_participants (
+    id integer NOT NULL,
+    rank integer,
+    name character varying,
+    bib_number character varying,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL,
+    deleted_at timestamp without time zone
+);
+
+
+ALTER TABLE public.rank_participants OWNER TO postgres;
+
+--
+-- Name: rank_participants_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE rank_participants_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.rank_participants_id_seq OWNER TO postgres;
+
+--
+-- Name: rank_participants_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE rank_participants_id_seq OWNED BY rank_participants.id;
+
+
+--
+-- Name: ranks; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE ranks (
+    id integer NOT NULL,
+    rank integer,
+    end_time timestamp without time zone,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL,
+    deleted_at timestamp without time zone
+);
+
+
+ALTER TABLE public.ranks OWNER TO postgres;
+
+--
+-- Name: ranks_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE ranks_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.ranks_id_seq OWNER TO postgres;
+
+--
+-- Name: ranks_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE ranks_id_seq OWNED BY ranks.id;
+
+
+--
+-- Name: schema_migrations; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE schema_migrations (
+    version character varying NOT NULL
+);
+
+
+ALTER TABLE public.schema_migrations OWNER TO postgres;
+
+--
+-- Name: waves; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE waves (
+    id integer NOT NULL,
+    wave_number integer,
+    start_time timestamp without time zone,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL,
+    deleted_at timestamp without time zone
+);
+
+
+ALTER TABLE public.waves OWNER TO postgres;
+
+--
+-- Name: waves_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE waves_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.waves_id_seq OWNER TO postgres;
+
+--
+-- Name: waves_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE waves_id_seq OWNED BY waves.id;
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY participants ALTER COLUMN id SET DEFAULT nextval('participants_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY rank_participants ALTER COLUMN id SET DEFAULT nextval('rank_participants_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY ranks ALTER COLUMN id SET DEFAULT nextval('ranks_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY waves ALTER COLUMN id SET DEFAULT nextval('waves_id_seq'::regclass);
+
+
+--
+-- Data for Name: participants; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY participants (id, name, bib_number, wave_number, created_at, updated_at, deleted_at) FROM stdin;
+2	Leong Jude	CN104	\N	2016-01-22 08:18:41.120906	2016-01-23 00:22:08.525771	\N
+4	Chan Ferdinand	CN112	\N	2016-01-22 08:18:41.140169	2016-01-22 08:18:41.140169	\N
+6	Zhang Lei	MN121	\N	2016-01-22 08:18:41.164687	2016-01-22 08:18:41.164687	\N
+8	Lim Jason	MO103	\N	2016-01-22 08:18:41.185697	2016-01-22 08:18:41.185697	\N
+10	Bin arsalahan Mohammed ansar khan	MO120	\N	2016-01-22 08:18:41.20714	2016-01-22 08:18:41.20714	\N
+13	Tan Boon Poh	MO123	\N	2016-01-22 08:18:41.241541	2016-01-22 08:18:41.241541	\N
+15	Chow wah Kong	MO132	\N	2016-01-22 08:18:41.263527	2016-01-22 08:18:41.263527	\N
+17	Font (Joulieau B) Dave	MO141	\N	2016-01-22 08:18:41.285223	2016-01-22 08:18:41.285223	\N
+18	Hui Si Jian	TN104	\N	2016-01-22 08:18:41.296994	2016-01-22 08:18:41.296994	\N
+21	NALLA ABHIJITH	CN110	\N	2016-01-22 08:18:41.329917	2016-01-22 08:18:41.329917	\N
+22	Wang Jennifer	CN115	\N	2016-01-22 08:18:41.341107	2016-01-22 08:18:41.341107	\N
+23	LIM ALISSA	FN100	\N	2016-01-22 08:18:41.353001	2016-01-22 08:18:41.353001	\N
+24	Wang Yumeng	FN104	\N	2016-01-22 08:18:41.364662	2016-01-22 08:18:41.364662	\N
+25	Ramesh Ranita	FN106	\N	2016-01-22 08:18:41.375252	2016-01-22 08:18:41.375252	\N
+26	Ho Elizabeth	FN109	\N	2016-01-22 08:18:41.38622	2016-01-22 08:18:41.38622	\N
+27	Chandran Arun Kumar	MN101	\N	2016-01-22 08:18:41.396629	2016-01-22 08:18:41.396629	\N
+28	Ang Kian Sin	MN102	\N	2016-01-22 08:18:41.407439	2016-01-22 08:18:41.407439	\N
+29	Mak Geng Yuan	MN104	\N	2016-01-22 08:18:41.418777	2016-01-22 08:18:41.418777	\N
+30	Wang Yunzhi	MN105	\N	2016-01-22 08:18:41.43053	2016-01-22 08:18:41.43053	\N
+31	Goy Benjamin	MN107	\N	2016-01-22 08:18:41.439846	2016-01-22 08:18:41.439846	\N
+32	Iqb Mustafa	MN108	\N	2016-01-22 08:18:41.451113	2016-01-22 08:18:41.451113	\N
+33	Lee Wen Sheng, Benjamin	MN111	\N	2016-01-22 08:18:41.464935	2016-01-22 08:18:41.464935	\N
+34	Lee Juin Bin	MN112	\N	2016-01-22 08:18:41.474116	2016-01-22 08:18:41.474116	\N
+35	Koga Jonta	MN117	\N	2016-01-22 08:18:41.485405	2016-01-22 08:18:41.485405	\N
+36	Lee Darren	MN118	\N	2016-01-22 08:18:41.496772	2016-01-22 08:18:41.496772	\N
+37	Yap Teck Hooi	MN126	\N	2016-01-22 08:18:41.507612	2016-01-22 08:18:41.507612	\N
+38	Lue Ik Hong	MN128	\N	2016-01-22 08:18:41.520515	2016-01-22 08:18:41.520515	\N
+39	Tran An	MN129	\N	2016-01-22 08:18:41.53009	2016-01-22 08:18:41.53009	\N
+40	Ng Chin Fei	MN130	\N	2016-01-22 08:18:41.540468	2016-01-22 08:18:41.540468	\N
+41	Trivedi Anupam	MN131	\N	2016-01-22 08:18:41.551734	2016-01-22 08:18:41.551734	\N
+42	Menon Radhakrishnan Bharat	MN132	\N	2016-01-22 08:18:41.574841	2016-01-22 08:18:41.574841	\N
+43	ELLA ALAN	MO100	\N	2016-01-22 08:18:41.584448	2016-01-22 08:18:41.584448	\N
+44	Jimmy Lim	MO101	\N	2016-01-22 08:18:41.595423	2016-01-22 08:18:41.595423	\N
+45	Yong Loi huat	MO102	\N	2016-01-22 08:18:41.606534	2016-01-22 08:18:41.606534	\N
+46	Lin Yaner	MO104	\N	2016-01-22 08:18:41.620076	2016-01-22 08:18:41.620076	\N
+47	KOH THONG MUI	MO105	\N	2016-01-22 08:18:41.629954	2016-01-22 08:18:41.629954	\N
+48	KOH THONG GAN	MO106	\N	2016-01-22 08:18:41.640888	2016-01-22 08:18:41.640888	\N
+49	Sng Boon Heng	MO107	\N	2016-01-22 08:18:41.652424	2016-01-22 08:18:41.652424	\N
+50	Kuan Leong chong	MO110	\N	2016-01-22 08:18:41.663766	2016-01-22 08:18:41.663766	\N
+51	Ithnin Baktiar	MO111	\N	2016-01-22 08:18:41.675876	2016-01-22 08:18:41.675876	\N
+52	Palaniappan Suresh	MO112	\N	2016-01-22 08:18:41.685726	2016-01-22 08:18:41.685726	\N
+53	Lee Choon Ping Thomas	MO113	\N	2016-01-22 08:18:41.696221	2016-01-22 08:18:41.696221	\N
+54	Ah Kau Chan	MO115	\N	2016-01-22 08:18:41.707171	2016-01-22 08:18:41.707171	\N
+55	TAN JUN ANN	MO119	\N	2016-01-22 08:18:41.718317	2016-01-22 08:18:41.718317	\N
+56	Gopala krishnan Rajaraman	MO124	\N	2016-01-22 08:18:41.729433	2016-01-22 08:18:41.729433	\N
+57	LOH LIP CHIANG	MO133	\N	2016-01-22 08:18:41.739948	2016-01-22 08:18:41.739948	\N
+58	Uthiraphati Arunkumar	MO134	\N	2016-01-22 08:18:41.751022	2016-01-22 08:18:41.751022	\N
+59	See Zong Chen	MO142	\N	2016-01-22 08:18:41.762799	2016-01-22 08:18:41.762799	\N
+60	Chan Chee Wah	MO143	\N	2016-01-22 08:18:41.773846	2016-01-22 08:18:41.773846	\N
+116	Sanjay Radakrishna	MO135	\N	2016-01-22 08:18:42.396428	2016-01-22 08:18:42.396428	\N
+61	Lee Zhi Kai	MO144	\N	2016-01-22 08:18:41.784903	2016-01-22 08:18:41.784903	\N
+62	WANG Zirui	TN108	\N	2016-01-22 08:18:41.796128	2016-01-22 08:18:41.796128	\N
+63	Neo Isaac	TN111	\N	2016-01-22 08:18:41.807077	2016-01-22 08:18:41.807077	\N
+64	Mishra Rajesh	TN112	\N	2016-01-22 08:18:41.819218	2016-01-22 08:18:41.819218	\N
+65	Suryavanshi Pranay	TN113	\N	2016-01-22 08:18:41.830096	2016-01-22 08:18:41.830096	\N
+66	Koh Patrick	TN114	\N	2016-01-22 08:18:41.840695	2016-01-22 08:18:41.840695	\N
+67	Ho Keen Hoe	TN115	\N	2016-01-22 08:18:41.853528	2016-01-22 08:18:41.853528	\N
+68	Zhang Pinzheng	TN117	\N	2016-01-22 08:18:41.863576	2016-01-22 08:18:41.863576	\N
+69	Vu Xuan Minh	TN118	\N	2016-01-22 08:18:41.874226	2016-01-22 08:18:41.874226	\N
+70	Dinesh Selven	TN130	\N	2016-01-22 08:18:41.885559	2016-01-22 08:18:41.885559	\N
+71	Iau James	TN132	\N	2016-01-22 08:18:41.89761	2016-01-22 08:18:41.89761	\N
+72	Tan Wai fang	WO102	\N	2016-01-22 08:18:41.907898	2016-01-22 08:18:41.907898	\N
+73	Soh Angeline	WO105	\N	2016-01-22 08:18:41.920407	2016-01-22 08:18:41.920407	\N
+74	Chua Dora	WO108	\N	2016-01-22 08:18:41.930035	2016-01-22 08:18:41.930035	\N
+75	Yip Shirley	WO110	\N	2016-01-22 08:18:41.940879	2016-01-22 08:18:41.940879	\N
+76	Rothe Jillian	WO115	\N	2016-01-22 08:18:41.952481	2016-01-22 08:18:41.952481	\N
+77	Wong Josephine	WO118	\N	2016-01-22 08:18:41.96352	2016-01-22 08:18:41.96352	\N
+78	Tan Felicia	WO119	\N	2016-01-22 08:18:41.974944	2016-01-22 08:18:41.974944	\N
+79	Bassenghi Federica	WO120	\N	2016-01-22 08:18:41.985825	2016-01-22 08:18:41.985825	\N
+80	Singh Priyanka	WO121	\N	2016-01-22 08:18:41.996733	2016-01-22 08:18:41.996733	\N
+81	Santoso Michelle	CN101	\N	2016-01-22 08:18:42.008097	2016-01-22 08:18:42.008097	\N
+82	Goh Lisa	CN102	\N	2016-01-22 08:18:42.019066	2016-01-22 08:18:42.019066	\N
+83	Choo Joon Guan	CN103	\N	2016-01-22 08:18:42.030903	2016-01-22 08:18:42.030903	\N
+84	Cher Yuting	CN105	\N	2016-01-22 08:18:42.039855	2016-01-22 08:18:42.039855	\N
+85	Zapata Dazzelyn	CN108	\N	2016-01-22 08:18:42.050974	2016-01-22 08:18:42.050974	\N
+86	Zeng Jin	CN111	\N	2016-01-22 08:18:42.065187	2016-01-22 08:18:42.065187	\N
+87	Chiang Terrence	CN114	\N	2016-01-22 08:18:42.07503	2016-01-22 08:18:42.07503	\N
+88	Tan Joel	CN116	\N	2016-01-22 08:18:42.085615	2016-01-22 08:18:42.085615	\N
+89	Yeo Janice	CN117	\N	2016-01-22 08:18:42.097144	2016-01-22 08:18:42.097144	\N
+90	Fang Qianyao	FN102	\N	2016-01-22 08:18:42.107913	2016-01-22 08:18:42.107913	\N
+91	Tan Rena	FN105	\N	2016-01-22 08:18:42.120743	2016-01-22 08:18:42.120743	\N
+92	Thia Yew Yin	FN108	\N	2016-01-22 08:18:42.130055	2016-01-22 08:18:42.130055	\N
+93	Woo Crystal	FN111	\N	2016-01-22 08:18:42.140929	2016-01-22 08:18:42.140929	\N
+94	Zhan Nanxin	FN115	\N	2016-01-22 08:18:42.152741	2016-01-22 08:18:42.152741	\N
+95	Ng Valerie	FN116	\N	2016-01-22 08:18:42.16373	2016-01-22 08:18:42.16373	\N
+96	Deng Li	FN117	\N	2016-01-22 08:18:42.174718	2016-01-22 08:18:42.174718	\N
+97	Lee Kai Peng	MN100	\N	2016-01-22 08:18:42.186015	2016-01-22 08:18:42.186015	\N
+98	Tay Clinton	MN106	\N	2016-01-22 08:18:42.19682	2016-01-22 08:18:42.19682	\N
+99	Hei Aaron	MN109	\N	2016-01-22 08:18:42.207801	2016-01-22 08:18:42.207801	\N
+100	Wong Ci Yi	MN113	\N	2016-01-22 08:18:42.220734	2016-01-22 08:18:42.220734	\N
+101	Tanujaya Herbert Ilhan	MN114	\N	2016-01-22 08:18:42.230119	2016-01-22 08:18:42.230119	\N
+102	TAY WARREN	MN115	\N	2016-01-22 08:18:42.242017	2016-01-22 08:18:42.242017	\N
+103	Boh Chuang Wei Brandon	MN116	\N	2016-01-22 08:18:42.252686	2016-01-22 08:18:42.252686	\N
+104	Raditya Made	MN119	\N	2016-01-22 08:18:42.263475	2016-01-22 08:18:42.263475	\N
+105	Sham Brandon	MN120	\N	2016-01-22 08:18:42.27746	2016-01-22 08:18:42.27746	\N
+106	Neo Jonathan	MN122	\N	2016-01-22 08:18:42.285766	2016-01-22 08:18:42.285766	\N
+107	Lau Shaun	MN125	\N	2016-01-22 08:18:42.296391	2016-01-22 08:18:42.296391	\N
+108	Eu Joshua	MN127	\N	2016-01-22 08:18:42.307242	2016-01-22 08:18:42.307242	\N
+109	Lye Adolphus	MN133	\N	2016-01-22 08:18:42.320603	2016-01-22 08:18:42.320603	\N
+110	Barry Chin	MO109	\N	2016-01-22 08:18:42.330197	2016-01-22 08:18:42.330197	\N
+111	Ang Denzil	MO116	\N	2016-01-22 08:18:42.340979	2016-01-22 08:18:42.340979	\N
+112	Tan Tiong Chin	MO126	\N	2016-01-22 08:18:42.353192	2016-01-22 08:18:42.353192	\N
+113	Alkaff Awad	MO127	\N	2016-01-22 08:18:42.364179	2016-01-22 08:18:42.364179	\N
+114	Quek Elson wee meng	MO129	\N	2016-01-22 08:18:42.375991	2016-01-22 08:18:42.375991	\N
+115	Mariappan Ramakrishnan	MO130	\N	2016-01-22 08:18:42.385884	2016-01-22 08:18:42.385884	\N
+3	Pinlac Adolfo	CN109	\N	2016-01-22 08:18:41.128944	2016-01-22 10:39:47.474975	\N
+5	Yip Tommy	MN103	\N	2016-01-22 08:18:41.151036	2016-01-22 10:39:51.429523	\N
+7	Chu Simon	MN124	\N	2016-01-22 08:18:41.174162	2016-01-22 10:39:59.079668	\N
+11	Lim Winson	MO121	\N	2016-01-22 08:18:41.219449	2016-01-22 11:11:15.933092	\N
+12	Myint Khin	MO122	\N	2016-01-22 08:18:41.230009	2016-01-22 11:11:20.881136	\N
+14	Tan Choon Heong	MO128	\N	2016-01-22 08:18:41.252286	2016-01-22 11:11:28.679134	\N
+16	Chin Yong Kang	MO139	\N	2016-01-22 08:18:41.274345	2016-01-22 11:11:32.515643	\N
+19	Low Adrian	CN106	\N	2016-01-22 08:18:41.308833	2016-01-22 11:11:37.745844	\N
+20	Yang Jingrong	CN107	\N	2016-01-22 08:18:41.319783	2016-01-22 11:11:41.159088	\N
+117	Tan Gregory	MO137	\N	2016-01-22 08:18:42.409431	2016-01-22 08:18:42.409431	\N
+118	Chua Boon Seng	MO140	\N	2016-01-22 08:18:42.418958	2016-01-22 08:18:42.418958	\N
+119	Toh Judith	TN100	\N	2016-01-22 08:18:42.430595	2016-01-22 08:18:42.430595	\N
+120	Tan Jonathan	TN101	\N	2016-01-22 08:18:42.441526	2016-01-22 08:18:42.441526	\N
+121	Foo Piao Lin	TN102	\N	2016-01-22 08:18:42.452505	2016-01-22 08:18:42.452505	\N
+122	Tan Kuang Ian	TN103	\N	2016-01-22 08:18:42.463849	2016-01-22 08:18:42.463849	\N
+123	Cheng Dao Han	TN105	\N	2016-01-22 08:18:42.47485	2016-01-22 08:18:42.47485	\N
+124	Kathrada Ahmad Ismat	TN107	\N	2016-01-22 08:18:42.485914	2016-01-22 08:18:42.485914	\N
+125	Willy See	TN110	\N	2016-01-22 08:18:42.497164	2016-01-22 08:18:42.497164	\N
+126	Wu Tingfeng	TN116	\N	2016-01-22 08:18:42.508191	2016-01-22 08:18:42.508191	\N
+127	Zimmermann Christoph Dominik	TN119	\N	2016-01-22 08:18:42.519406	2016-01-22 08:18:42.519406	\N
+128	Ng Daniel	TN121	\N	2016-01-22 08:18:42.530493	2016-01-22 08:18:42.530493	\N
+129	Seah Marcus	TN122	\N	2016-01-22 08:18:42.551611	2016-01-22 08:18:42.551611	\N
+130	Lim Gennie	TN124	\N	2016-01-22 08:18:42.56226	2016-01-22 08:18:42.56226	\N
+131	Mon Thu Kaung	TN125	\N	2016-01-22 08:18:42.573127	2016-01-22 08:18:42.573127	\N
+132	Nghai Claris	TN126	\N	2016-01-22 08:18:42.585667	2016-01-22 08:18:42.585667	\N
+133	Toh Kai Yang	TN128	\N	2016-01-22 08:18:42.597631	2016-01-22 08:18:42.597631	\N
+134	Soh Sharyuen	TN129	\N	2016-01-22 08:18:42.608193	2016-01-22 08:18:42.608193	\N
+135	Oyekanmi Rolu Monilla	TN131	\N	2016-01-22 08:18:42.61894	2016-01-22 08:18:42.61894	\N
+136	Joseph Vinay	TN134	\N	2016-01-22 08:18:42.630162	2016-01-22 08:18:42.630162	\N
+137	Tay Li Theng	WO104	\N	2016-01-22 08:18:42.64135	2016-01-22 08:18:42.64135	\N
+138	Teo Sok Kun	WO109	\N	2016-01-22 08:18:42.652387	2016-01-22 08:18:42.652387	\N
+139	Kor Yah lee	WO111	\N	2016-01-22 08:18:42.663179	2016-01-22 08:18:42.663179	\N
+140	Fun Seal jun	WO112	\N	2016-01-22 08:18:42.674605	2016-01-22 08:18:42.674605	\N
+141	Robertson Bridget	WO116	\N	2016-01-22 08:18:42.685469	2016-01-22 08:18:42.685469	\N
+142	Lee Hwee Khim	WO117	\N	2016-01-22 08:18:42.697268	2016-01-22 08:18:42.697268	\N
+143	Lim Jia Hui	WO124	\N	2016-01-22 08:18:42.707824	2016-01-22 08:18:42.707824	\N
+144	Ng Xiao Ting	WO125	\N	2016-01-22 08:18:42.719469	2016-01-22 08:18:42.719469	\N
+145	Siti Radiah Bte Mohamed H	WO126	\N	2016-01-22 08:18:42.730793	2016-01-22 08:18:42.730793	\N
+146	ZHOU JING	WO127	\N	2016-01-22 08:18:42.741488	2016-01-22 08:18:42.741488	\N
+147	Nonis Macneu Martin	MN110	\N	2016-01-22 08:18:42.753259	2016-01-22 08:18:42.753259	\N
+148	Prasad Jaijendra	MO108	\N	2016-01-22 08:18:42.764432	2016-01-22 08:18:42.764432	\N
+149	Jaensch William	MO117	\N	2016-01-22 08:18:42.775181	2016-01-22 08:18:42.775181	\N
+150	GOH CHEK CHYE ALAN	MO118	\N	2016-01-22 08:18:42.784594	2016-01-22 08:18:42.784594	\N
+151	Worster Steve	MO125	\N	2016-01-22 08:18:42.796194	2016-01-22 08:18:42.796194	\N
+152	Ang Guan Beng	MO131	\N	2016-01-22 08:18:42.806999	2016-01-22 08:18:42.806999	\N
+153	Garcia Ace Glen	MO136	\N	2016-01-22 08:18:42.819967	2016-01-22 08:18:42.819967	\N
+154	Ng Allan	MO138	\N	2016-01-22 08:18:42.830499	2016-01-22 08:18:42.830499	\N
+155	Lu Wanheng	CN113	\N	2016-01-22 08:18:42.841724	2016-01-22 08:18:42.841724	\N
+156	Nguyen Nga	FN101	\N	2016-01-22 08:18:42.853703	2016-01-22 08:18:42.853703	\N
+157	Ng Chen Hui	FN103	\N	2016-01-22 08:18:42.863994	2016-01-22 08:18:42.863994	\N
+158	Lee Rachel	FN107	\N	2016-01-22 08:18:42.876033	2016-01-22 08:18:42.876033	\N
+159	Lim Keely	FN110	\N	2016-01-22 08:18:42.886244	2016-01-22 08:18:42.886244	\N
+160	Chiew Wei Ling	FN112	\N	2016-01-22 08:18:42.896857	2016-01-22 08:18:42.896857	\N
+161	Ch'ng Jaime	FN113	\N	2016-01-22 08:18:42.908174	2016-01-22 08:18:42.908174	\N
+162	Azizah Zam Zam	FN114	\N	2016-01-22 08:18:42.919634	2016-01-22 08:18:42.919634	\N
+163	Tham Lai Ying	FN118	\N	2016-01-22 08:18:42.930438	2016-01-22 08:18:42.930438	\N
+164	Woenardi Jonathan Mulyawan	MN123	\N	2016-01-22 08:18:42.941437	2016-01-22 08:18:42.941437	\N
+165	Tan Han Siang	TN106	\N	2016-01-22 08:18:42.953068	2016-01-22 08:18:42.953068	\N
+166	LIM Chern Miao Samuel	TN109	\N	2016-01-22 08:18:42.964735	2016-01-22 08:18:42.964735	\N
+167	Tham Sher-lyn	TN120	\N	2016-01-22 08:18:42.975185	2016-01-22 08:18:42.975185	\N
+168	Tan Li Yin	TN123	\N	2016-01-22 08:18:42.986119	2016-01-22 08:18:42.986119	\N
+169	Tan Jorgin	TN127	\N	2016-01-22 08:18:42.997022	2016-01-22 08:18:42.997022	\N
+170	Tan Zhi Sheng	TN133	\N	2016-01-22 08:18:43.009097	2016-01-22 08:18:43.009097	\N
+171	Liew Yoke Pin	WO100	\N	2016-01-22 08:18:43.019922	2016-01-22 08:18:43.019922	\N
+172	Chia Alicia	WO101	\N	2016-01-22 08:18:43.030995	2016-01-22 08:18:43.030995	\N
+173	Ng Guan Ling	WO103	\N	2016-01-22 08:18:43.042006	2016-01-22 08:18:43.042006	\N
+174	Chin See Onn	WO106	\N	2016-01-22 08:18:43.052418	2016-01-22 08:18:43.052418	\N
+175	Chia Alicia	WO107	\N	2016-01-22 08:18:43.063372	2016-01-22 08:18:43.063372	\N
+176	Toh Yi Qian	WO113	\N	2016-01-22 08:18:43.075119	2016-01-22 08:18:43.075119	\N
+177	Leong Raelene	WO114	\N	2016-01-22 08:18:43.086054	2016-01-22 08:18:43.086054	\N
+178	Lim Soo Ee	WO122	\N	2016-01-22 08:18:43.097795	2016-01-22 08:18:43.097795	\N
+179	Liu Bowie	WO123	\N	2016-01-22 08:18:43.106979	2016-01-22 08:18:43.106979	\N
+1	Hadinata Justin	CN100	\N	2016-01-22 08:18:41.097482	2016-01-22 10:39:43.04862	\N
+9	LIM SIOU SIAN	MO114	\N	2016-01-22 08:18:41.197315	2016-01-22 10:41:27.239092	\N
+\.
+
+
+--
+-- Name: participants_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('participants_id_seq', 179, true);
+
+
+--
+-- Data for Name: rank_participants; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY rank_participants (id, rank, name, bib_number, created_at, updated_at, deleted_at) FROM stdin;
+\.
+
+
+--
+-- Name: rank_participants_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('rank_participants_id_seq', 10, true);
+
+
+--
+-- Data for Name: ranks; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY ranks (id, rank, end_time, created_at, updated_at, deleted_at) FROM stdin;
+\.
+
+
+--
+-- Name: ranks_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('ranks_id_seq', 643, true);
+
+
+--
+-- Data for Name: schema_migrations; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY schema_migrations (version) FROM stdin;
+20151205082509
+20151205084020
+20151205084430
+20151205084636
+20151207154544
+20151207154652
+20151207154658
+20151207154710
+\.
+
+
+--
+-- Data for Name: waves; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY waves (id, wave_number, start_time, created_at, updated_at, deleted_at) FROM stdin;
+\.
+
+
+--
+-- Name: waves_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('waves_id_seq', 72, true);
+
+
+--
+-- Name: participants_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY participants
+    ADD CONSTRAINT participants_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: rank_participants_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY rank_participants
+    ADD CONSTRAINT rank_participants_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: ranks_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY ranks
+    ADD CONSTRAINT ranks_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: waves_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY waves
+    ADD CONSTRAINT waves_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: index_participants_on_deleted_at; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX index_participants_on_deleted_at ON participants USING btree (deleted_at);
+
+
+--
+-- Name: index_rank_participants_on_deleted_at; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX index_rank_participants_on_deleted_at ON rank_participants USING btree (deleted_at);
+
+
+--
+-- Name: index_ranks_on_deleted_at; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX index_ranks_on_deleted_at ON ranks USING btree (deleted_at);
+
+
+--
+-- Name: index_waves_on_deleted_at; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX index_waves_on_deleted_at ON waves USING btree (deleted_at);
+
+
+--
+-- Name: unique_schema_migrations; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE UNIQUE INDEX unique_schema_migrations ON schema_migrations USING btree (version);
+
+
+--
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+--
+-- PostgreSQL database dump complete
+--
+
