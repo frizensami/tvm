@@ -18,7 +18,7 @@
 //= require bootstrap-sprockets
 //= require flipclock.min
 
-/*
+
 // GLOBAL VARIABLE FOR CLOCK
 //This code catches all ajax calls and forces a page refresh
 $(document).ready(function(){
@@ -35,8 +35,8 @@ $(document).ready(function(){
       alert("Either: The Bib number you tried to enter was not registered at the start of the Vertical Marathon \n OR \n Not all fields are filled up (i.e. name, rank or bib number) \n OR \n This rank is missing! Confirm with the rank chip giver if this rank has been cancelled.");
 
     } else {
-    	//alert("AJAX Error: Whatever you were saving was not saved.");
-    	//ok lo you want then can
+      //alert("AJAX Error: Whatever you were saving was not saved.");
+      //ok lo you want then can
       console.log("-----------");
       console.log(Date.now());
       console.log("AJAX ERROR: Error raised in xhr call");
@@ -50,19 +50,19 @@ $(document).ready(function(){
   // When the "enter" button is pressed and released, add a new entry to waves or ranks
   $(document).keyup(function(event) {
 
-  	var pathname = $(location).attr('pathname');
+    var pathname = $(location).attr('pathname');
 
-  	if (event.keyCode === 187) {
-  		if (pathname === '/waves') {
-	  		$.ajax({url: "/waves/auto", success: function(result){
-		        Turbolinks.visit(location.toString());
-		    }});
-  		} else if (pathname === '/ranks') {
-  			$.ajax({url: "/ranks/auto", success: function(result){
-		        Turbolinks.visit(location.toString());
-		    }});
-  		}
-  	}
+    if (event.keyCode === 187) {
+      if (pathname === '/waves') {
+        $.ajax({url: "/waves/auto", success: function(result){
+            Turbolinks.visit(location.toString());
+        }});
+      } else if (pathname === '/ranks') {
+        $.ajax({url: "/ranks/auto", success: function(result){
+            Turbolinks.visit(location.toString());
+        }});
+      }
+    }
   });
 
 
@@ -96,11 +96,11 @@ $(document).ready(function(){
     });
 
   // Refresh the overview page once in a while
-  /*
+
   if ($(location).attr('pathname') == '/overview') {
-    setInterval(function() { window.location.reload(); }, 20000)
+    setInterval(function() { window.location.reload(); }, 20000);
   }
-  */
+
 
 
 });
