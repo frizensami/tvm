@@ -18,7 +18,7 @@
 //= require bootstrap-sprockets
 //= require flipclock.min
 
-
+/*
 // GLOBAL VARIABLE FOR CLOCK
 //This code catches all ajax calls and forces a page refresh
 $(document).ready(function(){
@@ -101,6 +101,7 @@ $(document).ready(function(){
     setInterval(function() { window.location.reload(); }, 20000)
   }
   */
+
 
 });
 

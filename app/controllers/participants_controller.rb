@@ -1,3 +1,4 @@
+require 'csv'
 class ParticipantsController < ApplicationController
   before_action :set_participant, only: [:show, :edit, :update, :destroy]
 
@@ -146,6 +147,9 @@ class ParticipantsController < ApplicationController
       start_time = DateTime.new
       time_delta = DateTime.new
 
+      #get a wave object to check for a start time
+      wave_number = participant.wave_number
+
       unless rank_participant.nil?
         #if we have a participant with a rank, get the timing object to check end time
         rank = rank_participant.rank
@@ -154,9 +158,6 @@ class ParticipantsController < ApplicationController
         unless timing_object.nil?
           #if we do have a timing object, get the end time
           end_time = timing_object.end_time
-          #get a wave object to check for a start time
-          wave_number = Wave.find_by(wave_number: participant.wave_number).wave_number
-
 
           unless wave_number.blank?
             start_time = Wave.find_by(wave_number: participant.wave_number).start_time
@@ -177,11 +178,13 @@ class ParticipantsController < ApplicationController
                     end_time: end_time.strftime("%d/%m/%Y %H:%M:%S.%3N"),
                     timing: time_delta, wave_number: wave_number
                   }
-      puts "APPENDED!"
-      puts "APPENDED!"
-      puts "APPENDED!"
-      puts "APPENDED!"
-      puts "APPENDED!"
+
+     CSV.open("data.csv", "wb") do |csv|
+      @all_info.each do |hash|
+        csv << hash.values
+      end
+    end
+
 
 
 
