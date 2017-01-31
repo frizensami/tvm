@@ -12,6 +12,7 @@
 4. Run `bundle install` to install all prerequisite "gems" (packages)
 5. Run `bundle exec rake db:create` to create the required database
 6. Run `bundle exec rake db:migrate` to update the database to the current schema
+7. Run `bundle exec rake csv:import_participants` to use the `participants.csv` file from last year to populate the development database. Note that we have to convert out 2017 participants list into this form or change the import task.
 7. (IGNORE THIS STEP: Disabled Postgres for production) If you're using postgres, set up the connection to it by creating an "application.yml" file under config/. This is a slightly involved process as you need to create certain postgres users, set the correct permissions etcs. Recommend that you stick to SQLITE unless you have the time to figure this out.
 8. Running `rails -s` will open the development rails server (WEBRick), you can view the application at the endpoint shown in the console
 9. Run all the tests with `bundle exec rake test` and all tests should be passing.
