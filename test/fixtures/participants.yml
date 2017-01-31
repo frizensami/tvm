@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  bib_number: MyString
-  wave_number: 1
+  name: Marvin
+  bib_number: CN101
+  wave_number: 3 #not to conflict with wave numbers in wave fixtures
 
 two:
-  name: MyString
-  bib_number: MyString
-  wave_number: 1
+  name: Yong Jie
+  bib_number: WO202
+  wave_number: 4 #not to conflict with wave numbers in wave fixtures

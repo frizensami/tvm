@@ -53,6 +53,7 @@ class ParticipantsController < ApplicationController
         format.json { render :show, status: :created, location: @participant }
         #format.js   { }
       else
+        p @participant.errors
         format.html { render :new }
         format.json { render json: @participant.errors, status: :unprocessable_entity }
         format.js { render json: @participant.errors, status: :unprocessable_entity }

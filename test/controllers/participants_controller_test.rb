@@ -3,6 +3,7 @@ require 'test_helper'
 class ParticipantsControllerTest < ActionController::TestCase
   setup do
     @participant = participants(:one)
+    @participant_new = Participant.new(bib_number: "MO101", name: "Yew Siang", wave_number: 4)
   end
 
   test "should get index" do
@@ -18,10 +19,10 @@ class ParticipantsControllerTest < ActionController::TestCase
 
   test "should create participant" do
     assert_difference('Participant.count') do
-      post :create, participant: { bib_number: @participant.bib_number, name: @participant.name, wave_number: @participant.wave_number }
+      post :create, participant: { bib_number: @participant_new.bib_number, name: @participant_new.name, wave_number: @participant_new.wave_number }
     end
 
-    assert_redirected_to participant_path(assigns(:participant))
+    assert_redirected_to participants_path#(:participant)#(assigns(:participant))
   end
 
   test "should show participant" do
@@ -36,7 +37,7 @@ class ParticipantsControllerTest < ActionController::TestCase
 
   test "should update participant" do
     patch :update, id: @participant, participant: { bib_number: @participant.bib_number, name: @participant.name, wave_number: @participant.wave_number }
-    assert_redirected_to participant_path(assigns(:participant))
+    assert_redirected_to participants_path#(assigns(:participant))
   end
 
   test "should destroy participant" do

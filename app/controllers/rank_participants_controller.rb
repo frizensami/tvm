@@ -134,6 +134,7 @@ class RankParticipantsController < ApplicationController
           format.html { redirect_to @rank_participant, notice: 'Rank participant was successfully created.' }
           format.json { render :show, status: :created, location: @rank_participant }
         else
+          p @rank_participant.errors
           format.html { render :new }
           format.json { render json: @rank_participant.errors, status: :unprocessable_entity }
           format.js { render json: @rank_participant.errors, status: :unprocessable_entity }

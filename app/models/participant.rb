@@ -1,6 +1,8 @@
 class Participant < ActiveRecord::Base
 	validates :name, :bib_number, :presence => true
 
+  validates :bib_number, :uniqueness => true
+
   #cannot input a wave that has already started
   validate :wave_cannot_have_started
   validate :only_five_in_a_wave

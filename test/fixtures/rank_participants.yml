@@ -2,10 +2,10 @@
 
 one:
   rank: 1
-  name: MyString
-  bib_number: MyString
+  name: Marvin
+  bib_number: CN101
 
 two:
-  rank: 1
-  name: MyString
-  bib_number: MyString
+  rank: 2
+  name: Yong Jie
+  bib_number: WO202
