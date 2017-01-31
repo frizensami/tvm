@@ -6,7 +6,7 @@
 
 ## Setup
 
-1. Install Rails (current rails version on Sriram's PC is Rails 4.2.5). Installation instructions can be found at http://installrails.com/ [DO NOT USE A CLOUD VERSION]. Warning: I did not install Rails this way 1 year ago, so be prepared for perhaps a difficult install. Note that the current version of rails is Rails 5, but we're still using Rails 4.
+1. Install Rails (current rails version on Sriram's PC is Rails 4.2.5). Current Ruby version on Sriram's PC is 2.2.3. Installation instructions can be found at http://installrails.com/ [DO NOT USE A CLOUD VERSION]. Warning: I did not install Rails this way 1 year ago, so be prepared for perhaps a difficult install. Note that the current version of rails is Rails 5, but we're still using Rails 4.
 2. If running in production, set up Postgres. Otherwise, SQLITE will be used. Recommend yall to just use SQLITE for now.
 3. Clone this repository to your computer
 4. Run `bundle install` to install all prerequisite "gems" (packages)
