@@ -18,6 +18,7 @@
 9. Run all the tests with `bundle exec rake test` and all tests should be passing.
 10. Ensure that all tests pass before you make any changes
 11. If you want to use the legit server: use `unicorn`. To run the exact start script for unicorn in production using the production config: use `./start.sh.`For development environment purposes, just enter `unicorn` in the command line, this is basically a replacement for `rails s`.
+12. You may want to set up NGINX as a reverse proxy to forward requests from port 80 to the Rails unicorn socket. I used a DigitalOcean tutorial to figure this out.
 
 ## Making Changes
 1. Create a feature branch (e.g. add-new-stuff)
