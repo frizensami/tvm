@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :teams
+  get '/teams/by_category/:category' => 'teams#by_category'
   root 'static_pages#home'
 
   get 'static_pages/home'

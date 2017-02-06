@@ -1,6 +1,13 @@
 class TeamsController < ApplicationController
   before_action :set_team, only: [:show, :edit, :update, :destroy]
 
+  # GET /teams/by_category/:category
+  def by_category
+    category = params[:category]
+    @teams = Team.where(category: category)
+    p @teams
+  end
+
   # GET /teams
   # GET /teams.json
   def index

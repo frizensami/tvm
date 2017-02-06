@@ -58,6 +58,7 @@ class ParticipantsController < ApplicationController
     end
   end
 
+  # Endpoint to show on a large screen - participants for the next wave
   def by_wave
     @participants = Participant.where(wave_number: params[:wave_number])
   end
