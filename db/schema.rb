@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170206092723) do
+ActiveRecord::Schema.define(version: 20170206093445) do
 
   create_table "participants", force: :cascade do |t|
     t.string   "name"
@@ -20,9 +20,11 @@ ActiveRecord::Schema.define(version: 20170206092723) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.datetime "deleted_at"
+    t.integer  "team_id"
   end
 
   add_index "participants", ["deleted_at"], name: "index_participants_on_deleted_at"
+  add_index "participants", ["team_id"], name: "index_participants_on_team_id"
 
   create_table "rank_participants", force: :cascade do |t|
     t.integer  "rank"

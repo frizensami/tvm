@@ -1,4 +1,7 @@
 class Participant < ActiveRecord::Base
+  # Always belong to a team
+  belongs_to :team
+
 	validates :name, :bib_number, :presence => true
 
   validates :bib_number, :uniqueness => true
