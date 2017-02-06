@@ -33,6 +33,7 @@ Rails.application.routes.draw do
   get '/participants/match_rank'
   get '/participants/undolist'
   get '/participants/unfinished'
+  patch '/participants/update_wave_by_bib_number/:bib_number/:wave_number' => 'participants#update_wave_by_bib_number'
   get '/participants/by_wave/:wave_number' => 'participants#by_wave'
   #delete '/participants/:id/really_delete' => 'participants#really_delete'
   patch '/participants/:id/undo_deletion' => 'participants#undo_deletion'

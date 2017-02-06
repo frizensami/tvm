@@ -2,6 +2,27 @@ require 'csv'
 class ParticipantsController < ApplicationController
   before_action :set_participant, only: [:show, :edit, :update, :destroy]
 
+
+  # PATCH/PUT /participants/update_wave_by_bib_number/:bib_number/:wave_number
+  def update_wave_by_bib_number
+    bib_number = params[:bib_number]
+    wave_number = params[:wave_number]
+
+    @participant = Participant.where(bib_number: bib_number).first
+
+    if @participant.present?
+      # Update the participant
+      if @participant.update(wave_number: wave_number)
+        render json: { message: "Successfully updated " + bib_number + " to be in wave " + wave_number}
+      else
+        render json: @participant.errors, status: :unprocessable_entity
+      end
+    else
+      render json: { message: "Cannot find participant with that bib number!"}, status: :not_found
+    end
+
+  end
+
   # GET /participants
   # GET /participants.json
   def index
@@ -75,6 +96,7 @@ class ParticipantsController < ApplicationController
       end
     end
   end
+
 
   # DELETE /participants/1
   # DELETE /participants/1.json
