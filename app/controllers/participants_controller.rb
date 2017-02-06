@@ -142,55 +142,47 @@ class ParticipantsController < ApplicationController
 
     participants.map do |participant|
       rank_participant = RankParticipant.find_by(bib_number: participant.bib_number)
-      rank = -3000
-      wave_number = -2000
-      end_time = DateTime.new
-      start_time = DateTime.new
-      time_delta = DateTime.new
+
+      rank = nil
+      wave_number = nil
+      end_time = nil
+      start_time = nil
+      time_delta = nil
 
       #get a wave object to check for a start time
       wave_number = participant.wave_number
 
-      unless rank_participant.nil?
-        #if we have a participant with a rank, get the timing object to check end time
-        rank = rank_participant.rank
-        timing_object = Rank.find_by(rank: rank)
+      unless wave_number.blank?
+        start_time = Wave.find_by(wave_number: participant.wave_number).start_time
 
-        unless timing_object.nil?
-          #if we do have a timing object, get the end time
-          end_time = timing_object.end_time
+        unless rank_participant.nil?
+          #if we have a participant with a rank, get the timing object to check end time
+          rank = rank_participant.rank
+          timing_object = Rank.find_by(rank: rank)
 
-          unless wave_number.blank?
-            start_time = Wave.find_by(wave_number: participant.wave_number).start_time
-
+          unless timing_object.nil?
+            #if we do have a timing object, get the end time
+            end_time = timing_object.end_time
             #time delta is in MINUTES
             time_delta = Time.at((end_time.to_f - start_time.to_f)).utc.strftime("%H:%M:%S.%3N")
           end
 
         end
-      else
-        rank = -2000
       end
 
       #create final hash as key pointing to array of values
       @all_info << {name: participant.name,
                     rank: rank,
-                    start_time: start_time.strftime("%d/%m/%Y %H:%M:%S.%3N"),
-                    end_time: end_time.strftime("%d/%m/%Y %H:%M:%S.%3N"),
-                    timing: time_delta, wave_number: wave_number
+                    start_time: start_time.try(:strftime, "%d/%m/%Y %H:%M:%S.%3N"),
+                    end_time: end_time.try(:strftime, "%d/%m/%Y %H:%M:%S.%3N"),
+                    timing: time_delta || DateTime.new, wave_number: wave_number
                   }
 
-     CSV.open("data.csv", "wb") do |csv|
-      @all_info.each do |hash|
-        csv << hash.values
+      CSV.open("data.csv", "wb") do |csv|
+        @all_info.each do |hash|
+          csv << hash.values
+        end
       end
-    end
-
-
-
-
-
-      #@names_with_ranks[participant.name] = [rank, start_time.strftime("%d/%m/%Y %H:%M:%S.%3N"), end_time.strftime("%d/%m/%Y %H:%M:%S.%3N"), time_delta, waveid]
     end
 
     p "All info!!"

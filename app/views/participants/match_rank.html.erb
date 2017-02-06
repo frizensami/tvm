@@ -14,17 +14,17 @@
   </thead>
 
   <tbody>
-    <td><%= count = 1 %></td>
+    <% count = 1 %>
     <% @all_info.sort_by{|h| h[:timing]}.each do |info| %>
       <tr>
         <td><%= count %></td>
         <% count = count + 1 %>
-        <td><%= info[:name] %></td>
-        <td><%= info[:wave_number] %></td>
-        <td><%= info[:rank] %></td>
-        <td><%= info[:start_time] %></td>
-        <td><%= info[:end_time] %></td>
-        <td><%= info[:timing] %></td>
+        <td><%= info[:name]%></td>
+        <td><%= info[:wave_number] || "-" %></td>
+        <td><%= info[:rank] || "-"%></td>
+        <td><%= info[:start_time] || "-" %></td>
+        <td><%= info[:end_time] || "-"%></td>
+        <td><%= info[:timing] || "-"%></td>
       </tr>
     <% end %>
   </tbody>
