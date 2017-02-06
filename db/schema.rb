@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170206093445) do
+ActiveRecord::Schema.define(version: 20170206122909) do
 
   create_table "participants", force: :cascade do |t|
     t.string   "name"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20170206093445) do
     t.string   "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "identifier"
   end
 
   create_table "waves", force: :cascade do |t|

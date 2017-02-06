@@ -52,6 +52,7 @@ The important change is that there now are 6 "sub-competitions" within TVM, each
 
 ### Specific changes
 1. Create a "Team" model. Team has_many Participants, Participant belongs_to Team.  Team also has a string field: category. 
+2. Add regex validation for the specific type of bib number being used
 
 
 

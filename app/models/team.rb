@@ -1,6 +1,6 @@
 class Team < ActiveRecord::Base
     has_many :participants
 
-    validates :category, :presence => true
-    validates :category, :uniqueness => true
+    validates :category, :identifier, :presence => true
+    validates :category, :uniqueness => { scope: [:identifier] }
 end
