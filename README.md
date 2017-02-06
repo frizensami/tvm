@@ -50,6 +50,9 @@ The important change is that there now are 6 "sub-competitions" within TVM, each
 ### Why?
 1. This means that a simple table can be created called "teams". A **team** has a one-to-many relationship with **participant**. This causes minimal changes to the overall structure of the codebase since **participant** directly does not need to have knowledge of what **team** they are in - as this can be computed at import-time.
 
+### Specific changes
+1. Create a "Team" model. Team has_many Participants, Participant belongs_to Team.  Team also has a string field: category. 
+
 
 
 
