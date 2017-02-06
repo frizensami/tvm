@@ -35,6 +35,8 @@ namespace :tvm do
         identifier = participant_bib[2..-1]
         # we need to create the required team
         team = Team.create!({ category: category, identifier: identifier })
+        participant.team = team
+        participant.save
         puts "Individual team created, category: #{category}, identifier: #{identifier}"
       else
         # This is a team with more than 1 member - TVM couple / team.
@@ -53,11 +55,13 @@ namespace :tvm do
         if matching_team.present?
           # the team is already created - add the current participant to the team
           participant.team = matching_team
+          participant.save
           puts "Matching team present, assigning participant to team - category: #{category}, identifier: #{identifier}"
         else
           # we need to create the required team
           team = Team.create!({ category: category, identifier: identifier })
           participant.team = team
+          participant.save
           puts "Real team created, category: #{category}, identifier: #{identifier}"
         end
       end
