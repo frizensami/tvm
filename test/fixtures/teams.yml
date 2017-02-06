@@ -1,7 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  category: MyString
+  category: "MO"
+  identifier: "121"
+
 
 two:
-  category: MyString
+  category: "FN"
+  identifier: "101"

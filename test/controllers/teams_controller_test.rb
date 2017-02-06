@@ -3,6 +3,8 @@ require 'test_helper'
 class TeamsControllerTest < ActionController::TestCase
   setup do
     @team = teams(:one)
+    # unique team
+    @team_to_add = Team.new(category: "MO", identifier: "131")
   end
 
   test "should get index" do
@@ -18,7 +20,7 @@ class TeamsControllerTest < ActionController::TestCase
 
   test "should create team" do
     assert_difference('Team.count') do
-      post :create, team: { category: @team.category, identifier: @team.identifier }
+      post :create, team: { category: @team_to_add.category, identifier: @team_to_add.identifier }
     end
 
     assert_redirected_to team_path(assigns(:team))
