@@ -1,3 +1,4 @@
+require 'csv'
 class TeamsController < ApplicationController
   before_action :set_team, only: [:show, :edit, :update, :destroy]
 
@@ -6,6 +7,23 @@ class TeamsController < ApplicationController
     category = params[:category]
     @teams = Team.where(category: category)
     p @teams
+
+    # Write final category results to CSV
+    CSV.open("results-" + category + ".csv", "wb") do |csv|
+      csv << ["Category", "Identifier", "Final Timing"]
+      @teams.each do |team|
+        raw_timing = team.sum_of_participant_timings
+        final_timing = nil
+
+        if raw_timing == Float::INFINITY
+          final_timing = "-"
+        else
+          final_timing = Time.at(raw_timing).utc.strftime("%H:%M:%S.%3N")
+        end
+
+        csv << [team.category, team.identifier, final_timing]
+      end
+    end
   end
 
   # GET /teams
