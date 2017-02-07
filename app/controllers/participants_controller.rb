@@ -175,7 +175,7 @@ class ParticipantsController < ApplicationController
       #get a wave object to check for a start time
       wave_number = participant.wave_number
 
-      unless wave_number.blank?
+      unless wave_number.blank? || !Wave.exists?(wave_number: participant.wave_number)
         start_time = Wave.find_by(wave_number: participant.wave_number).start_time
 
         unless rank_participant.nil?

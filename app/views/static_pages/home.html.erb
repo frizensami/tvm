@@ -5,15 +5,28 @@
 
 </script>
 
-<%= button_to 'Participants', participants_path, :method => "get" %> <br>
-<%= button_to 'Wave', waves_path, :method => "get"  %> <br>
-<%= button_to 'Rank-Timing', ranks_path, :method => "get"  %> <br>
-<%= button_to 'Rank Participants', rank_participants_path, :method => "get"  %> <br>
-<%= button_to 'By Wave List', '/participants/by_wave/' + @latest_wave_number, :method => "get"  %> <br>
+<h2> For volunteers </h2>
+<%= button_to 'Assign participants to waves (Participants)', participants_path, :method => "get" %> <br>
+<%= button_to 'Start a new wave (Wave)', waves_path, :method => "get"  %> <br>
+<%= button_to 'Record a new end-timing (Rank-Timing)', ranks_path, :method => "get"  %> <br>
+<%= button_to 'Tag participants to their rank (Rank Participants)', rank_participants_path, :method => "get"  %> <br>
 
+<h2> Info/Monitoring Screens </h2>
+<%= button_to 'List participants in particular wave', '/participants/by_wave/' + @latest_wave_number, :method => "get"  %> <br>
+<%= button_to 'List unfinished participants', '/participants/unfinished', :method => "get"  %> <br>
+
+<h2> Results </h2>
+<%= button_to 'Men NUS Results', '/teams/by_category/MN', :method => "get"  %>
+<%= button_to 'Men Open Results', '/teams/by_category/MO', :method => "get"  %>
+<%= button_to 'Female NUS Results', '/teams/by_category/FN', :method => "get"  %>
+<%= button_to 'Female Open Results', '/teams/by_category/WO', :method => "get"  %>
+<%= button_to 'Couple NUS Results', '/teams/by_category/CN', :method => "get"  %>
+<%= button_to 'Team NUS Results', '/teams/by_category/TN', :method => "get"  %>
+<%= button_to 'Individual Participants Results', 'participants/match_rank', :method => "get"  %>
 
 <br>
+<h2> Administrative Screens (do not touch unless Yew Siang/Sri/Mavin/Yong Jie)
 <br>
-<%= button_to 'Overall Participants Results', 'participants/match_rank', :method => "get"  %> <br>
+
 <%= button_to 'Overview <admin>', '/overview', :method => "get"  %> <br>
 
