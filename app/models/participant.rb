@@ -11,7 +11,7 @@ class Participant < ActiveRecord::Base
 
   #cannot input a wave that has already started
   validate :wave_cannot_have_started
-  validate :only_five_in_a_wave
+  validate :limit_number_of_participants_in_wave
 
 	#PARANOID MODE: Nothing really gets deleted
 	acts_as_paranoid
@@ -22,9 +22,9 @@ class Participant < ActiveRecord::Base
     end
   end
 
-  def only_five_in_a_wave
-    if self.wave_number.present? && Participant.where(wave_number: self.wave_number).count >= 5
-      errors.add(:wave_number, "is incorrect, only 5 people can be in one wave. Please allocate participant to the next wave.")
+  def limit_number_of_participants_in_wave
+    if self.wave_number.present? && Participant.where(wave_number: self.wave_number).count >= Wave::MAX_PARTICIPANTS_IN_WAVE
+      errors.add(:wave_number, "is incorrect, only #{Wave::MAX_PARTICIPANTS_IN_WAVE} people can be in one wave. Please allocate participant to the next wave.")
     end
   end
 
