@@ -10,7 +10,7 @@ class TeamsController < ApplicationController
 
     # Write final category results to CSV
     CSV.open("results-" + category + ".csv", "wb") do |csv|
-      csv << ["Category", "Identifier", "Final Timing"]
+      csv << ["Category", "Identifier", "Participant/Team Name", "Final Timing"]
       @teams.each do |team|
         raw_timing = team.sum_of_participant_timings
         final_timing = nil
@@ -21,7 +21,7 @@ class TeamsController < ApplicationController
           final_timing = Time.at(raw_timing).utc.strftime("%H:%M:%S.%3N")
         end
 
-        csv << [team.category, team.identifier, final_timing]
+        csv << [team.category, team.identifier, team.participants.first.name, final_timing]
       end
     end
   end
