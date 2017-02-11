@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   get '/ranks/auto' => 'ranks#auto'
   get '/ranks/update_nums' => 'ranks#update_nums'
+  get '/ranks/next_rank' => 'ranks#next_rank'
   get '/waves/auto' => 'waves#auto'
   get '/waves/update_nums' => 'waves#update_nums'
 

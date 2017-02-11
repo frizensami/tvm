@@ -1,6 +1,11 @@
 class RanksController < ApplicationController
   before_action :set_rank, only: [:show, :edit, :update, :destroy]
 
+  # GET /ranks/next_rank
+  def next_rank
+    @next_rank_number = Rank.maximum(:rank).to_i + 1
+  end
+
   # GET /ranks
   # GET /ranks.json
   def index
@@ -111,14 +116,14 @@ class RanksController < ApplicationController
 	Time.zone = "Singapore"
 	@new_rank.end_time = Time.zone.now
 	@new_rank.rank = (Rank.last.try(:rank) || 0) + 1
-   
+
 	    if @new_rank.save
 		head :ok, content_type: "text/html"
 	    else
 		head :unprocessable_entity, content_type: "text/html"
 	    end
     end
-	
+
 =begin
     respond_to do |format|
       if @new_rank.save

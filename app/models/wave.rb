@@ -4,7 +4,7 @@ class Wave < ActiveRecord::Base
 	#PARANOID MODE: Nothing really gets deleted
 	acts_as_paranoid
 
-    MAX_PARTICIPANTS_IN_WAVE = 6
+    MAX_PARTICIPANTS_IN_WAVE = 5
 
 
 end
