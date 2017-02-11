@@ -10,8 +10,8 @@ class Participant < ActiveRecord::Base
   validates :bib_number, :format => { with: /[MTCFW][ON]\d{3}/, message: "must match regex [MTCFW][ON]\\d{3}" }
 
   #cannot input a wave that has already started
-  validate :wave_cannot_have_started
-  validate :limit_number_of_participants_in_wave
+  #validate :wave_cannot_have_started
+  #validate :limit_number_of_participants_in_wave
 
 	#PARANOID MODE: Nothing really gets deleted
 	acts_as_paranoid
